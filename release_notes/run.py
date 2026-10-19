@@ -8,6 +8,7 @@ spend-limit or login message never gets scored as a response.
 Usage: python run.py [--reps N] [--models opus,sonnet,haiku] [--conds 0,A,B] [--split dev|test|all]
 """
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -22,7 +23,13 @@ ROOT = HERE.parent
 RAW = HERE / "data" / "raw"
 SKILLS = ROOT / "skills" / "release-notes"
 
-MODELS = {"opus": "claude-opus-5-5", "sonnet": "claude-sonnet-5-5", "haiku": "claude-haiku-5-5"}
+MODELS = {"opus": "claude-opus-5-5", "sonnet": "claude-sonnet-5-5", "haiku": "claude-haiku-5-5",
+          "astra": "gpt-6-astra", "sol": "gpt-6.1-sol", "luna": "gpt-6-luna"}
+CODEX = {"astra", "sol", "luna"}
+# Codex isolation: a CODEX_HOME holding only auth.json keeps ~/.codex/AGENTS.md and config out
+# (checked: with it the model cannot quote AGENTS.md), and model_instructions_file replaces the
+# base instructions (checked with a codeword). Set CODEX_ISOLATED_HOME to that folder.
+CODEX_HOME = os.environ.get("CODEX_ISOLATED_HOME")
 BASE_SYSTEM = "You are a helpful assistant."
 NOT_A_RESPONSE = ("spend limit", "usage-credits", "rate limit reached", "Please run /login",
                   "Invalid API key", "quota", "overloaded_error", "API Error")
@@ -30,7 +37,8 @@ abort = threading.Event()
 
 
 def skill_text(cond):
-    files = {"A": "A-rules.md", "B": "B-role.md", "A+p": "A-rules+patch.md", "B+p": "B-role+patch.md"}
+    files = {"A": "A-rules.md", "B": "B-role.md", "C": "C-patched.md",
+             "A+p": "A-rules+patch.md", "B+p": "B-role+patch.md"}
     return None if cond == "0" else (SKILLS / files[cond]).read_text(encoding="utf-8")
 
 
@@ -47,6 +55,25 @@ def user_prompt(case):
             "Write the release notes for this update. Reply with the release notes only.")
 
 
+def run_codex(model, cond, case, dest):
+    if not CODEX_HOME:
+        raise SystemExit("CODEX_ISOLATED_HOME is not set")
+    work = dest.with_suffix(".work")
+    work.mkdir(exist_ok=True)
+    (work / "system.md").write_text(system_prompt(cond), encoding="utf-8")
+    last = work / "last.md"
+    instructions = (work / "system.md").resolve().as_posix()
+    proc = subprocess.run(
+        [shutil.which("codex"), "exec", "-m", MODELS[model], "-c", f"model_instructions_file='{instructions}'",
+         "-c", 'model_reasoning_effort="medium"', "--skip-git-repo-check", "--ephemeral",
+         "-s", "read-only", "-C", str(work), "-o", str(last), "-"],
+        input=user_prompt(case).encode("utf-8"), capture_output=True, timeout=600,
+        env={**os.environ, "CODEX_HOME": CODEX_HOME})
+    out = last.read_text(encoding="utf-8") if last.exists() else proc.stderr.decode("utf-8", errors="replace")
+    shutil.rmtree(work, ignore_errors=True)
+    return out, proc
+
+
 def is_valid(text):
     if not text or len(text.strip()) < 80:
         return False
@@ -60,11 +87,14 @@ def generate(model, cond, case, rep, claude):
     if abort.is_set():
         return "aborted"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    proc = subprocess.run(
-        [claude, "-p", "--model", MODELS[model], "--system-prompt", system_prompt(cond),
-         "--setting-sources", "", "--tools", ""],
-        input=user_prompt(case).encode("utf-8"), capture_output=True, timeout=300)
-    out = proc.stdout.decode("utf-8", errors="replace")
+    if model in CODEX:
+        out, proc = run_codex(model, cond, case, dest)
+    else:
+        proc = subprocess.run(
+            [claude, "-p", "--model", MODELS[model], "--system-prompt", system_prompt(cond),
+             "--setting-sources", "", "--tools", ""],
+            input=user_prompt(case).encode("utf-8"), capture_output=True, timeout=300)
+        out = proc.stdout.decode("utf-8", errors="replace")
     if not is_valid(out):
         if any(m in out for m in ("spend limit", "usage-credits")):
             abort.set()

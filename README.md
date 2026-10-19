@@ -12,7 +12,7 @@ condition has a skill; only its framing changes.
 
 - **0 · none** — the task alone (control).
 - **A · rules** — the guidance as a checklist with explicit prohibitions.
-- **C · patched** — rules after successive corrections, ending in a natural-language conditional.
+- **C · patched** — rules after successive corrections ("Update: …"), ending in a natural-language conditional. Written a priori, before any output was seen.
 - **B · role** — the same intent as a way of doing it ("as you'd tell a colleague").
 
 ## Skills under test
@@ -55,5 +55,16 @@ which went from rule to role while fixing how numbers are spoken:
 
 ## Running
 
-Single-turn text via `claude -p`, Opus/Sonnet/Haiku 5.5, N≥3 per cell, run serially.
-Every runner rejects invalid executions (spend-limit messages, empty output) before scoring.
+Single-turn text, run serially, two calls at a time. Every runner rejects invalid executions
+(spend-limit messages, empty output) before scoring.
+
+- **Claude** (Opus, Sonnet, Haiku 5.5) via `claude -p --system-prompt … --setting-sources ""`:
+  replaces Claude Code's default prompt and keeps the user's CLAUDE.md out (verified by asking
+  the model to quote it).
+- **Codex** (`gpt-6-astra`, `gpt-6.1-sol`, `gpt-6-luna`) via `codex exec` with a `CODEX_HOME`
+  holding only `auth.json` (keeps `~/.codex/AGENTS.md` and config out; verified) and
+  `model_instructions_file` (replaces the base instructions; verified with a codeword).
+  Reasoning effort fixed at medium.
+
+Both providers see the same system prompt (one sentence + the skill) and the same user
+prompt, so cross-provider comparisons are fair on context.
