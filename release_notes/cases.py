@@ -43,7 +43,7 @@ CASES = [
     dict(id="c03", split="dev", changes=[
         C("Webhooks: new invoice.paid event (LED-77)", "visible",
           [r"webhook", r"invoice\.paid", r"paid event"], [r"webhook"], ["LED-77"]),
-        C("Replace moment.js with date-fns", "internal", [r"moment", r"date-fns"], leak=["moment.js", "date-fns"]),
+        C("Replace moment.js with date-fns", "internal", [r"moment.js", r"date-fns"], leak=["moment.js", "date-fns"]),
         C("Fix: PDF invoices showed totals rounded to whole euros when locale was de-DE", "visible",
           [r"round", r"whole euro", r"cents", r"totals?"], [r"PDF"], ["de-DE", "locale"]),
         C("Dark mode for the dashboard (Settings -> Appearance)", "visible", [r"dark mode", r"Appearance"]),
