@@ -68,3 +68,23 @@ Single-turn text, run serially, two calls at a time. Every runner rejects invali
 
 Both providers see the same system prompt (one sentence + the skill) and the same user
 prompt, so cross-provider comparisons are fair on context.
+
+## Pre-registered reading (2026-10-19)
+
+The release-notes pilot is near-classification and Opus solves it under any framing; the
+framing effect showed only in `gpt-6-luna`. If the correction experiment below also shows
+nothing on Opus/Astra, the publishable result is the small-model one, stated as such.
+
+## Experiment 2: corrections (`corrections/`)
+
+The original observation was about a **correction** over-applied by Opus ("avoid piling up
+non-round numbers" -> no numbers at all), on a **graded** criterion. So here:
+
+- a realistic base skill (several sections) that produces too much of X;
+- a correction appended either as a **rule** (R) or as a **way of doing it** (W), carrying the
+  same content, exception included, within ±10 % length;
+- cases where X is needed and cases where it is not. Over-correction = X disappears where it
+  was needed.
+
+Five corrections people actually give: numbers in spoken text, clarifying questions,
+hedging, code comments, concision. Main models Opus 5.5 and gpt-6-astra.
