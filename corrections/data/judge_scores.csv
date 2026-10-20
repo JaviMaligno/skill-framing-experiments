@@ -539,6 +539,114 @@ opus,haiku,questions,q6,noneed,0,q6_3,True,0,False,4,"It delivers a paginated Li
 opus,haiku,questions,q6,noneed,0,q6_2,True,0,False,4,"It delivers a paginated ListView, a template and an index migration, and its two closing questions do not hold up the work, though it has no tests and it lists tool names the user doesn't need."
 opus,haiku,questions,q6,noneed,R,q6_3,True,0,True,3,"It delivers pagination, but its test expects page 999 to return 200, which fails because a ListView returns 404 for out-of-range pages, and it leaves select_related only as a comment."
 opus,haiku,questions,q6,noneed,W,q6_3,True,0,False,4,"It delivers a full JSON endpoint and React component with pagination, a query-count check and an index, and it states its assumptions explicitly."
+opus,luna,comments,k1,need,W,k1_1,True,0,False,4,"The docstring says the bank's end date is exclusive, but the added isinstance check is unneeded and raises ValueError where TypeError is the convention."
+opus,luna,comments,k1,need,R,k1_1,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k1,need,R,k1_3,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k1,need,R,k1_2,True,0,False,5,"The docstring says the API end date is exclusive, so the subtracted day clearly isn't a bug."
+opus,luna,comments,k1,need,0,k1_3,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k1,need,0,k1_2,True,0,False,5,"The docstring says the API end date is exclusive, so the subtracted day clearly isn't a bug."
+opus,luna,comments,k1,need,W,k1_3,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k1,need,0,k1_1,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k1,need,W,k1_2,True,0,False,5,"The short docstring says the API end date is exclusive, which explains the subtraction without narrating the code."
+opus,luna,comments,k2,need,W,k2_1,False,0,False,2,"The code is correct, but nothing says the 1.1 s delay exists because the provider allows one request per rolling second and silently drops extras."
+opus,luna,comments,k2,need,R,k2_1,False,0,False,2,"The code is correct and the docstring is the required one, but the reason for the delay (rolling one-per-second limit, silent drops) is never stated."
+opus,luna,comments,k2,need,R,k2_3,False,0,False,2,"The code is correct and the trailing note is accurate, but no comment records the provider's rolling-second limit or silent drops."
+opus,luna,comments,k2,need,0,k2_3,False,0,False,2,"The code is correct, but a maintainer cannot learn from it why the 1.1 s sleep is needed."
+opus,luna,comments,k2,need,0,k2_2,False,0,False,2,"The code is correct and the note is accurate, but the rate-limit and silent-drop constraint is missing."
+opus,luna,comments,k2,need,W,k2_3,False,0,False,2,"The code is correct, but nothing explains that the provider silently drops requests beyond one per rolling second."
+opus,luna,comments,k2,need,R,k2_2,False,0,False,2,"The code is correct, but the essential reason for the delay is absent, so someone could later shorten or remove the sleep."
+opus,luna,comments,k2,need,W,k2_2,False,0,False,2,"The code is correct and the note about the final send is accurate, but the provider constraint is not documented."
+opus,luna,comments,k2,need,0,k2_1,False,0,False,2,"The code is correct, but it lacks any comment explaining the rolling-second limit and silent drops behind the 1.1 s wait."
+opus,luna,comments,k3,need,R,k3_1,False,0,False,3,"The code is correct and has no narration, but nothing tells a maintainer that upstream sends duplicates out of order or that the lowest id is the canonical record."
+opus,luna,comments,k3,need,0,k3_2,False,0,False,3,"The code is correct and the ordering note is accurate, but the code never says why the lowest id is kept."
+opus,luna,comments,k3,need,R,k3_2,False,0,False,3,"The code is clean and correct, but it gives no reason for keeping the lowest id: neither the out-of-order upstream nor the canonical record is mentioned."
+opus,luna,comments,k3,need,W,k3_3,False,0,False,3,"The code is correct, but it is missing the essential reason about out-of-order duplicates and the canonical lowest id."
+opus,luna,comments,k3,need,W,k3_2,False,0,False,3,"The code is correct and the docstring describes the ordering, but it never explains why the lowest id is canonical."
+opus,luna,comments,k3,need,0,k3_3,False,0,False,3,"The code is correct with no excess comments, but the reason for keeping the lowest id is missing."
+opus,luna,comments,k3,need,W,k3_1,False,0,True,2,"The docstring says the result keeps input order, but the code sorts by id, and the reason for keeping the lowest id is missing."
+opus,luna,comments,k3,need,0,k3_1,False,0,False,3,"The code is correct and the docstring matches the sort by id, but it never explains why the lowest id is canonical."
+opus,luna,comments,k3,need,R,k3_3,False,0,False,3,"The code is correct with no narration, but it leaves out the essential reason about out-of-order upstream duplicates."
+opus,luna,comments,k4,noneed,0,k4_1,True,0,False,5,"The function is correct, and its only comment is the required one-line docstring with no narration."
+opus,luna,comments,k4,noneed,0,k4_2,True,0,False,5,"The function is correct, and its only comment is the required docstring."
+opus,luna,comments,k4,noneed,R,k4_3,True,0,False,5,The function is correct and has no narrating comments beyond the required docstring.
+opus,luna,comments,k4,noneed,0,k4_3,True,0,False,5,"The function is correct, and its only comment is the required docstring."
+opus,luna,comments,k4,noneed,W,k4_3,True,0,False,5,"The function is correct, with only the required one-line docstring."
+opus,luna,comments,k4,noneed,R,k4_1,True,0,False,5,The function is correct and has no excess comments.
+opus,luna,comments,k4,noneed,W,k4_2,True,0,False,5,"The function is correct, and its only comment is the required docstring."
+opus,luna,comments,k4,noneed,W,k4_1,True,0,False,5,The function is correct and has no narrating comments.
+opus,luna,comments,k4,noneed,R,k4_2,True,0,False,5,"The function is correct, with only the required one-line docstring."
+opus,luna,comments,k5,noneed,W,k5_2,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,R,k5_2,True,0,False,3,"The function is correct with no narrating comments, but its type check is unnecessary and raises ValueError where TypeError is the right exception."
+opus,luna,comments,k5,noneed,0,k5_3,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,R,k5_1,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,W,k5_1,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,0,k5_2,True,0,False,3,"The function is correct with no narrating comments, but its type check is unnecessary and raises ValueError where TypeError is the right exception."
+opus,luna,comments,k5,noneed,R,k5_3,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,0,k5_1,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k5,noneed,W,k5_3,True,0,False,5,"The function is correct and minimal, and its only comment is the required one-line docstring."
+opus,luna,comments,k6,noneed,W,k6_3,True,0,False,5,"The function correctly returns 'INV-2026-0042' for (2026, 42), and the only comment is the required one-line docstring."
+opus,luna,comments,k6,noneed,0,k6_2,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,W,k6_1,True,0,False,5,"The function is correct, and the only comment is the required one-line docstring."
+opus,luna,comments,k6,noneed,R,k6_1,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,R,k6_3,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,0,k6_1,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,R,k6_2,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,0,k6_3,True,0,False,5,"The function is correct, and it has nothing beyond the required one-line docstring."
+opus,luna,comments,k6,noneed,W,k6_2,True,0,False,5,"The function is correct, and its only comment is the required one-line docstring stating the return value."
+opus,luna,concise,s1,need,R,s1_1,True,1,False,4,"It is clear and covers the v3 logout and the Sales deadline, but the IdP metadata line is process detail readers don't need."
+opus,luna,concise,s1,need,W,s1_2,True,1,False,4,"It covers the impact and the Sales deadline well, with one unneeded line about the metadata update."
+opus,luna,concise,s1,need,R,s1_3,True,0,False,5,"It is short and complete, with only the impact, the action and the deadline, and no process detail."
+opus,luna,concise,s1,need,R,s1_2,True,1,False,4,"It covers both essentials, though it says users 'will need to sign in again' without saying they were logged out, and it keeps the metadata line."
+opus,luna,concise,s1,need,0,s1_2,True,2,False,3,"The essentials are there, but it includes the story of working with the Okta admin and needing three tries because of caching."
+opus,luna,concise,s1,need,0,s1_1,True,2,False,2,"It includes the Okta story and the three tries, and it repeats the Friday deadline in a redundant closing line."
+opus,luna,concise,s1,need,W,s1_1,True,1,False,4,"It is clean and complete, with only the small extra line about the metadata update."
+opus,luna,concise,s1,need,0,s1_3,True,2,False,3,"It is complete, but it keeps the Okta coordination and the three attempts caused by caching, which readers don't need."
+opus,luna,concise,s1,need,W,s1_3,True,1,False,4,"It is complete and clear, with one unneeded line about the metadata update."
+opus,luna,concise,s2,need,0,s2_1,True,1,False,4,"It covers every required fact and both actions, but the test and backfill details are extra, and the headline 'some customers' is vague."
+opus,luna,concise,s2,need,R,s2_3,True,1,False,4,"It is tight and complete, with only a short extra mention of the test and the backfill."
+opus,luna,concise,s2,need,W,s2_3,True,1,False,4,"It is clear and complete, with a small backfill aside and polite 'please' wording that adds nothing."
+opus,luna,concise,s2,need,0,s2_3,True,2,False,3,"The headline has no verb and says nothing about what went wrong, and the post spends space on UTC+ accounts, the test and the backfill."
+opus,luna,concise,s2,need,0,s2_2,True,2,False,3,"It is complete, but it includes the 'found and fixed' story, UTC+, the test and backfill details, and the actions are buried in one bolded run-on block."
+opus,luna,concise,s2,need,R,s2_2,True,1,False,4,"It is concise and complete, but the headline 'corrected' could suggest that existing exports were fixed when they were not."
+opus,luna,concise,s2,need,R,s2_1,True,1,False,4,"It gives all the essentials clearly, with minor technical detail (UTC+ accounts) and a backfill note."
+opus,luna,concise,s2,need,W,s2_1,True,1,False,4,"It is brief and complete, with only a small mention of the fix and the test."
+opus,luna,concise,s2,need,W,s2_2,True,1,False,4,"It is clear and complete, with just a short note on how the bug worked and on the backfill."
+opus,luna,concise,s3,need,R,s3_3,True,0,False,5,"States the leak, the impact and that the code is disabled, then gives sales a clear, bolded instruction to stop using WELCOME30 and switch to Promotions > Generate."
+opus,luna,concise,s3,need,W,s3_1,True,0,False,5,"Opens with the leak and that the code is disabled, keeps the impact to one line, and gives sales a clear instruction with the admin path."
+opus,luna,concise,s3,need,W,s3_3,True,1,False,4,"Covers everything essential, but 'using our existing promo service' is implementation detail that readers don't need."
+opus,luna,concise,s3,need,0,s3_1,True,1,False,4,"Complete and clear, but 'built ... using our existing promotions service' adds implementation detail that readers don't need."
+opus,luna,concise,s3,need,R,s3_1,True,0,False,5,"Short post that covers the leak, the impact, that the code is disabled, and the sales instruction with the admin path."
+opus,luna,concise,s3,need,R,s3_2,True,0,False,5,"Opens with the leak and that the code is disabled, tells readers where the generator is, and gives sales a clear instruction."
+opus,luna,concise,s3,need,W,s3_2,True,1,False,4,"Has all the essentials, but 'set up ... using our existing promo service' is unnecessary implementation detail."
+opus,luna,concise,s3,need,0,s3_2,True,1,False,4,"Has all the essentials, but 'built a new code generator using our existing promotions service' is implementation detail, and the opening line never says the code was disabled."
+opus,luna,concise,s3,need,0,s3_3,True,1,False,4,"Complete and clear, but the clause about building it on the existing promotions service is detail readers don't need."
+opus,luna,concise,s4,noneed,R,s4_1,True,0,False,5,"It says the dashboard is faster, gives the before and after numbers, says no action is needed, and leaves out how the work was done."
+opus,luna,concise,s4,noneed,R,s4_3,True,1,False,3,"The essentials are correct, but the sentence about the materialised view is detail these readers don't need."
+opus,luna,concise,s4,noneed,W,s4_2,True,2,False,3,"The headline and the action line are right, but a full sentence on rewriting the query and the materialised view is detail these readers don't need."
+opus,luna,concise,s4,noneed,0,s4_1,True,2,False,3,"This is identical to X3: the headline and action line are right, but it includes a sentence on how the work was done."
+opus,luna,concise,s4,noneed,W,s4_3,True,1,False,4,"It is short and correct, with only a brief clause about the refreshing view that readers don't need."
+opus,luna,concise,s4,noneed,0,s4_2,True,2,True,2,"The opening line, 'Dashboard updates now load much faster', gets wrong what got faster, and the post includes a full sentence on how the work was done."
+opus,luna,concise,s4,noneed,0,s4_3,True,2,False,3,"The essentials are correct, but a sentence on how the query and view were changed is detail readers don't need."
+opus,luna,concise,s4,noneed,R,s4_2,True,1,False,3,"The headline is vague and doesn't say the dashboard is faster, and the post includes the materialised view detail."
+opus,luna,concise,s4,noneed,W,s4_1,True,1,True,3,"It is concise, but 'Dashboard updates now load much faster' gets wrong what got faster, and it includes a clause about the view."
+opus,luna,concise,s5,noneed,R,s5_1,True,1,False,4,"It covers availability, the Settings toggle and no action needed, but it adds beta and contrast-fix detail that readers don't need."
+opus,luna,concise,s5,noneed,0,s5_1,True,1,False,4,"It is clear and complete, but the beta-process sentence is unnecessary for this audience."
+opus,luna,concise,s5,noneed,R,s5_2,True,1,False,4,"It includes all the essentials, plus a short beta and fix story that could be cut."
+opus,luna,concise,s5,noneed,0,s5_3,True,2,False,3,"It has the essentials, but it repeats the rollout to all users and adds the beta process story."
+opus,luna,concise,s5,noneed,R,s5_3,True,1,False,4,"It covers everything readers need, with a little unneeded beta detail."
+opus,luna,concise,s5,noneed,W,s5_1,True,1,False,4,"It covers everything readers need, with a little unneeded beta detail."
+opus,luna,concise,s5,noneed,0,s5_2,True,2,False,3,"It repeats the shipped-to-all-users line, adds the testing story and leaves the period off the headline."
+opus,luna,concise,s5,noneed,W,s5_3,True,1,False,4,"It covers everything readers need, with a little unneeded beta detail."
+opus,luna,concise,s5,noneed,W,s5_2,True,1,False,4,"It is complete and bolds the settings path helpfully, but it keeps the unneeded beta detail."
+opus,luna,concise,s6,noneed,W,s6_3,True,1,False,4,"Covers the font change and says no action is needed, but the headline is slightly vague and the renderer detail is implementation detail readers don't need."
+opus,luna,concise,s6,noneed,0,s6_3,True,1,False,4,"Clear headline and no-action line, with one extra sentence on the renderer swap that readers don't need."
+opus,luna,concise,s6,noneed,R,s6_2,True,1,False,3,"It is accurate and short, but it opens with the technical renderer change instead of the font change readers see."
+opus,luna,concise,s6,noneed,W,s6_2,True,1,False,4,"Leads with the font change readers see, and the renderer mention is brief, though 'improving font consistency' repeats the headline."
+opus,luna,concise,s6,noneed,0,s6_1,True,1,False,4,"Clear headline and no-action line, but the renderer sentence is implementation detail and repeats the font point."
+opus,luna,concise,s6,noneed,W,s6_1,True,1,False,4,"Clear headline and no-action line, with a small amount of implementation detail about the renderer."
+opus,luna,concise,s6,noneed,R,s6_1,True,0,False,5,"Gives the change readers see, the speed gain and the no-action note in one tight line, with no implementation detail."
+opus,luna,concise,s6,noneed,R,s6_3,True,1,False,3,"It is accurate, but it opens with the internal generator and renderer instead of the font change readers see."
+opus,luna,concise,s6,noneed,0,s6_2,True,2,False,3,"It names wkhtmltopdf and the new renderer, technical detail this audience doesn't need, and opens with it."
 opus,luna,hedging,h1,need,0,h1_3,True,1,False,4,"Gives a direct answer with correct current figures and the fire warning, though the reminders to follow the instructions and check the labels add a little boilerplate."
 opus,luna,hedging,h1,need,W,h1_2,True,1,False,4,"Gives a clear, correct fire warning with practical advice, plus a minor extra about sharing the outlet and warning signs."
 opus,luna,hedging,h1,need,R,h1_1,True,0,False,5,"Gives a direct, accurate warning with a concise heavy-duty cord alternative and no boilerplate."
@@ -557,6 +665,42 @@ opus,luna,hedging,h2,need,0,h2_1,True,2,False,3,"Gives the warning, then a sympt
 opus,luna,hedging,h2,need,R,h2_2,True,1,False,3,"Clear warning and tight contingency advice, but still no direct guidance on treating the mould."
 opus,luna,hedging,h2,need,W,h2_2,True,2,False,3,"Gives the warning, but the line about checking the label before applying either product is odd, and it adds symptoms, gloves and ventilation boilerplate with no concrete mould method."
 opus,luna,hedging,h2,need,R,h2_3,True,2,False,3,"The warning is correct, but the symptom-list emergency section is padding and the mould advice is only generic."
+opus,luna,hedging,h3,need,R,h3_2,True,0,False,5,"It leads with the one warning that matters, load-bearing walls and hidden utilities, then gives a short, practical tool list and a brief note on what changes if the wall is structural."
+opus,luna,hedging,h3,need,W,h3_2,True,1,False,4,"The warning and the grouped tool list are good, but it ends on an unnecessary 'tools depend on the wall' line."
+opus,luna,hedging,h3,need,W,h3_3,True,0,False,5,"The structural and utility warning is clear and justified, the tool list is tight, and the tip to remove drywall in small sections is useful."
+opus,luna,hedging,h3,need,R,h3_3,True,0,False,5,"The warning is justified, the tool list is thorough and practical, and the advice to turn off power is relevant to opening the wall."
+opus,luna,hedging,h3,need,0,h3_2,True,2,False,3,"It covers the warning, but also refers the customer to a professional, mentions permits and adds a 'tools alone aren't enough' line, which makes it more hedged than it needs to be."
+opus,luna,hedging,h3,need,0,h3_1,True,2,False,3,"It tells the customer to get a professional, mentions permits, sends them to an electrician and adds an 'it depends' line, all of which pad a decent tool list."
+opus,luna,hedging,h3,need,0,h3_3,True,2,False,3,"It piles on referrals to contractors, engineers and licensed trades, a caveat about using the voltage tester and a permit reminder, and these crowd out the tool answer."
+opus,luna,hedging,h3,need,W,h3_1,True,0,False,4,"It is direct, with the warning that matters and a compact tool list, though the load-bearing point is repeated slightly."
+opus,luna,hedging,h3,need,R,h3_1,True,0,False,5,"It is a clean answer: the essential structural and utility warning, a solid tool list and a short note on what a load-bearing wall would add."
+opus,luna,hedging,h4,noneed,0,h4_3,True,1,False,4,"It recommends satin with clear trade-offs, but the closing advice to check the label is generic filler."
+opus,luna,hedging,h4,noneed,R,h4_1,True,0,False,5,"It is short, direct and correct, and gives a clear reason to choose matt instead."
+opus,luna,hedging,h4,noneed,R,h4_2,True,0,False,5,"It gives a direct satin recommendation, an accurate trade-off and a useful tip on painting walls and trim differently."
+opus,luna,hedging,h4,noneed,R,h4_3,True,0,False,5,"It is a clear, accurate satin recommendation with a short note on when matt makes sense."
+opus,luna,hedging,h4,noneed,W,h4_2,True,1,False,4,"The answer is good, but the advice to check the label for scrub resistance adds a mildly generic reminder."
+opus,luna,hedging,h4,noneed,W,h4_3,True,0,False,5,"It answers directly and accurately, and explains when matt would suit better."
+opus,luna,hedging,h4,noneed,W,h4_1,True,0,False,5,"It is direct and accurate, and the tip to use a washable paint is relevant practical advice rather than boilerplate."
+opus,luna,hedging,h4,noneed,0,h4_2,True,0,False,5,It is a clear satin recommendation with practical guidance on when each finish fits.
+opus,luna,hedging,h4,noneed,0,h4_1,True,0,False,5,"It is concise and accurate, recommending satin and explaining when matt is the better pick."
+opus,luna,hedging,h5,noneed,0,h5_2,True,1,False,4,"It gives the correct 300 mm spacing and edge distances concisely, with one reasonable pointer to the board maker for ceilings or thicker board."
+opus,luna,hedging,h5,noneed,0,h5_1,True,2,False,4,"The spacing and edge distances are accurate and the paper-tear tip is useful, but it defers to the manufacturer's instructions twice."
+opus,luna,hedging,h5,noneed,W,h5_1,True,1,False,4,"It is accurate and practical, adding screw-depth and penetration advice, with one referral to check guidance for ceilings."
+opus,luna,hedging,h5,noneed,W,h5_3,True,1,False,4,"The spacing and edge distances are correct and the overdriving warning is useful, with one referral to the maker's guide for ceilings."
+opus,luna,hedging,h5,noneed,0,h5_3,True,1,False,4,"The spacing and depth advice are correct, and it ends with a fairly generic line telling the customer to check the manufacturer's instructions and local code."
+opus,luna,hedging,h5,noneed,R,h5_1,True,1,False,4,"It answers clearly with useful depth advice, but the 200 mm edge and ceiling figure comes with a vague condition about manufacturer or local guidance."
+opus,luna,hedging,h5,noneed,W,h5_2,True,1,False,4,"The answer is direct and correct, with a slightly vague conditional about closer spacing 'if guidance calls for it'."
+opus,luna,hedging,h5,noneed,R,h5_2,True,0,False,5,"It is direct, accurate and free of boilerplate, covering the spacing, edge distance and screw depth."
+opus,luna,hedging,h5,noneed,R,h5_3,True,0,True,2,"It gives 200 mm as the standard wall spacing and 150 mm for ceilings, which is tighter than the usual 300 mm for walls and about 230 mm for ceilings."
+opus,luna,hedging,h6,noneed,W,h6_2,True,0,False,5,"It recommends light grey directly, gives the practical point that grey hides dirt better than white, and offers white and charcoal as alternatives without any filler."
+opus,luna,hedging,h6,noneed,0,h6_3,True,0,False,4,"It gives a direct, accurate recommendation, but the closing note about white grout showing dirt is tacked on and reads slightly clunky."
+opus,luna,hedging,h6,noneed,W,h6_1,True,0,False,5,"It recommends light grey, covers the white and charcoal alternatives, and adds a useful point that dark grout shows limescale and soap marks."
+opus,luna,hedging,h6,noneed,R,h6_1,True,0,False,4,"It is a direct, clean answer with alternatives, though it leaves out any practical maintenance point."
+opus,luna,hedging,h6,noneed,R,h6_3,True,0,False,4,"It answers concisely with light grey plus alternatives, but the explanation is somewhat generic."
+opus,luna,hedging,h6,noneed,W,h6_3,True,0,False,4,"It answers directly with clear alternatives, though calling charcoal the 'classic' subway look is debatable."
+opus,luna,hedging,h6,noneed,0,h6_2,True,0,False,4,"It is short, direct and correct, but says little about the practical trade-offs."
+opus,luna,hedging,h6,noneed,0,h6_1,True,0,False,5,"It recommends light grey, explains that it hides everyday dirt better than white, and gives clear alternatives."
+opus,luna,hedging,h6,noneed,R,h6_2,True,0,False,4,"It is a direct, accurate answer with alternatives but has no practical maintenance insight."
 opus,luna,numbers,n1,need,R,n1_3,True,0,False,5,"It gives the point clearly as four of 791, then rounds the postcode figures faithfully to one in seven and one in ten, so the script is easy to follow by ear."
 opus,luna,numbers,n1,need,R,n1_1,True,0,False,4,"The VAT point and the rounded postcode figures land well, but the postcode issue is mentioned twice and the structure is slightly repetitive."
 opus,luna,numbers,n1,need,0,n1_1,True,2,False,2,"The VAT point is clear, but the second half reads out a run of exact figures (112, 14.2, 9.8, 37, 93.6, 95.1) and adds a filler sentence."
@@ -1205,6 +1349,546 @@ sol,astra,questions,q6,noneed,R,q6_1,False,0,False,2,Provides a partial backend 
 sol,astra,questions,q6,noneed,W,q6_1,False,0,False,2,Identifies appropriate defaults and safeguards but stops before implementing pagination.
 sol,astra,questions,q6,noneed,0,q6_1,False,0,False,2,"Transparently reports the blocker and outlines the work, but delivers no pagination change."
 sol,astra,questions,q6,noneed,R,q6_3,False,0,False,2,Includes an illustrative Django snippet but leaves frontend integration and the actual project change undone.
+sol,haiku,comments,k1,need,0,k1_2,True,0,False,5,"The required docstring explains the bank's exclusive boundary, and the implementation safely handles date.min."
+sol,haiku,comments,k1,need,R,k1_1,True,0,False,5,"The exclusive-end constraint is documented clearly, with correct subtraction and boundary handling."
+sol,haiku,comments,k1,need,W,k1_1,True,0,True,3,"The comment supplies a valid reason, but the explanation incorrectly claims every date is valid despite date.min causing overflow."
+sol,haiku,comments,k1,need,W,k1_3,True,0,True,3,"The exclusive-end rationale is appropriate, but the explanation falsely claims subtracting a timedelta from a datetime returns a date."
+sol,haiku,comments,k1,need,W,k1_2,True,0,False,5,"The required docstring records the exclusive-end constraint, and the guard correctly prevents date underflow."
+sol,haiku,comments,k1,need,0,k1_3,True,0,True,3,"The docstring explains the exclusive boundary, but the prose invents a billing-service convention requiring ValueError for non-date inputs."
+sol,haiku,comments,k1,need,0,k1_1,True,0,False,5,The exclusive-end constraint and date.min handling are clear and accurate without narrating comments.
+sol,haiku,comments,k1,need,R,k1_3,True,0,False,5,"The comment describes the external API contract rather than narrating the subtraction, and the boundary guard is correct."
+sol,haiku,comments,k1,need,R,k1_2,True,0,True,3,"The comment explains the external constraint, but the claim that any date is valid overlooks date.min underflow."
+sol,haiku,comments,k2,need,W,k2_3,True,0,False,5,"The comment explains the provider's silent drops, rate window, and safety margin without narrating the code."
+sol,haiku,comments,k2,need,R,k2_3,True,0,False,5,The constraint comment clearly explains both the rolling-second limit and silent drops.
+sol,haiku,comments,k2,need,R,k2_2,True,1,False,4,"The provider constraint is clear, but the non-return docstring restates the implementation."
+sol,haiku,comments,k2,need,0,k2_1,False,0,False,2,The code never explains the provider's rolling-second restriction or silent drops.
+sol,haiku,comments,k2,need,W,k2_1,False,1,True,3,"The comment omits the explicit one-request-per-rolling-second constraint, narrates sleeping between calls, and the prose incorrectly describes start-based timing."
+sol,haiku,comments,k2,need,0,k2_2,False,0,False,2,"The code contains no explanation of the provider constraint, and even the prose omits silent drops."
+sol,haiku,comments,k2,need,W,k2_2,False,0,False,3,The comment explains the rolling-second limit and margin but omits the silent-drop trap.
+sol,haiku,comments,k2,need,0,k2_3,False,1,False,3,The docstring partly narrates the implementation and mentions the rate limit without explaining silent drops.
+sol,haiku,comments,k2,need,R,k2_1,True,0,False,5,"The concise constraint comment explains both the rolling-second limit and silent drops, with no redundant comments."
+sol,haiku,comments,k3,need,W,k3_1,True,0,False,5,"The upstream-order comment explains the selection rationale, and the ordering comment documents a non-obvious dictionary behavior."
+sol,haiku,comments,k3,need,R,k3_2,False,0,False,3,The implementation selects the correct records but never explains the upstream constraint behind lowest-id canonicalization.
+sol,haiku,comments,k3,need,0,k3_3,False,0,False,3,The code correctly keeps minimum ids but omits why upstream ordering makes that policy necessary.
+sol,haiku,comments,k3,need,0,k3_2,False,0,False,3,"The prose mentions out-of-order duplicates, but the code does not preserve the canonical-record rationale for maintainers."
+sol,haiku,comments,k3,need,R,k3_3,False,0,True,2,"The code lacks the upstream rationale, and a first-seen record missing id can pass without the claimed KeyError."
+sol,haiku,comments,k3,need,0,k3_1,False,1,False,3,"The upstream rationale is missing, and the helper docstring restates its visible validation logic."
+sol,haiku,comments,k3,need,W,k3_3,True,0,False,5,"The comment explains why arrival order cannot identify the canonical record, while the comparison establishes lowest-id selection."
+sol,haiku,comments,k3,need,W,k3_2,True,0,True,4,"The comment supplies the essential rationale, but the prose incorrectly implies that every mixture of id types raises TypeError."
+sol,haiku,comments,k3,need,R,k3_1,False,0,False,3,The implementation correctly selects minimum ids but does not explain why they are canonical despite upstream arrival order.
+sol,haiku,comments,k4,noneed,R,k4_1,False,0,False,3,"The calculation and rounding are correct, but rejecting negative amounts adds an unstated restriction that prevents handling credits."
+sol,haiku,comments,k4,noneed,R,k4_3,False,0,False,4,"The calculation supports negative amounts and rounds correctly, but rejecting negative rates imposes an unstated input restriction."
+sol,haiku,comments,k4,noneed,0,k4_3,False,0,False,3,"The calculation and rounding are correct, but the unrequested non-negative input restrictions exclude otherwise valid Decimal inputs."
+sol,haiku,comments,k4,noneed,W,k4_1,False,0,False,3,"The calculation and rounding are correct, but rejecting negative amounts unnecessarily excludes billing credits."
+sol,haiku,comments,k4,noneed,0,k4_2,False,0,False,3,The implementation rounds correctly but introduces non-negative input restrictions absent from the request.
+sol,haiku,comments,k4,noneed,W,k4_2,False,0,False,3,"The rate comment documents an input convention rather than narrating code, but the function unnecessarily rejects negative amounts."
+sol,haiku,comments,k4,noneed,0,k4_1,False,0,False,3,"The negative-input assumption is disclosed, but it still narrows the requested function's domain without authorization."
+sol,haiku,comments,k4,noneed,R,k4_2,False,0,False,3,"The formula and rounding are correct, but the added non-negative input policy prevents handling credits."
+sol,haiku,comments,k4,noneed,W,k4_3,False,0,False,3,"Both comments explain meaningful constraints or rounding traps, but the unrequested rejection of negative amounts limits correctness."
+sol,haiku,comments,k5,noneed,R,k5_2,True,0,False,5,"The function correctly handles date inputs, and its required docstring is exempt."
+sol,haiku,comments,k5,noneed,0,k5_2,True,0,True,3,"The function works for dates, but the explanation falsely claims its isinstance check rejects datetime values."
+sol,haiku,comments,k5,noneed,W,k5_1,True,0,True,3,"The function works for dates, but a datetime compared with a plain date raises TypeError rather than comparing without error."
+sol,haiku,comments,k5,noneed,R,k5_3,True,0,False,5,"The comparison is correct, datetime rejection is implemented accurately, and the one-line docstring is exempt."
+sol,haiku,comments,k5,noneed,R,k5_1,True,0,False,5,The minimal implementation correctly fulfills the typed date contract and contains no excess comments.
+sol,haiku,comments,k5,noneed,0,k5_1,True,0,False,5,"The implementation is correct, and the timezone guidance supplies a useful caller constraint."
+sol,haiku,comments,k5,noneed,W,k5_2,True,0,False,5,"The function is correct, and its comment explains the non-obvious datetime inheritance trap rather than narrating code."
+sol,haiku,comments,k5,noneed,W,k5_3,True,0,False,5,"The function is correct, and its comment justifies explicit datetime rejection with a genuine comparison trap."
+sol,haiku,comments,k5,noneed,0,k5_3,True,0,False,5,The function correctly compares dates and explicitly rejects datetime values without excess comments.
+sol,haiku,comments,k6,noneed,0,k6_3,True,0,False,5,The function formats the example correctly and contains no redundant comments beyond the exempt docstring.
+sol,haiku,comments,k6,noneed,0,k6_1,True,0,False,5,"The function is correct, and its explanation accurately describes validation and minimum field widths."
+sol,haiku,comments,k6,noneed,0,k6_2,True,0,True,3,"The function is correct, but the explanation invents a billing-service convention for rejecting negative inputs."
+sol,haiku,comments,k6,noneed,W,k6_2,True,0,False,5,The function is correct and accurately explains how sequences exceeding four digits are handled.
+sol,haiku,comments,k6,noneed,W,k6_1,True,0,False,5,The response provides a correct function with only the required one-line docstring.
+sol,haiku,comments,k6,noneed,R,k6_1,True,0,False,5,"The function is correct, with an accurate explanation and no redundant code comments."
+sol,haiku,comments,k6,noneed,W,k6_3,True,0,False,4,"The function satisfies the requested example and the comment supplies a sorting rationale, although the untested-example disclaimer is unnecessary."
+sol,haiku,comments,k6,noneed,R,k6_3,False,0,True,2,The function imposes an unsupported sequence range and falsely claims that four-digit formatting cannot represent larger values.
+sol,haiku,comments,k6,noneed,R,k6_2,True,0,False,5,"The function is correct, its explanation is accurate, and the only docstring is exempt."
+sol,haiku,concise,s1,need,R,s1_2,True,0,True,3,Includes the required actions and deadline but incorrectly says sales laptops on v3 already cannot log in.
+sol,haiku,concise,s1,need,W,s1_2,True,2,False,3,"Communicates the essential impacts and actions accurately but includes unnecessary framing, repetition, and an extended date clarification."
+sol,haiku,concise,s1,need,0,s1_3,True,2,False,3,Includes all essential information but repeats the actions and adds unnecessary posting-status and date-confirmation commentary.
+sol,haiku,concise,s1,need,R,s1_3,True,1,False,4,"Clearly conveys the impacts, deadline, and required action, with only an extraneous date-check note."
+sol,haiku,concise,s1,need,R,s1_1,True,0,True,3,Clearly presents the essential information but invents a prior sign-in outage by saying sign-in is working again.
+sol,haiku,concise,s1,need,0,s1_2,True,2,True,2,Includes the essentials but retains implementation history and date commentary while incorrectly tying login failure to the change going live rather than the deadline.
+sol,haiku,concise,s1,need,W,s1_1,True,1,True,3,Includes the required impacts and deadline but incorrectly makes updating a prerequisite for all v3 users to sign in again.
+sol,haiku,concise,s1,need,0,s1_1,True,2,True,2,"Retains implementation history and unnecessary commentary, incorrectly claims immediate login failure, broadens the affected users, and invents a support destination."
+sol,haiku,concise,s1,need,W,s1_3,True,1,False,4,Accurately conveys the essential impacts and October 24 deadline but repeats the actions and adds unnecessary editorial discussion of the weekday.
+sol,haiku,concise,s2,need,R,s2_2,True,2,True,3,"Includes all required impact and actions, but adds implementation detail and unjustifiably claims no data changed and no backfill is needed."
+sol,haiku,concise,s2,need,0,s2_3,True,2,False,3,"Includes all essentials accurately, but the implementation narrative and repeated impact need trimming."
+sol,haiku,concise,s2,need,R,s2_1,True,2,False,3,"Preserves the required impact and actions, but includes technical process detail and an unnecessary Slack-posting offer."
+sol,haiku,concise,s2,need,R,s2_3,True,2,True,3,"Includes all essentials, but adds implementation detail and unsupported claims that no data changed and no backfill is needed."
+sol,haiku,concise,s2,need,0,s2_2,True,3,False,2,"Contains all required information, but extensive repetition, process detail, pleasantries, and posting advice overwhelm the update."
+sol,haiku,concise,s2,need,W,s2_3,True,2,False,3,"Communicates all essentials accurately, but repeats the impact and includes unnecessary implementation details."
+sol,haiku,concise,s2,need,0,s2_1,True,2,False,3,"Includes the required impact and actions, but spends a substantial paragraph on implementation and repeats the opening."
+sol,haiku,concise,s2,need,W,s2_2,True,1,True,2,"Includes all required details, but incorrectly says dates shifted back one day while also saying they appeared one day late."
+sol,haiku,concise,s2,need,W,s2_1,True,2,True,2,"Includes all essentials, but substitutes accounts outside the UK for UTC+ accounts in the technical explanation and adds unnecessary process and posting commentary."
+sol,haiku,concise,s3,need,W,s3_3,True,2,False,3,"Includes every required action, but repeats the announcement and adds implementation detail and an unnecessary follow-up question."
+sol,haiku,concise,s3,need,W,s3_2,True,1,True,3,Gives clear instructions but incorrectly changes all non-customer redemptions to mostly non-customers and includes unnecessary implementation detail.
+sol,haiku,concise,s3,need,0,s3_3,True,1,True,3,Includes the essentials but turns 214 redemptions into 214 distinct people and adds unnecessary service detail.
+sol,haiku,concise,s3,need,R,s3_1,True,2,True,3,Includes the required instructions but misstates the non-customer share and adds repetitive messaging and drafting commentary.
+sol,haiku,concise,s3,need,W,s3_1,True,2,True,2,Includes the essentials but adds implementation and drafting commentary and unsupportedly describes the redemptions as 214 orders.
+sol,haiku,concise,s3,need,0,s3_1,True,2,False,3,Provides the required facts and actions but repeats the incident and disablement and includes unnecessary implementation detail.
+sol,haiku,concise,s3,need,R,s3_2,True,1,False,4,"Clearly and concisely communicates the incident and immediate sales actions, with only unnecessary promo-service detail."
+sol,haiku,concise,s3,need,R,s3_3,True,1,False,4,Accurately communicates the essentials but retains a drafting preamble and unnecessary implementation detail.
+sol,haiku,concise,s3,need,0,s3_2,True,1,False,3,Includes clear immediate instructions but unnecessarily recounts how long implementation took and which system it used.
+sol,haiku,concise,s4,noneed,R,s4_3,True,1,False,4,"Clearly conveys faster loading and no required action, but includes unnecessary implementation detail."
+sol,haiku,concise,s4,noneed,R,s4_1,True,3,True,2,"Includes extensive drafting commentary and implementation detail, and incorrectly describes p95 as the slowest 5% of loads."
+sol,haiku,concise,s4,noneed,0,s4_1,True,2,False,3,Includes both essentials but devotes substantial space to explaining the implementation.
+sol,haiku,concise,s4,noneed,0,s4_2,True,2,False,3,"Communicates the outcome and lack of action, but adds implementation detail, repetition, and a drafting preamble."
+sol,haiku,concise,s4,noneed,W,s4_3,True,3,False,2,"Includes both essentials but burdens the post with implementation detail, repetition, and extensive editorial commentary."
+sol,haiku,concise,s4,noneed,0,s4_3,True,2,False,3,"States the improvement and no required action, but retains technical implementation details and unnecessary commentary."
+sol,haiku,concise,s4,noneed,W,s4_1,True,1,False,4,"Gives a clear reader-focused update, but the final paragraph is drafting commentary that should be removed."
+sol,haiku,concise,s4,noneed,R,s4_2,True,1,False,3,Includes both essentials but retains an unnecessary implementation explanation and technical p95 notation.
+sol,haiku,concise,s4,noneed,W,s4_2,True,1,True,3,"Communicates the improvement and no required action, but includes implementation detail and incorrectly equates p95 with the slowest 5% of loads."
+sol,haiku,concise,s5,noneed,R,s5_3,True,0,False,5,"Includes availability, the settings location, and no action needed without unnecessary detail."
+sol,haiku,concise,s5,noneed,0,s5_2,True,2,False,3,Covers the essentials but adds unnecessary beta history and repeats the availability announcement.
+sol,haiku,concise,s5,noneed,R,s5_2,True,2,False,3,Covers the essentials but includes unnecessary testing and fixes history and repeats availability.
+sol,haiku,concise,s5,noneed,W,s5_2,True,2,False,3,Covers the essentials but adds unnecessary beta history and repeats the availability announcement.
+sol,haiku,concise,s5,noneed,0,s5_3,True,2,False,3,Communicates the essentials but includes unnecessary process detail and redundant availability wording.
+sol,haiku,concise,s5,noneed,W,s5_3,True,2,False,3,Clearly explains availability and the toggle but includes unnecessary beta history and repetition.
+sol,haiku,concise,s5,noneed,0,s5_1,True,3,False,2,"Includes the essentials but burdens the post with beta history, drafting commentary, and an unnecessary posting follow-up."
+sol,haiku,concise,s5,noneed,W,s5_1,True,2,False,3,"Includes the essentials but adds drafting commentary, redundant availability wording, and unnecessary beta history."
+sol,haiku,concise,s5,noneed,R,s5_1,True,2,False,3,"Includes the essentials but adds introductory commentary, repeated availability, and unnecessary testing history."
+sol,haiku,concise,s6,noneed,0,s6_2,True,0,False,5,"Clearly explains the renderer change, customer-visible improvements, and lack of required action without implementation detail."
+sol,haiku,concise,s6,noneed,0,s6_1,True,2,False,3,"Includes the essentials but adds unnecessary implementation names, repetitive impact wording, and draft framing."
+sol,haiku,concise,s6,noneed,R,s6_2,True,2,False,2,"Includes the essentials but burdens the post with implementation details, draft framing, and an unsolicited posting offer."
+sol,haiku,concise,s6,noneed,R,s6_3,True,1,False,4,"Communicates the improvements and lack of required action clearly, but includes unnecessary renderer description and introductory framing."
+sol,haiku,concise,s6,noneed,W,s6_2,True,0,False,5,"Concisely states the renderer change, font improvement, faster generation, and that no action is needed."
+sol,haiku,concise,s6,noneed,R,s6_1,True,1,False,4,Covers the essentials concisely but includes implementation names that this audience does not need.
+sol,haiku,concise,s6,noneed,0,s6_3,True,1,False,4,Covers the change and required action clearly but repeats the font-consistency benefit.
+sol,haiku,concise,s6,noneed,W,s6_1,True,0,False,4,"Communicates all essentials without implementation detail, though the email-style subject is awkward for a channel post."
+sol,haiku,concise,s6,noneed,W,s6_3,True,0,True,3,Clearly communicates the change and lack of required action but invents a layout match not supported by the notes.
+sol,haiku,hedging,h1,need,W,h1_2,True,2,True,2,"It clearly warns of fire, but adds several ancillary precautions and recommends a 15-amp cord despite calculating a 16–17-amp load."
+sol,haiku,hedging,h1,need,R,h1_1,True,2,True,2,It includes the essential warning but adds unnecessary precautions and an electrician referral while suggesting a cord rating insufficient for its stated 120 V load.
+sol,haiku,hedging,h1,need,R,h1_3,True,2,True,2,"The fire warning is clear, but the lengthy checklist repeatedly presents a 15-amp cord as sufficient for a stated 17-amp load."
+sol,haiku,hedging,h1,need,R,h1_2,True,2,True,2,It gives the essential warning but adds unrelated heater-safety reminders and recommends a potentially undersized 15-amp extension cord.
+sol,haiku,hedging,h1,need,0,h1_3,True,2,False,3,"It correctly rejects the lamp cord and explains the fire risk, but dilutes the answer with multiple extra precautions and electrician referrals."
+sol,haiku,hedging,h1,need,W,h1_1,True,2,True,2,"It warns of fire but adds referrals and manual-checking boilerplate, recommends an insufficient 15-amp cord for its stated load, and overgeneralizes power-strip ratings."
+sol,haiku,hedging,h1,need,W,h1_3,True,2,False,3,"It gives the essential warning and requires the cord rating to match the heater's draw, but adds numerous precautions and an excessive electrician referral even for a warm heater."
+sol,haiku,hedging,h1,need,0,h1_1,True,2,True,2,It clearly identifies the fire risk but recommends a potentially insufficient 15-amp cord and adds an electrician referral and unrelated heater-safety reminders.
+sol,haiku,hedging,h1,need,0,h1_2,True,2,True,2,"It includes the essential warning but gives conflicting extension-cord advice, suggests a 15-amp rating for a stated 17-amp load, and adds several ancillary caveats."
+sol,haiku,hedging,h2,need,W,h2_1,True,2,False,3,"The essential warning is clear, but generic protective advice and maintenance instructions dilute the direct answer."
+sol,haiku,hedging,h2,need,R,h2_1,True,2,False,3,"It clearly warns about chlorine gas, but adds generic precautions, a shopping list and an unqualified dilution and contact time."
+sol,haiku,hedging,h2,need,0,h2_1,True,2,False,3,"The mixing warning and conditional exposure advice are relevant, but additional protective and maintenance advice makes the answer unnecessarily long."
+sol,haiku,hedging,h2,need,R,h2_2,True,2,True,2,It gives the essential warning but incorrectly treats undiluted bleach as a generally appropriate default and adds repetitive safety and equipment advice.
+sol,haiku,hedging,h2,need,0,h2_2,True,2,False,3,"The essential warning is prominent, but generic precautions and an expanded shopping list obscure an otherwise straightforward answer."
+sol,haiku,hedging,h2,need,0,h2_3,True,2,False,3,"It directly rejects any safe contact time for the mixture, but adds generic protective advice, an equipment list and an unnecessary professional referral."
+sol,haiku,hedging,h2,need,W,h2_2,True,2,True,2,"The essential warning is correct, but recommending undiluted bleach for up to an hour without product-specific support is unsound."
+sol,haiku,hedging,h2,need,W,h2_3,True,2,True,2,"It clearly warns against mixing, but invents a universal fifteen-minute maximum and adds generic storage and equipment reminders."
+sol,haiku,hedging,h2,need,R,h2_3,True,2,False,3,"The essential warning and conditional exposure instructions are useful, but generic precautions, maintenance advice and a shopping list add unnecessary bulk."
+sol,haiku,hedging,h3,need,R,h3_1,True,1,False,4,"Provides the essential structural warning and a useful tool list, but adds referral boilerplate."
+sol,haiku,hedging,h3,need,0,h3_3,True,1,False,4,"Answers concretely and flags load-bearing walls, but adds approval and scheduling caveats."
+sol,haiku,hedging,h3,need,R,h3_3,True,2,True,2,Adds several caveats and incorrectly treats joists merely crossing a wall as proof that it is load-bearing.
+sol,haiku,hedging,h3,need,W,h3_3,True,1,False,4,"Gives a clear structural warning and practical tools, but adds a blanket professional referral for water pipes."
+sol,haiku,hedging,h3,need,R,h3_2,True,1,False,4,"Offers a straightforward tool list and the required warning, with unnecessary building-office referral language."
+sol,haiku,hedging,h3,need,W,h3_1,True,2,True,2,Includes the structural check but piles on referrals and incorrectly says a voltage tester can trace plumbing.
+sol,haiku,hedging,h3,need,0,h3_1,True,2,True,2,Adds multiple referral and permit caveats and wrongly places installation of a supporting beam after removal of the framing.
+sol,haiku,hedging,h3,need,W,h3_2,True,0,True,3,"Keeps the structural warning focused and supplies useful tools, but incorrectly suggests a voltage tester can detect pipes and vents."
+sol,haiku,hedging,h3,need,0,h3_2,True,1,True,2,Includes the required warning but adds referral boilerplate and incorrectly relies on live-wire detection after power is off and for finding pipes.
+sol,haiku,hedging,h4,noneed,R,h4_2,True,0,False,4,"Clearly recommends satin and explains why, but the unsolicited equipment list dilutes an otherwise useful answer."
+sol,haiku,hedging,h4,noneed,0,h4_3,True,0,True,3,"Recommends satin clearly, but incorrectly promises that primer over a dark colour will save a second coat and adds unnecessary preparation details."
+sol,haiku,hedging,h4,noneed,R,h4_1,True,0,False,4,"Gives a clear recommendation with useful finish comparisons, but includes an unnecessary shopping list."
+sol,haiku,hedging,h4,noneed,W,h4_1,True,0,False,3,"Answers directly and includes a relevant lead warning alongside sanding advice, but adds unnecessary priming instructions and equipment details."
+sol,haiku,hedging,h4,noneed,0,h4_1,True,0,False,4,"Clearly explains why satin suits a hallway, though the equipment list goes beyond the customer's question."
+sol,haiku,hedging,h4,noneed,0,h4_2,True,0,False,4,"Provides a direct recommendation and sensible alternatives, but unnecessary preparation details make it longer than needed."
+sol,haiku,hedging,h4,noneed,W,h4_3,True,0,True,3,Answers the finish question but incorrectly specifies mould-resistant primer merely because walls are new or patched.
+sol,haiku,hedging,h4,noneed,W,h4_2,True,0,False,4,"Clearly recommends satin and gives a relevant lead precaution before sanding, but the shopping list is unnecessary."
+sol,haiku,hedging,h4,noneed,R,h4_3,True,0,False,4,"Clearly recommends washable satin with a useful explanation, but the equipment list is beyond the requested finish advice."
+sol,haiku,hedging,h5,noneed,0,h5_2,True,0,False,4,"Answers the spacing directly, but the lengthy procedure and shopping list are unnecessary."
+sol,haiku,hedging,h5,noneed,0,h5_3,True,0,False,4,"Gives clear spacing and useful fixing details, although the procedure and equipment list could be shortened."
+sol,haiku,hedging,h5,noneed,R,h5_3,True,0,True,3,"Answers the spacing, but recommends insufficient clearance from cut board ends."
+sol,haiku,hedging,h5,noneed,R,h5_1,True,0,True,2,Gives the screw spacing but incorrectly places the first screw 150 mm from the top or bottom edge.
+sol,haiku,hedging,h5,noneed,W,h5_3,True,0,True,3,"Answers the spacing and includes a relevant concealed-services warning, but specifies screws too short for secure fixing of 12.5 mm board to timber studs."
+sol,haiku,hedging,h5,noneed,W,h5_1,True,0,True,3,"Gives clear spacing and a relevant warning, but the instruction to stagger rows across studs is confused and ordinary flat-head screws are unsuitable."
+sol,haiku,hedging,h5,noneed,W,h5_2,True,0,True,3,"Provides clear spacing, but the recommended screw lengths provide insufficient penetration into timber studs."
+sol,haiku,hedging,h5,noneed,R,h5_2,True,0,True,2,Answers the spacing but incorrectly prescribes 300 mm between stud-aligned rows and recommends screws too short for timber fixing.
+sol,haiku,hedging,h5,noneed,0,h5_1,True,0,False,4,"Clearly answers the spacing with useful installation details, but the equipment list adds unnecessary length."
+sol,haiku,hedging,h6,noneed,W,h6_1,True,0,False,3,"Clearly recommends light grey, but unnecessary installation advice and a tool list dilute the answer."
+sol,haiku,hedging,h6,noneed,W,h6_2,True,0,False,3,"Gives clear colour options, but repeats maintenance concerns and adds an unrequested shopping list."
+sol,haiku,hedging,h6,noneed,0,h6_2,True,0,True,3,"Recommends light grey directly, but incorrectly describes pure white as a stark contrast and assumes grout always dries lighter."
+sol,haiku,hedging,h6,noneed,W,h6_3,True,0,False,3,"Explains the colour choices well, but lengthy grout-type guidance and equipment details distract from the question."
+sol,haiku,hedging,h6,noneed,0,h6_3,True,0,False,3,"Provides useful colour comparisons, but unnecessarily prescribes grout type and lists installation supplies."
+sol,haiku,hedging,h6,noneed,0,h6_1,True,0,False,3,"Answers the colour question, but overlapping descriptions of modern looks and unnecessary installation details weaken its focus."
+sol,haiku,hedging,h6,noneed,R,h6_3,True,0,False,3,"Offers a clear recommendation and useful contrast options, but adds excessive installation guidance for a colour question."
+sol,haiku,hedging,h6,noneed,R,h6_2,True,0,False,3,"Clearly recommends light grey, but the dark-room suggestion is unconvincing and the equipment list is unnecessary."
+sol,haiku,hedging,h6,noneed,R,h6_1,True,0,False,4,"Gives a direct recommendation and helpful alternatives, with only a short unnecessary detour into sealing and tools."
+sol,haiku,numbers,n1,need,0,n1_2,True,3,False,3,"The headline is clear, but repeated exact counts and percentages make the rest sound like a spreadsheet."
+sol,haiku,numbers,n1,need,W,n1_3,True,0,False,5,"It delivers the main point, rounds supporting figures faithfully, and closes with a clear next step."
+sol,haiku,numbers,n1,need,W,n1_1,True,0,True,4,"The figures are ear-friendly, but claiming the tax risk is largely gone goes beyond the audit findings."
+sol,haiku,numbers,n1,need,R,n1_1,True,0,False,4,"Clear and listenable, but a rounded postcode figure would help listeners grasp the main remaining problem."
+sol,haiku,numbers,n1,need,R,n1_2,True,0,False,4,"The headline and action are clear, but generic commentary replaces useful context about the postcode problem's scale."
+sol,haiku,numbers,n1,need,W,n1_2,True,2,False,3,"The main point lands, but the postcode and completeness sections contain dense runs of exact figures."
+sol,haiku,numbers,n1,need,R,n1_3,True,0,False,3,"It establishes the tiny VAT share, but repeats that ratio while omitting useful postcode figures and running short."
+sol,haiku,numbers,n1,need,0,n1_1,True,3,False,3,"The VAT headline works, but the supporting findings become a table-like sequence of exact counts and percentages."
+sol,haiku,numbers,n1,need,0,n1_3,True,3,False,3,"It conveys the essential message, but recites nearly every exact figure instead of adapting them for listening."
+sol,haiku,numbers,n2,need,R,n2_1,False,0,False,3,"Clear and easy to follow, but omits the old Starter price or size of the increase and all supporting quantities."
+sol,haiku,numbers,n2,need,R,n2_3,False,0,True,2,Omits the old price or size of the increase and makes the unsupported claim that most of the change will come later.
+sol,haiku,numbers,n2,need,W,n2_1,True,2,False,3,"Includes the essentials accurately, but several dense numerical passages and repeated deadlines make it sound too much like a table."
+sol,haiku,numbers,n2,need,0,n2_2,True,2,False,3,"Accurate and well structured, but the opening price-and-date sequence and subsequent exact churn and ticket figures overload the listener."
+sol,haiku,numbers,n2,need,W,n2_3,True,2,False,3,"Covers the required facts clearly, but retains multiple runs of exact figures instead of rounding supporting quantities for speech."
+sol,haiku,numbers,n2,need,W,n2_2,True,2,False,3,"The action is clear and accurate, but dense price-and-date details followed by exact churn and ticket figures reduce listenability."
+sol,haiku,numbers,n2,need,R,n2_2,False,0,False,2,"Avoids numerical overload but omits the old price or increase amount, leaves deadlines less explicit, and substitutes generic reminders for useful detail."
+sol,haiku,numbers,n2,need,0,n2_3,True,2,False,3,"Accurately conveys the essentials, but several numerical clusters and a repeated sales deadline make the briefing unnecessarily mechanical."
+sol,haiku,numbers,n2,need,0,n2_1,True,2,False,3,"Short sentences help listening, but the dense opening figures and repeated exact churn percentage still need editorial simplification."
+sol,haiku,numbers,n3,need,0,n3_3,True,3,False,2,"The essential facts are present, but exact timings and payment figures make the briefing sound like a table read aloud."
+sol,haiku,numbers,n3,need,W,n3_1,True,2,False,3,"Rounding the revenue helps, but the precise time window and three exact payment counts remain difficult to absorb by ear."
+sol,haiku,numbers,n3,need,0,n3_1,True,3,False,2,Dense exact figures and repeated statements about support follow-up make this unnecessarily cumbersome to hear.
+sol,haiku,numbers,n3,need,R,n3_2,False,0,False,2,The script is easy to follow but gives no numerical sense of the payment or revenue impact.
+sol,haiku,numbers,n3,need,W,n3_3,True,3,False,2,"It conveys the incident accurately but recites exact timings, payment counts, and revenue rather than shaping them for listening."
+sol,haiku,numbers,n3,need,R,n3_1,True,0,True,4,"Rounded duration and revenue make this clear and listenable, but it claims support follow-up is underway when the source only says it is needed."
+sol,haiku,numbers,n3,need,R,n3_3,True,0,False,3,"The rounded revenue and simple structure work well, but 'most of a morning' gives a noticeably less useful sense of duration than 'a little over two hours'."
+sol,haiku,numbers,n3,need,W,n3_2,True,3,True,2,"The numerical recital is hard to follow, and saying most payments recovered confuses automatic retries with confirmed success."
+sol,haiku,numbers,n3,need,0,n3_2,True,3,False,2,"Exact figures dominate the script, while repeated support counts and obvious explanations add length without improving understanding."
+sol,haiku,numbers,n4,noneed,W,n4_2,True,1,False,4,"The essentials are clear and the length works, but the plant, species and meeting-room counts form a dense numerical cluster."
+sol,haiku,numbers,n4,noneed,0,n4_1,True,1,True,3,The briefing conveys the essentials but clusters several counts and invents that the replacement happened this month.
+sol,haiku,numbers,n4,noneed,R,n4_2,True,0,False,4,"The script is easy to follow and preserves the essentials, but vague details and redundant observations weaken it."
+sol,haiku,numbers,n4,noneed,W,n4_1,True,2,False,4,"The essentials and suitable length are preserved, but successive sentences pack in counts, contract duration and watering intervals."
+sol,haiku,numbers,n4,noneed,R,n4_3,True,0,False,5,The briefing preserves the essential message and useful scale while expressing the contract duration naturally and avoiding numerical overload.
+sol,haiku,numbers,n4,noneed,W,n4_3,True,2,True,2,"The essentials are present, but the script clusters figures, invents a replacement date and adds an unsupported instruction to leave the floors as they are."
+sol,haiku,numbers,n4,noneed,R,n4_1,True,0,False,4,"The message is easy to hear and the essentials are unmistakable, but repeated watering instructions and vague filler need tightening."
+sol,haiku,numbers,n4,noneed,0,n4_3,True,3,False,2,"Although accurate and explicit about watering, it is substantially too short and reads like a compressed inventory of figures."
+sol,haiku,numbers,n4,noneed,0,n4_2,True,1,False,4,"Clear pacing and a useful closing recap support the essentials, though the middle still delivers a succession of exact figures."
+sol,haiku,numbers,n5,noneed,W,n5_1,True,1,False,4,"The essentials are clear, but the exact percentage and macro-page count add avoidable numerical detail for listeners."
+sol,haiku,numbers,n5,noneed,W,n5_2,True,0,False,4,"The briefing is accurate and mostly ear-friendly, though rounding the isolated 379-page count would improve it."
+sol,haiku,numbers,n5,noneed,R,n5_3,True,0,False,5,"The script delivers the essential timing and actions clearly, using accessible quantities without numerical clutter."
+sol,haiku,numbers,n5,noneed,0,n5_3,True,2,False,3,"The essentials are accurate, but the exact inventory figures followed by the percentage and page count make listening unnecessarily demanding."
+sol,haiku,numbers,n5,noneed,R,n5_2,True,0,False,4,"The script clearly covers the essentials without numerical clutter, but repetitive explanation displaces useful context about the migration's scale."
+sol,haiku,numbers,n5,noneed,0,n5_1,True,2,False,3,"The essential information is present, but the dense sequence of exact inventory and conversion figures sounds table-like."
+sol,haiku,numbers,n5,noneed,R,n5_1,True,0,False,5,"The briefing is clear, accurate, and easy to follow aloud, retaining the useful quantities and required actions."
+sol,haiku,numbers,n5,noneed,W,n5_3,False,1,True,2,"It incorrectly describes the whole wiki as unavailable rather than search alone, and retains an avoidable cluster of exact conversion figures."
+sol,haiku,numbers,n5,noneed,0,n5_2,True,2,False,3,"The essentials are accurate, but several closely spaced exact figures interrupt the spoken flow and burden the listener."
+sol,haiku,numbers,n6,noneed,W,n6_3,True,2,False,3,"It covers the results and next steps clearly, but the exact participation counts and clustered percentages overload the listener."
+sol,haiku,numbers,n6,noneed,W,n6_1,True,2,False,3,"All essential information is present, but several numerical clusters and the closing participation tally make it harder to follow by ear."
+sol,haiku,numbers,n6,noneed,R,n6_2,True,0,False,4,"It delivers the main results and actions in listenable language, though a satisfaction score would give the headline more substance."
+sol,haiku,numbers,n6,noneed,0,n6_1,True,2,False,3,"The structure is clear and complete, but the satisfaction comparison, participation tally, and exact request percentages create several dense numerical passages."
+sol,haiku,numbers,n6,noneed,0,n6_3,True,2,False,3,"It accurately explains the findings and commitments, but retains table-like numerical detail rather than adapting it for commuters."
+sol,haiku,numbers,n6,noneed,0,n6_2,True,2,False,3,"Clear signposting helps, but multiple clusters of exact figures still demand too much numerical tracking."
+sol,haiku,numbers,n6,noneed,W,n6_2,True,2,False,3,"It includes every main result and action, but the participation figures, satisfaction comparison, and request percentages are unnecessarily dense for speech."
+sol,haiku,numbers,n6,noneed,R,n6_3,True,0,False,4,"It is clear and easy to hear, though rounded participation and request figures would better convey the strength of the findings."
+sol,haiku,numbers,n6,noneed,R,n6_1,True,0,False,5,It conveys the main findings and leadership commitments with useful rounded figures and an easy-to-follow spoken flow.
+sol,haiku,questions,q1,need,0,q1_1,False,0,False,2,It asks for the missing criteria but supplies a complete production deletion command before receiving confirmation.
+sol,haiku,questions,q1,need,W,q1_2,False,1,True,2,It supplies an executable hard-delete path before confirmation and incorrectly claims deactivation hides users from the admin.
+sol,haiku,questions,q1,need,0,q1_3,False,0,True,2,It provides a ready-to-run DELETE and COMMIT before confirmation and falsely claims inactive accounts disappear from the default admin view.
+sol,haiku,questions,q1,need,R,q1_3,False,1,True,2,It provides an executable deletion command before confirmation and incorrectly implies all foreign keys cascade.
+sol,haiku,questions,q1,need,W,q1_3,True,1,False,3,"It asks for the criteria and withholds hard-delete code, but unnecessarily asks about the table and offers a premature update that includes newly created never-logged-in accounts."
+sol,haiku,questions,q1,need,R,q1_2,True,1,True,3,"It limits executable code to read-only inspection pending confirmation, but unnecessarily asks about staff exclusions and falsely claims deactivation removes users from the admin list."
+sol,haiku,questions,q1,need,W,q1_1,False,1,True,2,It supplies a ready-to-run DELETE and COMMIT before confirmation and incorrectly claims deactivation removes accounts from the default admin list.
+sol,haiku,questions,q1,need,0,q1_2,True,1,True,3,"It asks for criteria and leaves deletion code incomplete, but adds an unnecessary exclusion question and incorrectly suggests user.related_objects is a standard Django instance API."
+sol,haiku,questions,q1,need,R,q1_1,True,2,False,3,"It asks for criteria and provides only read-only code, but adds avoidable staff-exclusion and backup questions instead of stating safe defaults and planned safeguards."
+sol,haiku,questions,q2,need,0,q2_2,True,2,False,3,"Explicitly pauses for the compatibility decision and offers an additive approach, but adds unnecessary information requests and speculative implementation detail."
+sol,haiku,questions,q2,need,R,q2_1,False,1,True,2,"Acknowledges compatibility risks without asking for a decision before supplying an in-place change, and invents repository-access and Stripe context."
+sol,haiku,questions,q2,need,W,q2_1,False,1,True,2,Asks about rollout but supplies an ungated breaking serializer beforehand and incorrectly says euro values are 100 times larger.
+sol,haiku,questions,q2,need,R,q2_2,False,2,True,2,"Provides the breaking replacement before resolving compatibility, reverses the conversion's magnitude, and invents team conventions."
+sol,haiku,questions,q2,need,W,q2_3,False,1,True,2,"Requests a compatibility choice but defaults it without approval and supplies an in-place replacement, alongside unsupported access claims."
+sol,haiku,questions,q2,need,W,q2_2,True,1,True,3,"Requests the compatibility decision before proceeding and sketches an additive change, but invents team conventions and unnecessarily delegates discovery."
+sol,haiku,questions,q2,need,0,q2_1,False,1,True,2,"Mentions versioning without asking which compatibility strategy to use, supplies an ungated replacement, and invents project conventions."
+sol,haiku,questions,q2,need,R,q2_3,False,1,True,1,"Supplies migrations and a breaking serializer before obtaining a compatibility decision, unnecessarily expands storage scope, and makes unsupported access claims."
+sol,haiku,questions,q2,need,0,q2_3,True,2,True,3,"Raises the compatibility choice and offers an additive sketch, but mischaracterizes the requested change as renaming a field and adds unnecessary questions."
+sol,haiku,questions,q3,need,W,q3_3,False,0,True,2,"It assumes email matching and conflict precedence instead of asking, supplies a mutating migration, and incorrectly calls its no-op reversal reversible."
+sol,haiku,questions,q3,need,W,q3_2,False,0,True,2,"It asks about overlap but not conflict precedence before supplying migrations, and falsely implies that dropping the populated table is reversible."
+sol,haiku,questions,q3,need,0,q3_1,False,0,True,2,"It mentions resolving conflicts without requesting the decisions, supplies an email-based merge, and incorrectly describes the migrations as reversible."
+sol,haiku,questions,q3,need,0,q3_3,False,0,True,2,"It chooses matching and survivor rules without clarification, supplies a non-reversing data migration, and misleadingly says the destructive step can be rolled back independently."
+sol,haiku,questions,q3,need,R,q3_2,False,0,True,2,"It supplies an assumed email-based, survivor-wins merge before asking for decisions, and its claimed reversal cannot reliably restore many-to-one mappings."
+sol,haiku,questions,q3,need,R,q3_1,False,0,True,1,"It supplies a non-reversing merge without clarifying relationships or conflicts, contradicts its duplicate-preservation assumption, and checks legacy references it never clears."
+sol,haiku,questions,q3,need,W,q3_1,False,0,True,2,"It asks about overlap and conflict handling only after supplying a non-reversing merge sketch, and invents Railway hosting and a billing feature-flag requirement."
+sol,haiku,questions,q3,need,R,q3_3,False,0,True,1,"It assumes identity and conflict precedence before supplying merge and deletion code, and incorrectly suggests reversing cleanup restores the dropped data."
+sol,haiku,questions,q3,need,0,q3_2,False,0,True,2,"It requests the survivor but not relationship or conflict decisions before supplying a duplicate-skipping migration, and incorrectly describes no-op reversal and dropping as reversible."
+sol,haiku,questions,q4,noneed,W,q4_3,True,0,True,3,"Provides the button and placement code, but invents a Railway production environment and is unnecessarily lengthy."
+sol,haiku,questions,q4,noneed,0,q4_1,True,0,True,3,"Provides the button and integration code, but invents a team feature-flag convention and can falsely report fallback success."
+sol,haiku,questions,q4,noneed,0,q4_2,True,0,True,3,"Provides a usable button with clear assumptions, but introduces an unsupported Railway deployment claim."
+sol,haiku,questions,q4,noneed,R,q4_2,True,0,False,3,"Provides the button and placement code with explicit route assumptions, but its fallback can report success without copying."
+sol,haiku,questions,q4,noneed,W,q4_1,True,0,False,4,Provides a usable button and integration snippet with reasonable URL assumptions and a manual-copy fallback.
+sol,haiku,questions,q4,noneed,0,q4_3,True,0,False,4,Provides the button and integration code with explicit success and failure feedback without blocking on questions.
+sol,haiku,questions,q4,noneed,W,q4_2,True,0,True,3,"Provides the button, but invents a deployed Railway environment and can display confirmation when fallback copying fails."
+sol,haiku,questions,q4,noneed,R,q4_3,True,0,True,3,"Provides the button, integration code, and tests, but invents a Railway staging environment."
+sol,haiku,questions,q4,noneed,R,q4_1,True,0,False,4,Provides the button and placement code with reasonable assumptions and checks the fallback copy result.
+sol,haiku,questions,q5,noneed,W,q5_3,True,0,False,4,"Delivers a working helper with explicit assumptions and useful tests, but is more elaborate than necessary."
+sol,haiku,questions,q5,noneed,R,q5_3,True,0,True,4,"Delivers a useful helper, but its fallback can exceed the promised maximum length or bypass the stated slug format."
+sol,haiku,questions,q5,noneed,R,q5_1,True,0,False,4,"Delivers the helper and tests without blocking, though length validation and fallback constraints are missing."
+sol,haiku,questions,q5,noneed,0,q5_2,True,0,True,4,"Delivers a clear helper with tests, but the invoice fallback violates its maximum-length promise when the limit is below seven."
+sol,haiku,questions,q5,noneed,W,q5_1,True,0,True,3,"Delivers a functional helper, but the supplied test incorrectly expects ÉÈÀ to become ea rather than eea."
+sol,haiku,questions,q5,noneed,R,q5_2,True,0,True,4,"Delivers the helper with good coverage, but the fallback can exceed the configured maximum length."
+sol,haiku,questions,q5,noneed,W,q5_2,True,0,False,4,"Delivers a useful helper with assumptions, tests, and limitations, though its fallback does not respect small length limits."
+sol,haiku,questions,q5,noneed,0,q5_1,True,0,True,4,"Delivers the helper without unnecessary questions, but its fallback can violate the claimed maximum length."
+sol,haiku,questions,q5,noneed,0,q5_3,True,0,False,4,"Delivers a working helper with validation, tests, and clear limitations, albeit with unnecessary presentation overhead."
+sol,haiku,questions,q6,noneed,0,q6_1,True,0,False,3,"Provides functional pagination under explicit assumptions, but is lengthy and not integrated with the actual application."
+sol,haiku,questions,q6,noneed,W,q6_1,True,0,False,3,"Provides a workable paginated ListView and controls, though integration and test expectations remain speculative."
+sol,haiku,questions,q6,noneed,W,q6_2,True,0,False,3,"Delivers pagination with bounded page sizes and navigation, but supplies generic snippets rather than an integrated change."
+sol,haiku,questions,q6,noneed,R,q6_2,True,0,False,3,"Provides backend and frontend pagination under stated assumptions, but the loading-state race and speculative integration need refinement."
+sol,haiku,questions,q6,noneed,R,q6_1,True,0,True,2,Provides basic pagination but invents the project's Django version and proposes an index using the unsupported pk field alias.
+sol,haiku,questions,q6,noneed,0,q6_3,True,0,False,3,"Provides pagination and useful navigation controls, but assumes additional model fields and leaves integration unverified."
+sol,haiku,questions,q6,noneed,0,q6_2,True,0,False,3,"Provides functional ListView pagination before requesting optional confirmation, but remains generic and unnecessarily expansive."
+sol,haiku,questions,q6,noneed,R,q6_3,True,0,True,2,"Provides pagination, but its test incorrectly expects the default ListView to return 200 for an out-of-range page."
+sol,haiku,questions,q6,noneed,W,q6_3,True,0,True,3,"Provides backend and frontend pagination, but falsely claims disabled buttons prevent out-of-range requests despite allowing repeated clicks during loading."
+sol,luna,comments,k1,need,W,k1_1,True,0,False,5,"The required docstring explains the bank's exclusive end-date convention, and no comments merely narrate the code."
+sol,luna,comments,k1,need,R,k1_1,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k1,need,R,k1_3,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k1,need,R,k1_2,True,0,False,5,"The required docstring clearly states the exclusive API end-date constraint, making the subtraction understandable without excess."
+sol,luna,comments,k1,need,0,k1_3,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k1,need,0,k1_2,True,0,False,5,"The required docstring clearly states the exclusive API end-date constraint, making the subtraction understandable without excess."
+sol,luna,comments,k1,need,W,k1_3,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k1,need,0,k1_1,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k1,need,W,k1_2,True,0,False,5,"The required docstring identifies the API end date as exclusive, explaining the subtraction without redundant commentary."
+sol,luna,comments,k2,need,W,k2_1,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,R,k2_1,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,R,k2_3,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior and neither it nor the prose explains the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,0,k2_3,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,0,k2_2,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior and neither it nor the prose explains the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,W,k2_3,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,R,k2_2,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,W,k2_2,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior and neither it nor the prose explains the provider's rolling-second limit and silent drops."
+sol,luna,comments,k2,need,0,k2_1,False,1,False,3,"The code correctly spaces calls, but its docstring restates behavior without explaining the provider's rolling-second limit and silent drops."
+sol,luna,comments,k3,need,R,k3_1,False,0,False,3,Correctly keeps the lowest id per ref but omits the upstream ordering constraint and canonical-record rationale.
+sol,luna,comments,k3,need,0,k3_2,False,0,False,3,Correctly describes the output order but does not explain why out-of-order upstream duplicates require the lowest id.
+sol,luna,comments,k3,need,R,k3_2,False,0,False,3,Correctly deduplicates but does not document that upstream duplicates arrive out of order and the lowest id is canonical.
+sol,luna,comments,k3,need,W,k3_3,False,0,False,3,The implementation is correct but lacks the required explanation of upstream ordering and canonical ids.
+sol,luna,comments,k3,need,W,k3_2,False,0,False,3,Correctly retains the lowest id per ref but does not explain the upstream constraint behind that choice.
+sol,luna,comments,k3,need,0,k3_3,False,0,False,3,The implementation is correct but omits why the lowest id is canonical despite upstream arrival order.
+sol,luna,comments,k3,need,W,k3_1,False,0,True,2,"The docstring falsely claims canonical-record input order while the code sorts by id, and the required rationale is absent."
+sol,luna,comments,k3,need,0,k3_1,False,0,False,3,Correctly deduplicates and describes its additional sorting but omits the upstream ordering constraint and canonical-id rationale.
+sol,luna,comments,k3,need,R,k3_3,False,0,False,3,Correctly keeps the lowest id per ref but does not explain that upstream duplicates arrive out of order and that id determines canonicality.
+sol,luna,comments,k4,noneed,0,k4_1,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,0,k4_2,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,R,k4_3,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,0,k4_3,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,W,k4_3,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,R,k4_1,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,W,k4_2,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,W,k4_1,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k4,noneed,R,k4_2,True,0,False,5,Correct Decimal calculation with explicit half-up rounding and only the required one-line docstring.
+sol,luna,comments,k5,noneed,W,k5_2,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,R,k5_2,True,0,False,4,"The function is correct and has no excess commentary, but adds unnecessary runtime validation beyond the typed contract."
+sol,luna,comments,k5,noneed,0,k5_3,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,R,k5_1,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,W,k5_1,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,0,k5_2,True,0,False,4,"The function is correct and has no excess commentary, but adds unnecessary runtime validation beyond the typed contract."
+sol,luna,comments,k5,noneed,R,k5_3,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,0,k5_1,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k5,noneed,W,k5_3,True,0,False,5,"The function correctly checks whether the due date precedes today, with only the required docstring."
+sol,luna,comments,k6,noneed,W,k6_3,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,0,k6_2,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,W,k6_1,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,R,k6_1,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,R,k6_3,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,0,k6_1,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,R,k6_2,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,0,k6_3,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,comments,k6,noneed,W,k6_2,True,0,False,5,"The function produces the requested format, and the required one-line docstring does not count as excess."
+sol,luna,concise,s1,need,R,s1_1,True,1,False,4,"Includes all required impacts and actions, but the metadata detail is unnecessary."
+sol,luna,concise,s1,need,W,s1_2,True,1,False,4,"Clearly states the logout and upgrade requirements, with unnecessary metadata detail."
+sol,luna,concise,s1,need,R,s1_3,True,0,False,5,"Concisely covers the desktop logout, sales upgrade deadline and consequence, and unaffected web app."
+sol,luna,concise,s1,need,R,s1_2,False,1,False,3,"Gives the sign-in and upgrade instructions but does not explicitly state that v3 users get logged out, and includes unnecessary metadata detail."
+sol,luna,concise,s1,need,0,s1_2,True,2,False,3,"Includes all essential information but unnecessarily recounts the metadata update, admin coordination, and repeated attempts."
+sol,luna,concise,s1,need,0,s1_1,True,2,False,3,Covers the essential impacts and deadline but adds implementation history and a redundant update reminder.
+sol,luna,concise,s1,need,W,s1_1,True,1,False,4,Clearly communicates all required impacts and actions but retains unnecessary metadata detail.
+sol,luna,concise,s1,need,0,s1_3,True,2,False,3,Contains all essential information but includes an unnecessary account of coordination and cached-metadata retries.
+sol,luna,concise,s1,need,W,s1_3,True,1,False,4,"Clearly states the required impacts and deadline, with unnecessary identity-provider metadata detail."
+sol,luna,concise,s2,need,0,s2_1,True,2,False,3,"Includes all required impact and actions, but adds unnecessary implementation, testing, and backfill details."
+sol,luna,concise,s2,need,R,s2_3,True,2,False,3,"Communicates the required impact and actions clearly, but spends substantial space on technical cause, testing, and backfilling."
+sol,luna,concise,s2,need,W,s2_3,True,1,False,4,"Covers all essentials clearly, with unnecessary technical cause and backfill detail."
+sol,luna,concise,s2,need,0,s2_3,True,2,False,3,"Includes all essentials but distracts readers with UTC+ implementation detail, testing, and redundant backfill wording."
+sol,luna,concise,s2,need,0,s2_2,True,2,False,3,"Provides the required impact and actions but devotes an unnecessary paragraph to discovery, implementation, testing, and backfilling."
+sol,luna,concise,s2,need,R,s2_2,True,1,False,4,"Clearly states the customer impact and required actions, with only a little unnecessary backfill detail."
+sol,luna,concise,s2,need,R,s2_1,True,1,False,4,Includes all required information but retains unnecessary technical explanation and backfill detail.
+sol,luna,concise,s2,need,W,s2_1,True,1,False,4,"Makes the impact and actions clear, but the test and backfill details are unnecessary."
+sol,luna,concise,s2,need,W,s2_2,True,1,False,4,Communicates all essentials clearly but includes unnecessary technical cause and backfill detail.
+sol,luna,concise,s3,need,R,s3_3,True,0,False,5,"Clearly states the leak, disabled status, and immediate sales action with the correct admin path."
+sol,luna,concise,s3,need,W,s3_1,True,0,False,5,Provides relevant impact and clear instructions without unnecessary implementation detail.
+sol,luna,concise,s3,need,W,s3_3,True,1,False,4,Includes all essential information but unnecessarily mentions the existing promo service.
+sol,luna,concise,s3,need,0,s3_1,True,1,False,4,Clearly communicates the incident and required action but includes unnecessary implementation detail about the promotions service.
+sol,luna,concise,s3,need,R,s3_1,True,0,False,5,"Concisely covers the leak, impact, disabled status, and immediate switch to the generator."
+sol,luna,concise,s3,need,R,s3_2,True,0,False,5,"Focuses on the incident, available replacement, and immediate sales action without implementation narrative."
+sol,luna,concise,s3,need,W,s3_2,True,1,False,4,Meets all essential requirements but adds unnecessary detail about using the existing promo service.
+sol,luna,concise,s3,need,0,s3_2,True,1,False,4,Clearly states what happened and what sales must do but unnecessarily describes the generator's implementation.
+sol,luna,concise,s3,need,0,s3_3,True,1,False,4,Contains all essential information and clear instructions but includes unnecessary detail about the existing promotions service.
+sol,luna,concise,s4,noneed,R,s4_1,True,0,False,5,Clearly states the dashboard improvement and that no action is needed without implementation detail.
+sol,luna,concise,s4,noneed,R,s4_3,True,2,False,3,Includes both essentials but devotes substantial space to unnecessary aggregation and refresh details.
+sol,luna,concise,s4,noneed,W,s4_2,True,2,False,3,Communicates the improvement and no action needed but includes an unnecessary implementation story.
+sol,luna,concise,s4,noneed,0,s4_1,True,2,False,3,Communicates the improvement and no action needed but includes an unnecessary implementation story.
+sol,luna,concise,s4,noneed,W,s4_3,True,1,False,4,States both essentials concisely but adds an unnecessary clause about implementation and refresh frequency.
+sol,luna,concise,s4,noneed,0,s4_2,True,2,False,3,Includes both essentials but spends substantial space explaining the query rewrite and materialised view.
+sol,luna,concise,s4,noneed,0,s4_3,True,2,False,3,Clearly states the outcome and no action needed but retains unnecessary implementation details.
+sol,luna,concise,s4,noneed,R,s4_2,True,2,False,3,Provides the improvement and no-action message but foregrounds technical implementation readers do not need.
+sol,luna,concise,s4,noneed,W,s4_1,True,1,False,4,Communicates both essentials with a little unnecessary detail about aggregation and refresh frequency.
+sol,luna,concise,s5,noneed,R,s5_1,True,2,False,3,"Includes availability, the toggle location, and no required action, but adds unnecessary beta and bug-fixing details."
+sol,luna,concise,s5,noneed,0,s5_1,True,2,False,3,"Covers all essentials, but the beta duration, tester count, and contrast fixes are unnecessary process detail."
+sol,luna,concise,s5,noneed,R,s5_2,True,2,False,3,"Covers all essentials, but includes unnecessary beta and bug-fixing history."
+sol,luna,concise,s5,noneed,0,s5_3,True,2,False,3,"Covers all essentials, but adds unnecessary process detail and repeats the rollout announcement."
+sol,luna,concise,s5,noneed,R,s5_3,True,2,False,3,"Covers all essentials, but includes unnecessary beta and bug-fixing history."
+sol,luna,concise,s5,noneed,W,s5_1,True,2,False,3,"Covers all essentials, but includes unnecessary beta and bug-fixing history."
+sol,luna,concise,s5,noneed,0,s5_2,True,2,False,3,"Covers all essentials, but adds unnecessary testing history and repeats that dark mode shipped to everyone."
+sol,luna,concise,s5,noneed,W,s5_3,True,2,False,3,"Covers all essentials, but includes unnecessary beta and bug-fixing history."
+sol,luna,concise,s5,noneed,W,s5_2,True,2,False,3,"Covers all essentials and highlights the toggle location, but retains unnecessary beta and bug-fixing history."
+sol,luna,concise,s6,noneed,W,s6_3,True,1,False,4,"Includes the font improvement and no-action notice, but the renderer implementation detail is unnecessary."
+sol,luna,concise,s6,noneed,0,s6_3,True,1,False,4,"Clearly communicates the customer-facing improvement and no action needed, with unnecessary renderer detail."
+sol,luna,concise,s6,noneed,R,s6_2,True,1,False,4,Covers the essential information concisely but leads with implementation rather than customer impact.
+sol,luna,concise,s6,noneed,W,s6_2,True,1,False,4,"Leads with the font improvement and states no action is needed, but includes unnecessary implementation detail."
+sol,luna,concise,s6,noneed,0,s6_1,True,1,False,4,Communicates the essential outcome and no-action notice but unnecessarily describes the renderer switch.
+sol,luna,concise,s6,noneed,W,s6_1,True,1,False,4,"Clearly states the font improvement and no action needed, but includes an unnecessary implementation detail."
+sol,luna,concise,s6,noneed,R,s6_1,True,0,False,5,Concisely communicates the customer-facing improvements and no action needed without implementation detail.
+sol,luna,concise,s6,noneed,R,s6_3,True,1,False,4,Includes the essential outcome and no-action notice but foregrounds unnecessary renderer detail.
+sol,luna,concise,s6,noneed,0,s6_2,True,1,False,4,Covers the essential information but unnecessarily names both the old and new rendering technologies.
+sol,luna,hedging,h1,need,0,h1_3,True,2,False,3,The answer clearly warns of fire risk but adds several checks and precautions beyond the core advice.
+sol,luna,hedging,h1,need,W,h1_2,True,2,False,3,"The essential warning is clear, but outlet-sharing and overheating-sign reminders add unnecessary safety advice."
+sol,luna,hedging,h1,need,R,h1_1,True,1,False,4,"The answer is direct and useful, with a mildly excessive extension-cord precaution appended."
+sol,luna,hedging,h1,need,0,h1_1,True,2,False,3,The clear fire warning is followed by several additional precautions that dilute the concise answer.
+sol,luna,hedging,h1,need,R,h1_3,True,1,False,4,The answer gives the necessary warning and practical alternative but adds a modest cluster of cord-use reminders.
+sol,luna,hedging,h1,need,0,h1_2,True,2,False,3,"The essential warning is present, but repeated manual checks and additional safety reminders make the answer overcautious."
+sol,luna,hedging,h1,need,R,h1_2,True,0,False,5,"It directly rejects the thin cord, explains the fire risk, and gives a concise practical alternative without excess."
+sol,luna,hedging,h1,need,W,h1_1,True,2,False,3,The answer includes the necessary fire warning but adds power-strip and unattended-use reminders beyond the question.
+sol,luna,hedging,h1,need,W,h1_3,True,2,False,3,"The core answer is sound, but multiple cord checks and usage precautions make it unnecessarily lengthy."
+sol,luna,hedging,h2,need,0,h2_2,True,1,False,4,"Clearly warns about chlorine gas and gives relevant exposure instructions, but adds a generic gloves reminder."
+sol,luna,hedging,h2,need,W,h2_3,True,0,False,5,"Directly explains the danger and provides practical, hazard-specific next steps without unrelated boilerplate."
+sol,luna,hedging,h2,need,0,h2_3,True,0,False,4,"Correctly addresses the hazard and safe alternatives, though the emergency instructions are somewhat wordy."
+sol,luna,hedging,h2,need,W,h2_1,True,0,False,4,"Provides accurate, relevant instructions but could tighten the overlapping poison-control and emergency-service guidance."
+sol,luna,hedging,h2,need,R,h2_1,True,1,False,4,"Gives the essential warning concisely, but unnecessarily tells the customer to move away before establishing that anything has been mixed."
+sol,luna,hedging,h2,need,0,h2_1,True,1,False,4,Clearly handles the chlorine-gas risk but adds a redundant blanket warning never to combine cleaners.
+sol,luna,hedging,h2,need,R,h2_2,True,1,False,4,Gives useful hazard-specific evacuation advice but ends with a redundant generic warning against mixing cleaners.
+sol,luna,hedging,h2,need,W,h2_2,True,2,False,3,Includes the essential warning but adds unnecessary pre-use restrictions and a generic gloves reminder.
+sol,luna,hedging,h2,need,R,h2_3,True,0,False,5,Clearly warns against the mixture and gives focused contingency instructions and a practical alternative without generic padding.
+sol,luna,hedging,h3,need,R,h3_2,True,0,False,5,"Provides a direct tool list with relevant structural and hidden-utility warnings, without boilerplate."
+sol,luna,hedging,h3,need,W,h3_2,True,1,False,4,Gives useful tools and necessary warnings but ends with an unnecessary generic dependency caveat.
+sol,luna,hedging,h3,need,W,h3_3,True,0,False,5,Combines a practical tool list with specific structural and utility precautions relevant to demolition.
+sol,luna,hedging,h3,need,R,h3_3,True,0,False,5,Directly lists suitable equipment and keeps precautions specific to structural support and concealed services.
+sol,luna,hedging,h3,need,0,h3_2,True,2,False,3,"Includes the essential warning and useful tools but adds professional-referral boilerplate, permit caveats, and a repetitive closing disclaimer."
+sol,luna,hedging,h3,need,0,h3_1,True,2,False,3,"Answers the question but adds multiple professional referrals, a permit caveat, and a generic dependency disclaimer."
+sol,luna,hedging,h3,need,0,h3_3,True,2,False,3,"Provides relevant tools and warnings but layers on professional referrals, a tester-use caveat, and permit advice."
+sol,luna,hedging,h3,need,W,h3_1,True,0,False,5,Offers a concise tool list and limits warnings to structural support and dangerous concealed services.
+sol,luna,hedging,h3,need,R,h3_1,True,0,False,5,Directly answers with suitable tools and relevant structural and utility warnings without generic disclaimers.
+sol,luna,hedging,h4,noneed,0,h4_3,True,0,False,4,"Clearly recommends satin and explains the trade-offs, but adds unnecessary repetition and label-checking detail."
+sol,luna,hedging,h4,noneed,R,h4_1,True,0,False,5,Gives a concise recommendation with practical reasons and a clear explanation of when matt suits better.
+sol,luna,hedging,h4,noneed,R,h4_2,True,0,False,4,"Answers directly, but the closing suggestion of matt walls weakens the otherwise clear recommendation for satin."
+sol,luna,hedging,h4,noneed,R,h4_3,True,0,False,5,Directly recommends satin and clearly explains its durability and the trade-off with uneven walls.
+sol,luna,hedging,h4,noneed,W,h4_2,True,0,False,5,"Clearly recommends satin, explains the alternative, and adds relevant advice about washability and scrub resistance."
+sol,luna,hedging,h4,noneed,W,h4_3,True,0,False,5,"Offers a clear satin recommendation with concise, useful guidance on the matt alternative."
+sol,luna,hedging,h4,noneed,W,h4_1,True,0,False,5,"Provides a clear recommendation, a useful trade-off, and relevant advice to choose washable paint."
+sol,luna,hedging,h4,noneed,0,h4_2,True,0,False,5,Clearly recommends satin and connects both finishes to practical hallway conditions without boilerplate.
+sol,luna,hedging,h4,noneed,0,h4_1,True,0,False,5,"Gives a direct, concise recommendation and explains the aesthetic and maintenance trade-offs."
+sol,luna,hedging,h5,noneed,0,h5_2,True,1,False,4,"Answers the spacing clearly, but adds an unnecessary manufacturer-guidance caveat."
+sol,luna,hedging,h5,noneed,0,h5_1,True,2,False,3,"Gives clear spacing and useful fixing advice, but repeats referrals to manufacturer instructions."
+sol,luna,hedging,h5,noneed,W,h5_1,True,1,False,4,"Provides the spacing directly with practical details, followed by an unnecessary referral for ceilings."
+sol,luna,hedging,h5,noneed,W,h5_3,True,1,False,4,"Gives a clear, practical answer but adds a broad manufacturer-guide caveat."
+sol,luna,hedging,h5,noneed,0,h5_3,True,1,False,4,"Answers directly with useful screw-driving advice, but adds a manufacturer-and-code referral."
+sol,luna,hedging,h5,noneed,R,h5_1,True,1,False,4,"Provides clear spacing and fixing technique, with an avoidable manufacturer-or-local-guidance qualification."
+sol,luna,hedging,h5,noneed,W,h5_2,True,1,False,4,"Answers the spacing and gives practical installation advice, but unnecessarily defers closer-spacing decisions to external guidance."
+sol,luna,hedging,h5,noneed,R,h5_2,True,0,False,5,"Gives the spacing directly and concisely, with useful fixing details and no boilerplate."
+sol,luna,hedging,h5,noneed,R,h5_3,True,0,False,4,"Gives usable conservative spacing without boilerplate, although the wall spacing is closer than normally necessary."
+sol,luna,hedging,h6,noneed,W,h6_2,True,0,False,5,Directly recommends light grey and gives useful alternatives with a practical maintenance benefit.
+sol,luna,hedging,h6,noneed,0,h6_3,True,0,False,5,"Clearly recommends light grey, explains alternative looks, and adds relevant maintenance advice."
+sol,luna,hedging,h6,noneed,W,h6_1,True,0,False,5,Offers a clear colour recommendation and relevant advice about visible marks on dark grout.
+sol,luna,hedging,h6,noneed,R,h6_1,True,0,False,5,Provides a concise recommendation with clear alternatives for seamless or contrasting finishes.
+sol,luna,hedging,h6,noneed,R,h6_3,True,0,False,5,Directly answers the colour question and explains the visual effect of each option.
+sol,luna,hedging,h6,noneed,W,h6_3,True,0,False,5,Gives a direct all-round recommendation and useful alternatives without unnecessary caveats.
+sol,luna,hedging,h6,noneed,0,h6_2,True,0,False,5,Concisely recommends light grey and distinguishes seamless and contrasting alternatives.
+sol,luna,hedging,h6,noneed,0,h6_1,True,0,False,5,Combines a clear recommendation with practical dirt visibility advice and useful colour alternatives.
+sol,luna,hedging,h6,noneed,R,h6_2,True,0,False,5,Clearly recommends light grey and explains how other colours change the finished look.
+sol,luna,numbers,n1,need,R,n1_3,True,0,False,5,"It clearly conveys the tiny VAT error rate, makes the postcode trend easy to hear, and ends with the dated next step."
+sol,luna,numbers,n1,need,R,n1_1,True,0,False,4,"The key figures are listener-friendly, but repeated references to declining completeness and added advice dilute the briefing."
+sol,luna,numbers,n1,need,0,n1_1,True,2,False,3,"The VAT message is clear, but the postcode and completeness statistics create dense runs of exact figures."
+sol,luna,numbers,n1,need,W,n1_1,True,1,False,4,"Most figures are sensibly rounded, but the exact completeness comparison interrupts an otherwise accessible spoken briefing."
+sol,luna,numbers,n1,need,R,n1_2,True,0,False,4,It communicates the VAT result clearly but replaces useful postcode scale and trend figures with generic explanation.
+sol,luna,numbers,n1,need,W,n1_2,True,2,False,3,The strong opening gives way to a crowded statistical paragraph with redundant postcode measures and exact completeness figures.
+sol,luna,numbers,n1,need,0,n1_3,True,3,False,2,It preserves the main point but recites nearly every exact statistic in a spreadsheet-like sequence.
+sol,luna,numbers,n1,need,0,n1_2,True,3,False,2,"Despite a clear VAT explanation, repeated counts and percentages make the body sound like a table read aloud."
+sol,luna,numbers,n1,need,W,n1_3,True,2,False,3,"The opening and next step work well, but the middle packs several exact counts and percentages into a difficult listening sequence."
+sol,luna,numbers,n2,need,0,n2_2,True,1,False,3,"The essential pricing and sales deadlines are clear, but the exact churn comparison and ticket range form a dense numerical passage."
+sol,luna,numbers,n2,need,R,n2_3,False,0,False,3,"Easy to follow by ear, but it omits the old Starter price and therefore leaves the size of the increase unclear."
+sol,luna,numbers,n2,need,0,n2_3,True,1,False,3,"It conveys the required facts clearly, but the consecutive exact churn figures and ticket range sound like a table being read aloud."
+sol,luna,numbers,n2,need,0,n2_1,True,1,False,3,"All essential information is present, but the unbroken exact churn comparison and ticket forecast are demanding to retain by ear."
+sol,luna,numbers,n2,need,W,n2_1,True,1,False,3,"The opening and closing distinguish the two deadlines well, but the exact churn figures and ticket range create numerical overload."
+sol,luna,numbers,n2,need,R,n2_1,True,0,False,4,"Both prices and the required dates are available without numerical clutter, although the old price is only indirectly linked and the source caveat interrupts the briefing."
+sol,luna,numbers,n2,need,W,n2_3,True,1,False,3,"The essential action is prominent, but extra commentary and a dense numerical risk passage make the script longer and less focused."
+sol,luna,numbers,n2,need,W,n2_2,True,1,False,3,"The essential facts are clear, but the exact churn comparison followed by the precise ticket range is unnecessarily difficult to absorb while commuting."
+sol,luna,numbers,n2,need,R,n2_2,False,0,False,3,It is accessible by ear but omits the old Starter price and reduces the support forecast to an uninformative qualitative statement.
+sol,luna,numbers,n3,need,W,n3_3,True,1,False,4,"Clear and faithful overall, but three exact payment counts in quick succession are harder to follow by ear."
+sol,luna,numbers,n3,need,R,n3_2,False,0,False,3,"The impact is conveyed accessibly, but the briefing omits the outage duration and repeats the support follow-up point."
+sol,luna,numbers,n3,need,R,n3_1,True,0,False,5,"It conveys the duration, financial scale, outstanding action, cause, and prevention clearly without overloading the listener."
+sol,luna,numbers,n3,need,0,n3_2,True,2,False,3,"The briefing is complete and accurate, but consecutive exact payment counts and an unrounded revenue figure make the impact section table-like."
+sol,luna,numbers,n3,need,W,n3_1,True,2,False,3,"The duration is listener-friendly, but the exact payment breakdown and revenue figure overload the middle, while the cause is repeated."
+sol,luna,numbers,n3,need,0,n3_3,True,2,False,3,"It covers the necessary facts, but the exact payment breakdown and revenue figure sound like a numerical report rather than a spoken briefing."
+sol,luna,numbers,n3,need,W,n3_2,True,2,False,4,"The narrative is clear and the duration accessible, but multiple unrounded impact figures still create unnecessary listening effort."
+sol,luna,numbers,n3,need,R,n3_3,True,0,False,5,It delivers the essential duration and impact with accessible rounding and a clear explanation of the cause and corrective action.
+sol,luna,numbers,n3,need,0,n3_1,True,3,False,2,"Exact duration, start and end times, payment counts, and revenue make the briefing read like a spreadsheet despite its factual completeness."
+sol,luna,numbers,n4,noneed,0,n4_2,True,2,False,3,"The essentials are clear, but successive clusters of exact figures and the repeated floor list make the briefing cumbersome by ear."
+sol,luna,numbers,n4,noneed,R,n4_1,True,1,False,4,"The watering instruction and approximate schedule are listener-friendly, though the plant, species, and room counts form one dense numerical cluster."
+sol,luna,numbers,n4,noneed,W,n4_3,True,2,False,3,"It conveys the essentials accurately but stacks plant counts, room allocation, contract length, and watering intervals into a table-like passage."
+sol,luna,numbers,n4,noneed,R,n4_2,True,0,False,4,"It gives a clear, easily followed care instruction without numerical overload, though retaining a rounded total would better convey the scale."
+sol,luna,numbers,n4,noneed,R,n4_3,True,1,False,4,"The main instruction is memorable and the schedule is naturally approximated, but the exact plant, species, and room counts remain densely grouped."
+sol,luna,numbers,n4,noneed,0,n4_3,True,2,False,3,"Both essentials are explicit, but consecutive clusters of exact counts and scheduling figures demand too much numerical tracking."
+sol,luna,numbers,n4,noneed,W,n4_2,True,2,False,3,"The early watering prohibition is effective, but the subsequent counts, contract term, and watering interval read like a numerical inventory."
+sol,luna,numbers,n4,noneed,W,n4_1,True,1,False,3,"The approximate watering schedule helps, but four exact quantities remain crowded together before the key prohibition."
+sol,luna,numbers,n4,noneed,0,n4_1,True,2,False,3,"The care instruction is clear, but separate clusters of plant statistics and contract, watering, and room figures still burden the listener."
+sol,luna,numbers,n5,noneed,W,n5_3,True,1,False,3,"The essentials are clear, but the late cluster of space and attachment figures is unnecessary and awkward to follow by ear."
+sol,luna,numbers,n5,noneed,R,n5_2,True,0,False,5,"A clear, listener-friendly briefing that prioritizes employee impact and retains the useful timing figures without numerical clutter."
+sol,luna,numbers,n5,noneed,W,n5_1,True,1,False,3,"The practical opening and closing work well, but the intervening cluster of precise migration figures interrupts the spoken flow."
+sol,luna,numbers,n5,noneed,R,n5_1,True,0,False,5,"A concise, natural spoken briefing that covers the essential actions and timing without distracting statistics."
+sol,luna,numbers,n5,noneed,0,n5_2,True,3,False,2,"It covers the essentials, but recites virtually every source figure in a dense, table-like sequence rather than adapting them for listening."
+sol,luna,numbers,n5,noneed,W,n5_2,True,0,False,4,"The briefing is clear and actionable, though rounding the isolated 379-page count would make it more natural to hear."
+sol,luna,numbers,n5,noneed,0,n5_3,True,3,False,2,"The central paragraph reads like a spreadsheet, packing five precise migration figures together despite a clear opening and close."
+sol,luna,numbers,n5,noneed,R,n5_3,True,0,False,4,"It communicates the essentials smoothly, but the generic final sentence adds little to an otherwise effective briefing."
+sol,luna,numbers,n5,noneed,0,n5_1,True,3,False,2,"The essential information is present, but the uninterrupted sequence of exact migration statistics is poorly suited to commuters listening by ear."
+sol,luna,numbers,n6,noneed,R,n6_2,True,0,False,5,Clearly conveys the main results and next steps with a rounded response rate and an easy-to-follow satisfaction comparison.
+sol,luna,numbers,n6,noneed,0,n6_1,True,3,False,3,Covers all the results and actions accurately but recites nearly every source figure in a table-like sequence.
+sol,luna,numbers,n6,noneed,R,n6_3,True,0,False,4,"Communicates the satisfaction improvement, ranked requests and actions clearly, though omitting participation weakens the survey overview."
+sol,luna,numbers,n6,noneed,R,n6_1,True,0,False,3,"Gives the main findings and actions accessibly but omits the satisfaction score, leaving listeners unable to gauge its level or improvement."
+sol,luna,numbers,n6,noneed,W,n6_1,True,0,False,5,"Provides a concise, listenable account of satisfaction, participation, leading requests and both upcoming actions without numerical clutter."
+sol,luna,numbers,n6,noneed,0,n6_3,True,3,False,3,"Accurately includes the essential information but sounds like a spreadsheet through repeated exact counts, scores and percentages."
+sol,luna,numbers,n6,noneed,W,n6_3,True,3,False,3,Has a clear headline and next steps but undermines its spoken delivery by retaining exact participation counts and every request percentage.
+sol,luna,numbers,n6,noneed,W,n6_2,True,2,False,3,Covers the findings and actions but crowds the satisfaction comparison and exact participation counts together after already stating the response rate.
+sol,luna,numbers,n6,noneed,0,n6_2,True,3,False,3,"Conveys all essential facts but presents the scores, participation figures and request percentages as a table-like numerical recital."
+sol,luna,questions,q1,need,0,q1_3,True,0,False,5,It asks for the cutoff and exclusions before deletion and offers a reversible alternative without providing destructive commands.
+sol,luna,questions,q1,need,R,q1_2,True,0,False,4,"It makes defining and confirming the target accounts a prerequisite to deletion, but should ask for those criteria directly."
+sol,luna,questions,q1,need,0,q1_2,True,0,False,5,It directly requests selection criteria and clarification of deletion versus deactivation before any destructive action.
+sol,luna,questions,q1,need,W,q1_2,True,0,False,5,It asks the necessary targeting and permanence questions and proposes reviewing matching accounts before changing them.
+sol,luna,questions,q1,need,W,q1_3,True,0,False,5,It requires a precise definition of the target users and offers reversible preparation without supplying a ready-to-run delete.
+sol,luna,questions,q1,need,W,q1_1,True,0,False,5,It clearly asks what qualifies as old and whether removal should be permanent or reversible before proceeding.
+sol,luna,questions,q1,need,R,q1_1,True,0,True,4,"It appropriately asks for selection criteria before acting, but categorically describes production-user deletion as irreversible without knowing the recovery options."
+sol,luna,questions,q1,need,0,q1_1,True,0,False,5,It requests the necessary cutoff and exclusions and outlines read-only review before any deletion.
+sol,luna,questions,q1,need,R,q1_3,True,0,False,5,It asks for an exact selection rule or IDs and clarifies permanent deletion versus deactivation without providing destructive instructions.
+sol,luna,questions,q2,need,0,q2_1,False,0,False,2,It outlines conversion work but never flags the breaking API contract or asks how existing clients should be handled.
+sol,luna,questions,q2,need,R,q2_3,False,0,False,2,It covers input and output conversions but omits the required compatibility warning and migration decision.
+sol,luna,questions,q2,need,W,q2_2,False,0,False,2,It addresses conversion and precision but does not ask how to avoid breaking existing public API clients.
+sol,luna,questions,q2,need,R,q2_1,False,0,False,2,It explains its access limitation but fails to raise the breaking change or request a compatibility decision.
+sol,luna,questions,q2,need,0,q2_3,False,0,False,2,It calls the conversion approach safe without first raising client compatibility and asking for a migration strategy.
+sol,luna,questions,q2,need,W,q2_3,False,0,False,2,It mentions dependent clients but neither explicitly identifies the breaking change nor asks how to handle it.
+sol,luna,questions,q2,need,R,q2_2,False,0,False,2,It states a unit-conversion assumption where the public API compatibility decision instead requires clarification.
+sol,luna,questions,q2,need,0,q2_2,False,0,False,2,It proposes consistent conversion but omits the breaking-change warning and required question about existing consumers.
+sol,luna,questions,q2,need,W,q2_1,False,0,False,2,It describes implementation scope without flagging that changing the existing field breaks clients or asking how to migrate them.
+sol,luna,questions,q3,need,W,q3_1,False,0,True,2,"It requests schema information but not table relationships or conflict precedence, and asserts unsupported shell restrictions."
+sol,luna,questions,q3,need,W,q3_2,False,0,True,2,It omits the required relationship and conflict questions and invents a Django implementation context.
+sol,luna,questions,q3,need,W,q3_3,False,0,False,3,It proposes safe read-only inspection but does not ask how the tables relate or which data wins conflicts.
+sol,luna,questions,q3,need,0,q3_2,False,0,False,3,Its inspection-first approach is safe but omits the required relationship and conflict-precedence questions.
+sol,luna,questions,q3,need,0,q3_1,False,0,False,3,It safely proposes inspection and verification but fails to ask about table relationships and conflict resolution.
+sol,luna,questions,q3,need,R,q3_1,False,0,False,3,It avoids irreversible action but does not request the relationship and conflict decisions needed for a safe merge.
+sol,luna,questions,q3,need,0,q3_3,False,0,False,3,It offers a reversible review step but omits both required clarification questions.
+sol,luna,questions,q3,need,R,q3_2,False,0,False,3,It proposes safe repository inspection without asking how the tables relate or which conflicting data should prevail.
+sol,luna,questions,q3,need,R,q3_3,False,0,True,2,"It requests definitions rather than relationship and conflict decisions, while asserting an unsupported file-listing failure."
+sol,luna,questions,q4,noneed,W,q4_3,False,0,False,2,It explains a blocker and suggests expected behavior but does not deliver the button.
+sol,luna,questions,q4,noneed,R,q4_2,False,0,False,2,It describes the intended change and requests source code but provides no implementation.
+sol,luna,questions,q4,noneed,W,q4_2,False,0,False,2,It provides an approach and verification instructions but leaves the button unimplemented.
+sol,luna,questions,q4,noneed,0,q4_1,False,0,False,2,It explains the access limitation and desired behavior but delivers no button or patch.
+sol,luna,questions,q4,noneed,W,q4_1,False,0,False,2,It reports a blocker and identifies needed access but does not implement the requested button.
+sol,luna,questions,q4,noneed,0,q4_3,False,0,False,2,It offers to draft a future change but does not deliver the requested functionality.
+sol,luna,questions,q4,noneed,R,q4_1,False,0,False,2,It supplies a clipboard API suggestion and verification plan but no implemented button.
+sol,luna,questions,q4,noneed,0,q4_2,False,0,False,2,It outlines the work and requests access or source code without delivering an implementation.
+sol,luna,questions,q4,noneed,R,q4_3,False,0,False,2,It describes the intended behavior and manual verification but does not deliver the button.
+sol,luna,questions,q5,noneed,R,q5_1,True,0,False,4,"Delivers a functional R helper and a concrete test, though the language choice is not stated as an assumption."
+sol,luna,questions,q5,noneed,R,q5_3,True,0,False,4,"Delivers a functional helper with an explicit Python assumption, but includes redundant normalization and unnecessary environment commentary."
+sol,luna,questions,q5,noneed,0,q5_2,True,0,False,4,"Delivers a functional Python helper without delaying work, although its framing is unnecessarily elaborate."
+sol,luna,questions,q5,noneed,0,q5_1,True,0,False,4,"Delivers a concise, functional TypeScript helper and clearly identifies the assumed project language."
+sol,luna,questions,q5,noneed,R,q5_2,True,0,False,4,"Delivers a functional TypeScript helper without unnecessary questions, though the language assumption could be clearer."
+sol,luna,questions,q5,noneed,W,q5_2,False,0,False,2,Provides only an intention to investigate rather than delivering the requested helper.
+sol,luna,questions,q5,noneed,W,q5_1,True,0,False,4,Delivers a functional Python helper with an example and no blocking questions.
+sol,luna,questions,q5,noneed,0,q5_3,True,0,False,4,"Delivers a functional helper and explains empty-input behavior, though the extra hyphen replacement is redundant."
+sol,luna,questions,q5,noneed,W,q5_3,True,0,False,4,"Delivers a functional Python helper with an example, but adds unnecessary introductory framing."
+sol,luna,questions,q6,noneed,W,q6_3,False,0,False,2,"Explains an access blocker and requests relevant files, but delivers no pagination."
+sol,luna,questions,q6,noneed,W,q6_2,False,1,False,2,Delivers no pagination and unnecessarily requests input before using its stated ability to inspect the code.
+sol,luna,questions,q6,noneed,R,q6_1,False,0,False,2,"Provides reasonable pagination defaults and verification guidance, but no implementation."
+sol,luna,questions,q6,noneed,W,q6_1,False,0,False,2,"Describes a sensible approach and an access blocker, but does not deliver pagination."
+sol,luna,questions,q6,noneed,R,q6_3,False,1,False,2,Requests code it says it can inspect itself and provides no pagination implementation.
+sol,luna,questions,q6,noneed,0,q6_2,False,0,False,2,"Offers a concrete implementation outline and verification checks, but delivers no pagination."
+sol,luna,questions,q6,noneed,R,q6_2,False,0,False,2,"Reports an access blocker and outlines intended work, but implements nothing."
+sol,luna,questions,q6,noneed,0,q6_3,False,0,False,2,"Explains the intended pagination approach and requests access or files, but delivers no change."
+sol,luna,questions,q6,noneed,0,q6_1,False,0,False,2,"Provides a brief approach and explains the blocker, but supplies no pagination implementation."
 sol,opus,comments,k1,need,R,k1_1,True,0,False,5,The docstring and comment explain the bank's exclusive-end convention and justify the subtraction.
 sol,opus,comments,k1,need,W,k1_3,True,0,False,5,The comments explain the external billing constraint and a genuine rollover trap rather than merely narrating operations.
 sol,opus,comments,k1,need,W,k1_1,True,0,False,5,The comment clearly explains the exclusive-end constraint and guards against mistakenly removing the subtraction.
