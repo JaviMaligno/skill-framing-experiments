@@ -1,0 +1,179 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration is unchanged from the original: the clipped 'the full transcript: 10 of 72' still reads like a table and '7.5x... 1.4x' stacks two unround figures, and the only addition is a needless spoken-form note.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "7.5x token saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "Cutting 7.5x eases the ear but drops the token-saving number the cost twist rests on, and the clipped 'the full transcript: 10 of 72' stays.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "All numbers are kept in natural sentences ('applied it in 10 of 72', 'saved 7.5x in tokens, but only 1.4x in money'), though the cost line still has two unround figures close together.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "transcript 10 of 72",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The transcript result and the whole cost twist become vague quantifiers ('rarely', 'much smaller'), which loses the headline numbers.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "transcript 10 of 72",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Same as X4: 'rarely did' and 'much smaller' replace the transcript result and the cost numbers.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "state 70 of 72",
+   "transcript 10 of 72",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "Every headline number is gone, so the narration states no finding with a number.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "Scene 4 now reads as a natural sentence and all numbers are kept; the cost line still pairs 7.5x with 1.4x.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "The cost twist loses its numbers to 'much smaller', and the clipped scene 4 is left as it was.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration is unchanged from the original, with only a redundant spoken-form note added, so both dense number spots remain.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "Identical to X7: a natural scene 4 with all numbers kept, and the cost line slightly dense.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "Identical to X8: the cost numbers are replaced by a vague quantifier.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "Unchanged from the original, so it does nothing about the clipped, table-like scene 4 or the stacked figures in the cost line.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

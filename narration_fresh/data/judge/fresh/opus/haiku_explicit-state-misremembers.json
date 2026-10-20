@@ -1,0 +1,164 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "Joins 75 and 200 into one natural sentence and gives 0.999 its own line, though the label \"Stateful\" is never introduced to the listener.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X2",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "The narration is unchanged, so \"75 episodes, up to 200 steps\" still sounds like a list and the bare \": 0.999\" still sounds like a table cell.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X3",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Rounding 0.999 to \"nearly one\" and dropping 200 steps makes it easier to hear, but \"absorbed it: nearly one\" is still a bare value with nothing saying what it measures.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X4",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "Removing the model version numbers doesn't fix the number problem, the bare \": 0.999\" stays, and a stray note sits inside the script.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "0.999 score when Haiku keeps the transcript"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "It reads cleanly, but the transcript-absorbs-it finding no longer has a number.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "0.999 score when Haiku keeps the transcript"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "\"It scored best\" is a vague comparison in place of the 0.999 figure.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration is the same as the original, so neither the list-like Finding A nor the bare 0.999 is fixed.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X8",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 5,
+  "reason": "Every number is said inside a natural sentence (\"in 75 episodes of up to 200 steps\", \"scoring 0.999\") with nothing lost.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "Dropping the 200 steps helps Finding A, but the bare \": 0.999\" stays and the spoken-forms section is gone.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The spoken lines work well, with numbers inside sentences and 0.999 tied to a score, but the reply is a full table with a preamble and it cuts off mid-note.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration is unchanged, and the note refers to written-out spoken forms that aren't there.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "0.999 score when Haiku keeps the transcript"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "\"Scored highest\" replaces 0.999 with a vague comparison, and the model versions are dropped without being needed.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ }
+]

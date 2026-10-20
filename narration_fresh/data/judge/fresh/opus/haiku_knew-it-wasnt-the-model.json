@@ -1,0 +1,168 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "This is the original unchanged, so scene 4 still runs 19/20, 19 and 19, 14/20 and 4/20 back to back, and 260 of 260 comes just before.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "19 of 20 patched the symptom"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The patching finding becomes 'nearly every agent', and the notes mention a p-value that isn't in the narration.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "4 of 20 said it about the forest"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The pile-up is fixed, but the forest's 4 of 20 becomes 'far fewer', so the 14 against 4 contrast is no longer said.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X4",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "It cuts only 260 of 260 and the repeated 19s and keeps 19/20, 14/20 and 4/20 as spoken findings, though 'both briefs gave identical output' wrongly makes the briefs produce the output, when the original says they reported it.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X5",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The narration edits are right, but the notes are confused: they say the TTS speaks only 'fourteen' and 'four' and give no spoken forms.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "4 of 20 said it about the forest"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "It replaces the forest's 4 of 20 with 'far fewer' and leaves 260 of 260 in.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "Spelling the numbers out doesn't help: 260 of 260 and 19 and 19 are still spoken, so the scene 4 pile-up remains.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "4 of 20 said it about the forest"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The flow is cleaner, but the forest's 4 of 20 becomes 'far fewer', so the main contrast loses its number.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "It keeps all three headline fractions and drops the side figures, though it leaves stray note fragments.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "It adds numbers instead of removing them, so 260 of 260, 19/20, 19/20 in each arm, 14/20 and 4/20 read like a table.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "It only reformats the fractions; 260 of 260 and the repeated 19 of 20 still crowd scene 4.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "4 of 20 said it about the forest"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "It replaces the forest's 4 of 20 with 'far less often' and drops 'twenty agents per arm', which leaves 14/20 without its context.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "haiku",
+  "script": "knew-it-wasnt-the-model"
+ }
+]

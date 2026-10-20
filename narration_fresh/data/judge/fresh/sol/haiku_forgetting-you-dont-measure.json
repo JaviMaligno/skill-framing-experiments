@@ -1,0 +1,186 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "All findings retain their numbers, but the unchanged decimal-heavy runs remain table-like.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "Task accuracy starting value",
+   "General accuracy drop magnitude",
+   "Ten-percent mixing level",
+   "Instruction-following decline magnitude",
+   "LoRA instruction-following gain magnitude"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The voice is less crowded, but several quantitative findings become merely directional.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "The claimed reductions are not supplied, leaving the original numerical runs intact.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "No spoken replacements are provided, so the original awkward numerical sequences remain.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "General accuracy drop magnitude",
+   "Instruction-following decline magnitude",
+   "LoRA instruction-following gain magnitude"
+  ],
+  "excess": 0,
+  "errors": true,
+  "quality": 2,
+  "reason": "Natural numerical phrasing helps, but three magnitudes disappear and 'across the board' overstates an average decline.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "Task accuracy starting value",
+   "General accuracy drop magnitude",
+   "Recovery proportion",
+   "Instruction-following decline magnitude",
+   "LoRA instruction-following gain magnitude"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The lighter delivery sacrifices several numerical findings, including the recovery proportion.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "essential": false,
+  "lost": [
+   "Task accuracy starting value",
+   "General accuracy drop magnitude",
+   "Ten-percent mixing level",
+   "Instruction-following decline magnitude",
+   "LoRA instruction-following gain magnitude",
+   "LoRA unseen-command accuracy"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration avoids numerical overload by replacing too many measured results with qualitative descriptions.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "Adding prepositions does not resolve the dense runs of exact decimals.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "essential": false,
+  "lost": [
+   "Task accuracy starting value",
+   "General accuracy drop magnitude",
+   "Instruction-following decline magnitude",
+   "LoRA instruction-following gain magnitude"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The remaining numbers are manageable, but four original quantitative findings are no longer fully spoken.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "Explicit approximation words and linked comparisons improve flow slightly without removing decimal overload.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 5,
+  "reason": "Rounded points and familiar fractions preserve every quantitative finding while making the voice natural.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "The spoken narration remains unchanged, including both dense numerical passages.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ }
+]

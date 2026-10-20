@@ -1,0 +1,191 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "10% mixing dose",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Keeps only the 73% recovery and zero on unseen commands; most findings become vague words, and '10%' is replaced by 'a little'.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "10% mixing dose",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Easy to listen to, but almost every number is gone except 73%; 'failed completely' stands in for the zero.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "No change to the narration: the voice still reads the dense run of decimals like a table, and the spoken-forms table is empty.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Keeps the main 10%→73% finding and the zero, and the numbers are much easier on the ear, but several findings lose their numbers.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "10% mixing dose",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Only 73% and 'none right' survive; the 10% dose that makes the main finding work is now just 'some general text'.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "Only 0.5B gets a spoken form; the finding lines still read out runs of unround decimals.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "No change to the narration; the spoken-forms table is empty, so the voice still recites a table.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "No change to the narration; the spoken-forms table is empty, so the voice still recites a table.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "No change to the narration apart from a length note; the dense run of decimals is still read aloud.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Keeps the main 10%→73% finding and the zero, and it's easy to follow, but the other findings become words without numbers.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "Says overrides apply but gives none, so every decimal is still spoken.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "task accuracy 0.36→0.90",
+   "general accuracy drop 0.078",
+   "instruction-following −0.071 vs +0.033",
+   "unseen commands LoRA 0.15"
+  ],
+  "excess": 0,
+  "errors": true,
+  "quality": 2,
+  "reason": "Keeps 10%→73% and the zero, but 'dropped across the board' misstates what was only an average drop.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ }
+]

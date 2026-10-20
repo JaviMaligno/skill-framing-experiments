@@ -1,0 +1,214 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Mixing level: 10%",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The narration avoids numerical overload by removing most of the findings' quantitative substance.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "General accuracy drop: 0.078",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The retained numbers sound conversational, but several headline results become unquantified.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Mixing level: 10%",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Keeping the recovery percentage alone does not preserve the other numbered findings.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The numerical pileups disappear, but so do most of the result magnitudes.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "All headline numbers remain, but the enumerated mixing levels and successive decimal results still sound table-like.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Mixing level and recovery: 10% and 73%",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "Unseen-command accuracy: 0.00",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 3,
+  "errors": false,
+  "quality": 1,
+  "reason": "This is a list of unexplained numbers rather than narration of the experiment.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": true,
+  "quality": 1,
+  "reason": "The numerical recitation remains, and the added claim that LoRA learned the task just as well is not established by the original.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "General accuracy drop: 0.078",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Conversational fractions improve the retained findings, but four headline magnitudes are omitted.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "quality": 2,
+  "reason": "Connecting the clauses does not resolve the dense succession of unround decimal results.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The voice retains a few useful numbers but replaces several major measured results with direction alone.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Moving the omitted numbers to the visuals does not satisfy the requirement to say the findings with their numbers.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "Task accuracy: ~0.36 to ~0.90",
+   "General accuracy drop: 0.078",
+   "Recovery share: 73%",
+   "Instruction-following drop: 0.071",
+   "LoRA instruction-following gain: 0.033",
+   "LoRA unseen-command accuracy: 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "More than doubled and most are accurate summaries, but they do not preserve the original numerical findings.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ }
+]

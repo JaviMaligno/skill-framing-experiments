@@ -1,0 +1,175 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "The voice keeps 70 of 72, 'just 10' and 1.4x, and drops the stacked 7.5x, though 'the bill saving is just 1.4x' no longer says the token saving was bigger.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 5,
+  "reason": "It keeps every headline number in natural sentences and replaces 7.5x with 'big token saving shrank to 1.4x', so the contrast survives without stacked figures.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Explicit state's 70 of 72 becomes 'almost every time'; the transcript's 10 of 72 and the cost line still read well.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Explicit state's result becomes the vague 'almost every time', and 'Ten steps later' is needlessly cut to 'Later'.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72",
+   "transcript 10 of 72",
+   "1.4x cost saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Every headline number is replaced by a vague quantifier, so the findings lose their figures.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Explicit state's 70 of 72 becomes 'almost every time'; the transcript's 10 of 72 and 1.4x are still spoken naturally.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "Nearly unchanged: it still says 70 of 72 then 10 of 72, and 7.5x then 1.4x, back to back.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72",
+   "transcript 10 of 72",
+   "1.4x cost saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "All headline numbers become vague wording like 'almost every', 'rarely' and 'small cost saving'.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "It only fixes the colon, so both runs of unround figures (70/72 with 10/72, 7.5x with 1.4x) remain.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "It keeps 70 of 72, 'just 10' and 1.4x, and drops 7.5x cleanly; the spoken-forms note has a stray 'solo 10', but that only affects the notes.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "The sentences read better, but 70 of 72 and 10 of 72 are still said back to back, and 7.5x then 1.4x.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "explicit state 70 of 72",
+   "1.4x cost saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "'About one in seven' is a fair fraction for 10 of 72, but explicit state's result and the 1.4x bill figure are no longer spoken.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

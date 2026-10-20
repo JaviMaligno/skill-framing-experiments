@@ -1,0 +1,187 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The shortened comparison is easy to hear, but the token-saving finding loses its number.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The narration preserves a clear numerical episode comparison but replaces the quantified token saving with a vague description.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "It avoids numerical crowding by removing numbers from two headline findings.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The voice is less crowded, but screen-only figures do not preserve the explicit-state and token-saving numbers.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "10 of 72 transcript successes",
+   "7.5x token saving",
+   "1.4x monetary saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "Every headline finding loses its spoken number, leaving only qualitative conclusions.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The remaining numbers are manageable by ear, but two quantified findings become vague.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "All headline numbers remain, but both the episode comparison and cost comparison retain crowded runs of figures.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "10 of 72 transcript successes",
+   "7.5x token saving",
+   "1.4x monetary saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "Removing every headline number solves crowding at the expense of the author's requested quantitative findings.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "Replacing the colon with a verb does not fix the two audible clusters of exact figures.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "essential": false,
+  "lost": [
+   "7.5x token saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The shared denominator makes the episode comparison economical, but the token-saving number is missing.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "More conversational wording preserves all findings but leaves both numerical clusters substantially unchanged.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "70 of 72 explicit-state successes",
+   "7.5x token saving",
+   "1.4x monetary saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "About one in seven is a reasonable numerical approximation, but the other three headline findings lose their numbers.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

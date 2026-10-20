@@ -1,0 +1,178 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "All the findings keep their numbers and now have verbs, but the three percentages still come back to back, and the new restart counts (7 and 34) cluster more figures around 3 of 4 in scene 5.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "It reads easily, but the button's 91% is now only 'edged ahead', so that finding loses its number.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "It reads naturally, but the button result is no longer said with its number.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "iterating 86%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The main 86% becomes the vague 'most of the tasks' and 91% disappears, though 'seven in ten' and 'three of four' are kept.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "Every finding keeps its number and is now spoken as a sentence, but scene 4 still says three percentages close together.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Two of the three scene-4 results become just 'trailed' and 'edged ahead', with no numbers.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The clean-restart and button results are both said without numbers.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "It keeps every finding with a number and adds verbs so it sounds natural, though the three percentages still come in quick succession.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Only 86% is still spoken; the clean-restart and button results become 'did worse' and 'edged ahead'.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "The numbers survive as fractions, but 'about six in seven' is awkward, and the three fractions after colons still sound like a table read aloud.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%",
+   "rescued 3 of 4"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "It removes most of the numbers, including 29 tasks, and 'three of those losses' has no clear antecedent.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 2,
+  "reason": "It is basically the original: the three percentages are still recited after colons like table labels.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ }
+]

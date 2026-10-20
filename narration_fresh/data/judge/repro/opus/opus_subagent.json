@@ -1,0 +1,184 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (Opus with the fact in sight)",
+   "Gemini 88% from its subagent"
+  ],
+  "excess": 0,
+  "errors": true,
+  "quality": 2,
+  "reason": "The 4-in-791 finding becomes 'almost never', and Gemini's 88% becomes 'almost every time', which overstates it and leaves line 12 unclear about what is being counted.",
+  "version": "1c81e93",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X2",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "Every number is still said and line 12 is clearer, but 25%, 47%, 88%, 3%, 0% and 95% still come close together, much like a table read aloud.",
+  "version": "2d8f6fa",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "Opus 47% with long context",
+   "Gemini 95% adopted the wrong conclusion from its subagent"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The 47% and 95% findings become vague quantifiers, and line 13 no longer says the subagent was the source.",
+  "version": "4ccc13f",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X4",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "Every headline number stays in the voice, and the 3% and 0% contrast becomes 'almost never', which breaks up the string of numbers, though 25, 47, 88 and 95 still come fairly close.",
+  "version": "2d8f6fa",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (Opus with the fact in sight)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The round fractions read naturally, but the 4-in-791 headline is moved to the screen and only 'almost never' is spoken.",
+  "version": "1c81e93",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (Opus with the fact in sight)",
+   "Opus 47% with long context",
+   "Gemini 95% adopted the wrong conclusion from its subagent"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Three of the headline numbers are replaced by vague quantifiers.",
+  "version": "0993f3d",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X7",
+  "essential": false,
+  "lost": [
+   "Opus 47% with long context"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "Most numbers survive, but 47% becomes 'even more often'.",
+  "version": "4ccc13f",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (denominator dropped)",
+   "Opus 47% with long context",
+   "Gemini 95% adopted the wrong conclusion from its subagent"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "'Only 4 times' has no denominator, so it means little, and the 47% and 95% findings become vague.",
+  "version": "0993f3d",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "Every number is kept, but line 12 still reads out 88%, 3% and 0% in one sentence with 95% right after, so the tiring run is not fixed.",
+  "version": "2d8f6fa",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X10",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (Opus with the fact in sight)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The natural fractions read well, but the 4-in-791 finding becomes 'almost never'.",
+  "version": "1c81e93",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "4 times in 791 (Opus with the fact in sight)",
+   "Opus 47% with long context",
+   "Gemini 95% adopted the wrong conclusion from its subagent"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Most of the headline numbers are gone, and line 13 does not say the subagent was the source.",
+  "version": "0993f3d",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "Gemini 95% adopted the wrong conclusion from its subagent"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "It keeps 4 in 791, 25% and 88% and turns 47% into 'nearly half', but 95% becomes the vague 'nearly all the time'.",
+  "version": "4ccc13f",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ }
+]

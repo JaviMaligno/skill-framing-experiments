@@ -1,0 +1,180 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": true,
+  "quality": 1,
+  "reason": "It drops every headline number, cuts unrelated numbers from scenes 1 and 5, and swaps the Opus quote for a different line.",
+  "version": "0993f3d",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X2",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "Every number is kept, but scene 11 still recites three unround decimals in a row, so the pile-up the guidance targets remains.",
+  "version": "2d8f6fa",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "It reads smoothly, but both headline findings become vague ('almost all', 'barely', 'another planet').",
+  "version": "1c81e93",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Both numeric findings become qualitative ('over and over', 'far more'), which loses the point of the result.",
+  "version": "0993f3d",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "base 0.51/0.78 vs aligned"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "It keeps 99.6% and the aligned ~0.10, but the base figure becomes 'on another planet', so the comparison is only half numeric.",
+  "version": "4ccc13f",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X6",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "All the figures are kept with clearer wording, but scene 11 still strings three unround decimals together.",
+  "version": "2d8f6fa",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "quality": 4,
+  "reason": "It keeps 99.6% and the aligned-vs-base pair as one spoken contrast and moves only the secondary 0.78 to screen, though the line is a little terse.",
+  "version": "4ccc13f",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Both headline numbers move to the screen only and the voice uses vague quantifiers.",
+  "version": "1c81e93",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X9",
+  "essential": false,
+  "lost": [
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The 99.6% headline survives naturally, but the aligned-vs-base result is reduced to 'far more repetitive'.",
+  "version": "4ccc13f",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "Nothing is lost, but scene 11 still recites three decimals back to back, like a table.",
+  "version": "2d8f6fa",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Both numeric findings are replaced by 'fell into a loop' and 'on another planet'.",
+  "version": "1c81e93",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "99.6% repetition on 'table'",
+   "aligned ~0.10 vs base 0.51/0.78"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "It strips the headline numbers and also needlessly rewrites the hook, the 'thousand times' line and the Opus quote, far beyond the brief.",
+  "version": "0993f3d",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ }
+]

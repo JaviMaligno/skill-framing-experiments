@@ -1,0 +1,179 @@
+[
+ {
+  "id": "X1",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "All headline numbers remain spoken, but the finding counts and cost multipliers create two dense numerical passages.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "7.5x token saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 3,
+  "reason": "The cost line is easier to hear but drops the token-saving number, while the finding counts remain table-like.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "The fuller phrasing sounds more conversational and preserves every number, but both numerical clusters remain dense.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "essential": false,
+  "lost": [
+   "Transcript applied the fix in 10 of 72 episodes",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The voice avoids numerical overload by replacing three headline numbers with vague descriptions.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "Transcript applied the fix in 10 of 72 episodes",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "The smoother narration retains the state result but removes the numerical transcript result and both cost-comparison figures.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "essential": false,
+  "lost": [
+   "State applied the fix in 70 of 72 episodes",
+   "Transcript applied the fix in 10 of 72 episodes",
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 1,
+  "reason": "Every headline numerical finding becomes qualitative, defeating the requirement to say the findings with their numbers.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "Every headline number survives and the transcript sentence is more natural, but the counts and multipliers still form two dense clusters.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "The cost comparison loses both numbers, while the finding section retains its table-like sequence of counts.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "The spoken-form note changes no headline figures, leaving all findings intact but both numerical clusters unaddressed.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "The transcript result is phrased more conversationally, but all the closely packed counts and cost multipliers remain.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "7.5x token saving",
+   "1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "quality": 2,
+  "reason": "Both cost figures disappear into a vague comparison, and the remaining finding counts still sound table-like.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "essential": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "quality": 3,
+  "reason": "The original numerical findings are preserved without error, but neither dense numerical passage is improved.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

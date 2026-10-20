@@ -1,0 +1,183 @@
+[
+ {
+  "id": "X1",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Easy to follow by ear, but the clean-restart and button results are now vague phrases instead of numbers.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "essential": false,
+  "lost": [
+   "iterating 86%",
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 2,
+  "reason": "Every headline percentage is gone and replaced with vague words like 'most' and 'clearly fewer', and 'iterating' is renamed 'patching'.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Keeps 86% naturally, but the clean-restart and button results lose their numbers.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "All three results keep their numbers, each spread over its own line with context, though three uneven percentages still come close together.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Smooth to listen to, but 69% and 91% now appear only on screen, and 'fell behind' is vague.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "All findings keep their numbers in conversational lines; the three percentages are still fairly close together.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "essential": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "quality": 4,
+  "reason": "All findings keep their numbers in natural sentences, but the three percentages sit packed into consecutive lines.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Only 86% is spoken; the clean-restart and button results became vague comparisons.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "essential": false,
+  "lost": [
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Keeps 86% and 69%, but the button's 91% is gone and 'Clean restarts: 69%' still sounds like reading a table.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "essential": false,
+  "lost": [
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "Drops the button's 91% and the repo count, and keeps the table-like 'Clean restarts: 69%'.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "essential": false,
+  "lost": [
+   "clean restarts 69%",
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "'Almost nine in ten' is a nice spoken form of 86%, but the other two results lose their numbers.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "essential": false,
+  "lost": [
+   "button 91%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "quality": 3,
+  "reason": "The button's 91% moves to screen only, and the terse 'Clean restarts: 69%' line is unchanged.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ }
+]
