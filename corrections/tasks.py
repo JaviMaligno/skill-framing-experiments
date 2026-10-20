@@ -45,6 +45,22 @@ sentence, the figure that makes the point and not the spreadsheet behind it. The
 to avoid is reading a table aloud.
 """
 
+# Two more rules without the "at most one figure" cap, added after the first run: R caps the
+# count at one, and the need cases depend on two figures (9 -> 12, 4 of 791), so R can fail by
+# obeying. S is the rule as first written in the narration skill (no cap, no exception); E adds
+# the exception, so it carries the same content as W.
+NUMBERS_S = """## Numbers (update)
+Do not string numbers together: listeners cannot follow a run of figures. Never say several
+unround numbers in a row. Round figures when the source allows it, and do not read out
+lists of values.
+"""
+
+NUMBERS_E = """## Numbers (update)
+Do not string numbers together: listeners cannot follow a run of figures. Never say several
+unround numbers in a row. Round when the source allows it. Exception: keep the figures the
+point depends on.
+"""
+
 NUMBERS_CASES = [
     # The point is the proportion: "4 of 791" or "half a percent" both say it; "four" alone does not.
     dict(id="n1", kind="need", key=[r"(?s)(?=.*(\b4\b|\bfour\b))(?=.*(791|seven hundred|eight hundred|800))"
@@ -278,7 +294,7 @@ CONCISE_CASES = [
 ]
 
 TASKS = {
-    "numbers": dict(base=NUMBERS_BASE, R=NUMBERS_R, W=NUMBERS_W, cases=NUMBERS_CASES,
+    "numbers": dict(base=NUMBERS_BASE, R=NUMBERS_R, W=NUMBERS_W, S=NUMBERS_S, E=NUMBERS_E, cases=NUMBERS_CASES,
                     ask="Write the spoken briefing from this source:\n\n{src}"),
     "questions": dict(base=QUESTIONS_BASE, R=QUESTIONS_R, W=QUESTIONS_W, cases=QUESTIONS_CASES,
                       ask="{src}"),

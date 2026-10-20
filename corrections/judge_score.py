@@ -1,15 +1,16 @@
 """Aggregate the LLM judgments of experiment 2 and compare the two judges.
 
-Usage: python judge_score.py   -> table per judge + agreement + data/judge_scores.csv
+Usage: python judge_score.py [data/judge_numbers5]   -> table per judge + agreement + <dir>_scores.csv
 """
 import csv
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 from statistics import mean
 
 HERE = Path(__file__).parent
-JUDGE = HERE / "data" / "judge"
+JUDGE = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "data" / "judge"
 
 
 def load():
@@ -27,7 +28,7 @@ def fmt(xs):
 
 def main():
     rows = load()
-    with open(HERE / "data" / "judge_scores.csv", "w", newline="", encoding="utf-8") as fh:
+    with open(JUDGE.parent / f"{JUDGE.name}_scores.csv", "w", newline="", encoding="utf-8") as fh:
         cols = ["judge", "model", "task", "case", "kind", "cond", "file", "essential", "excess", "errors",
                 "quality", "reason"]
         w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")

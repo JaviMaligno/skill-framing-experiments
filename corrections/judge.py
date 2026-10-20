@@ -135,9 +135,9 @@ Return only a JSON array, one object per response, in the order given:
 "quality" 5 means a demanding editor would publish it as is; 1 means unusable."""
 
 
-def build(model, task, case, reps):
+def build(model, task, case, reps, conds=CONDS):
     items = []
-    for cond in CONDS:
+    for cond in conds:
         for f in sorted((RAW / model / task / cond).glob(f"{case['id']}_*.md")):
             if int(f.stem.split("_")[1]) not in reps:
                 continue
@@ -163,13 +163,13 @@ def parse(out):
         return None
 
 
-def judge_one(judge, model, task, case, reps=None):
+def judge_one(judge, model, task, case, reps=None, conds=CONDS, out=OUT):
     reps = reps or DEFAULT_REPS
     suffix = "" if reps == DEFAULT_REPS else f"_r{min(reps)}-{max(reps)}"
-    dest = OUT / judge / f"{model}_{task}_{case['id']}{suffix}.json"
+    dest = out / judge / f"{model}_{task}_{case['id']}{suffix}.json"
     if dest.exists():
         return "skip"
-    prompt, key = build(model, task, case, reps)
+    prompt, key = build(model, task, case, reps, conds)
     out = call(judge, "You are a careful, strict evaluator. Output only what is asked.", prompt,
                dest.with_suffix(".work"))
     rows = parse(out) if is_valid(out) else None
@@ -191,6 +191,8 @@ def main():
     ap.add_argument("--tasks", default=",".join(TASKS))
     ap.add_argument("--cases", default="")
     ap.add_argument("--reps", default="1-3", help="range of reps judged together, e.g. 4-6")
+    ap.add_argument("--conds", default=",".join(CONDS), help="conditions judged together in one call")
+    ap.add_argument("--out", default=str(OUT), help="output directory (one per set of conditions)")
     args = ap.parse_args()
     only = set(filter(None, args.cases.split(",")))
     lo, hi = map(int, args.reps.split("-"))
@@ -201,7 +203,7 @@ def main():
         for t in args.tasks.split(","):
             for c in TASKS[t]["cases"]:
                 if not only or c["id"] in only:
-                    results.append(judge_one(args.judge, m, t, c, reps))
+                    results.append(judge_one(args.judge, m, t, c, reps, tuple(args.conds.split(",")), Path(args.out)))
     print({s: results.count(s) for s in set(results)})
 
 
