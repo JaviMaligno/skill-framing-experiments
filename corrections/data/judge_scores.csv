@@ -1,0 +1,1081 @@
+judge,model,task,case,kind,cond,file,essential,excess,errors,quality,reason
+opus,astra,comments,k1,need,0,k1_3,True,0,False,4,"The docstring says the API end is exclusive, which explains the subtraction, though it doesn't name the bank or the invoice constraint."
+opus,astra,comments,k1,need,R,k1_2,True,0,False,4,"This is identical to X1: the docstring explains the exclusive end, but it doesn't name the bank or the invoice constraint."
+opus,astra,comments,k1,need,R,k1_3,True,0,False,5,"The comment links the subtraction to the bank's exclusive end date and the invoice's billed end, so it gives a reason rather than narrating the code."
+opus,astra,comments,k1,need,0,k1_1,True,0,False,4,"The docstring says the API end date is exclusive, so the subtraction is justified, though it's brief."
+opus,astra,comments,k1,need,W,k1_3,True,0,False,4,"The comment clearly explains the gap between the exclusive and inclusive end, but raising ValueError for a non-date argument is less idiomatic than TypeError."
+opus,astra,comments,k1,need,R,k1_1,True,0,False,5,"The comment explains that the bank's exclusive end is one day after the last billed day, which justifies the subtraction."
+opus,astra,comments,k1,need,0,k1_2,True,0,False,4,"This is identical to X1: the docstring conveys that the API end is exclusive, but there's no explicit bank or invoice context."
+opus,astra,comments,k1,need,W,k1_2,True,0,False,5,The comment states the outside constraint briefly: the bank's end date is exclusive and invoices show the inclusive end.
+opus,astra,comments,k1,need,W,k1_1,True,0,False,5,The comment explains that the bank's end date excludes that day and that invoices need an inclusive end.
+opus,astra,comments,k2,need,W,k2_3,False,0,False,3,"The comment says the provider silently drops excess requests and explains the 0.1 s margin, but it never states the one-request-per-rolling-second limit."
+opus,astra,comments,k2,need,0,k2_3,False,0,False,2,"The code is clean and correct, but nothing tells a maintainer why the 1.1 s delay exists."
+opus,astra,comments,k2,need,W,k2_2,False,0,False,3,"The comment mentions silent drops and the extra 0.1 s, but it leaves out the one-request-per-rolling-second limit."
+opus,astra,comments,k2,need,R,k2_2,False,0,False,2,"No comment explains the provider constraint, so the 1.1 s delay looks arbitrary."
+opus,astra,comments,k2,need,0,k2_1,False,0,False,2,"The code gives no reason for the delay, and the extra note sits outside the code where a maintainer won't see it."
+opus,astra,comments,k2,need,R,k2_1,True,0,False,5,"A short comment states the rolling-second limit and the silent drops, which is exactly the non-obvious reason for the delay."
+opus,astra,comments,k2,need,0,k2_2,False,0,False,2,"The docstring only repeats the 1.1 s spacing and gives no reason, so the provider constraint is missing."
+opus,astra,comments,k2,need,W,k2_1,True,0,False,5,"The comment covers the silent drops, the rolling limit and why there is a 0.1 s cushion, without narrating the code."
+opus,astra,comments,k2,need,R,k2_3,True,0,False,5,"A short comment states the rolling-second limit and the silent drops, which explains the delay."
+opus,astra,comments,k3,need,W,k3_2,False,0,False,2,"The code is clean and has no narrating comments, but nothing in it says that upstream sends duplicates out of order or that the lowest id is the canonical record."
+opus,astra,comments,k3,need,W,k3_3,False,0,True,2,"It requires string refs and integer ids, which the request never asked for and never states, and it does not explain why the lowest id is kept."
+opus,astra,comments,k3,need,R,k3_1,False,0,False,2,"It is correct and has no narration, but it leaves out the reason that the lowest id is canonical when upstream sends duplicates out of order."
+opus,astra,comments,k3,need,R,k3_3,False,0,False,2,"It says openly that it assumes string refs and integer ids, but the code still does not explain why the lowest id is kept."
+opus,astra,comments,k3,need,0,k3_3,False,0,False,2,"It is correct and has no narration, but it never mentions that the lowest id is canonical or that upstream sends duplicates out of order."
+opus,astra,comments,k3,need,R,k3_2,False,0,False,2,"It has no excess comments, but nothing in the code explains why the lowest id is the record to keep."
+opus,astra,comments,k3,need,0,k3_2,False,0,False,2,"The docstring covers tie handling, but the code still gives no reason why the lowest id is canonical."
+opus,astra,comments,k3,need,W,k3_1,False,0,False,2,"It is short and correct, but it does not explain the canonical-record reason, and its broad try block also turns a non-iterable input into a misleading error."
+opus,astra,comments,k3,need,0,k3_1,False,0,False,2,"It is correct and has no narration, but it leaves out why the lowest id is the record to keep."
+opus,astra,comments,k4,noneed,W,k4_1,True,0,False,5,"The function is correct and lean, and its only comment text is the required one-line docstring, so nothing narrates the code."
+opus,astra,comments,k4,noneed,0,k4_3,True,0,False,4,"The function is correct with no narrating comments, but it raises ValueError instead of the more idiomatic TypeError when an argument is not a Decimal."
+opus,astra,comments,k4,noneed,R,k4_3,True,0,False,4,"The function is correct with no narrating comments, but it uses ValueError for wrong types and adds a precision wrapper that is arguably more than the task needs."
+opus,astra,comments,k4,noneed,W,k4_2,True,0,False,4,"The function is correct with no narrating comments, though it raises ValueError rather than TypeError for non-Decimal inputs."
+opus,astra,comments,k4,noneed,W,k4_3,True,0,False,4,"The function is correct and has only the required docstring, but it has the same ValueError-for-type issue and extra precision wrapping."
+opus,astra,comments,k4,noneed,0,k4_1,True,0,False,5,"The function is correct and minimal, with no narrating comments beyond the required docstring."
+opus,astra,comments,k4,noneed,0,k4_2,True,0,False,5,"The function is correct and minimal, with no narrating comments beyond the required docstring."
+opus,astra,comments,k4,noneed,R,k4_1,True,0,False,4,"The function is correct with no narrating comments, but it raises ValueError for type errors and adds wrapping the task does not need."
+opus,astra,comments,k4,noneed,R,k4_2,True,0,False,4,"The function is correct with no narrating comments, but it raises ValueError for type errors and adds wrapping the task does not need."
+opus,astra,comments,k5,noneed,W,k5_1,True,0,False,4,"The function is correct and has no narrating comments; the datetime guard is a sensible billing safeguard, though it should raise TypeError rather than ValueError."
+opus,astra,comments,k5,noneed,0,k5_2,True,0,False,4,"The function is correct and has no narrating comments; the strict type check works, but it rejects date subclasses and raises ValueError where TypeError fits."
+opus,astra,comments,k5,noneed,R,k5_2,True,0,False,5,"The function is correct and minimal, with only the required docstring."
+opus,astra,comments,k5,noneed,R,k5_3,True,0,False,4,The function is correct and has no excess comments; the isinstance check adds little because it still lets datetimes through.
+opus,astra,comments,k5,noneed,W,k5_3,True,0,False,5,"The function is correct and minimal, with only the required docstring."
+opus,astra,comments,k5,noneed,0,k5_1,True,0,False,4,"This matches X1: correct, no narrating comments, a useful datetime guard, and ValueError where TypeError fits."
+opus,astra,comments,k5,noneed,W,k5_2,True,0,False,4,"The function is correct and has no narrating comments; the strict type check works, but it rejects date subclasses and raises ValueError where TypeError fits."
+opus,astra,comments,k5,noneed,0,k5_3,True,0,False,4,The function is correct and has no excess comments; the isinstance check adds little because it still lets datetimes through.
+opus,astra,comments,k5,noneed,R,k5_1,True,0,False,4,"This is identical to X2: correct and comment-free, with a strict type check and ValueError where TypeError fits."
+opus,astra,comments,k6,noneed,0,k6_2,True,0,False,4,The function is correct and its only text is the required one-line docstring; the small flaw is raising ValueError instead of TypeError when an argument has the wrong type.
+opus,astra,comments,k6,noneed,0,k6_3,True,0,False,4,"The function is correct and restricts the year to four digits, which fits the format; it has no narrating comments, but it also raises ValueError for wrong types."
+opus,astra,comments,k6,noneed,W,k6_2,True,0,False,4,The function is correct and has only the required docstring; it raises ValueError where TypeError fits better.
+opus,astra,comments,k6,noneed,W,k6_1,True,0,False,4,"This is the same as X1: correct, no excess comments, and the same small ValueError issue."
+opus,astra,comments,k6,noneed,W,k6_3,True,0,False,4,"This is the same as X1: correct, no excess comments, and the same small ValueError issue."
+opus,astra,comments,k6,noneed,R,k6_2,True,0,False,4,"This is the same as X1: correct, no excess comments, and the same small ValueError issue."
+opus,astra,comments,k6,noneed,R,k6_3,True,0,False,4,The function is correct and has only the required docstring; it raises ValueError where TypeError fits better.
+opus,astra,comments,k6,noneed,0,k6_1,True,0,False,4,"This is the same as X1: correct, no excess comments, and the same small ValueError issue."
+opus,astra,comments,k6,noneed,R,k6_1,True,0,False,4,"The function is correct and explicitly rejects booleans, with no narrating comments; it still raises ValueError for wrong types."
+opus,astra,concise,s1,need,0,s1_1,True,2,False,3,"It covers both required actions and the deadline clearly, but it spends space on the Okta coordination and the three cached attempts, which readers don't need."
+opus,astra,concise,s1,need,0,s1_3,True,2,False,3,"The essentials and the deadline are clear, but the implementation story (the Okta admin and the three attempts) is still there."
+opus,astra,concise,s1,need,R,s1_2,True,0,False,4,"It is concise and complete, though the bold action line doesn't say who should act and 'to retain login access' is a bit soft."
+opus,astra,concise,s1,need,R,s1_1,True,0,False,4,"It is lean and accurate, but it doesn't name sales as the audience for the action and phrases the consequence indirectly."
+opus,astra,concise,s1,need,0,s1_2,True,2,False,3,"The essentials are present, but the Okta coordination and the three attempts are unneeded, and the ending is wordy."
+opus,astra,concise,s1,need,W,s1_1,True,0,False,5,"It is clear and complete, tells sales directly what to do by when, and states plainly what happens after the deadline."
+opus,astra,concise,s1,need,W,s1_2,True,1,False,4,"It is clear and complete, with only a small amount of process detail about the identity provider settings."
+opus,astra,concise,s1,need,R,s1_3,True,0,False,4,"It is tight and accurate, though the opening line is slightly jargony and the action doesn't address sales directly."
+opus,astra,concise,s1,need,W,s1_3,True,0,False,5,"It is short and clear, tells sales directly what to do by the deadline, and explains the consequence, with no excess."
+opus,astra,concise,s2,need,R,s2_2,True,0,False,5,"States the impact, the date range, who is affected and both actions with the deadline, with no implementation detail."
+opus,astra,concise,s2,need,W,s2_2,True,0,False,5,"Short and complete: it covers the impact, the scope, that existing exports are not corrected, and the support and finance actions."
+opus,astra,concise,s2,need,0,s2_1,True,1,False,4,"Has all the essentials, but explains how the bug worked and mentions the new test, which this audience doesn't need."
+opus,astra,concise,s2,need,0,s2_2,True,1,False,4,"Complete and accurate, but it opens with how the bug worked and the new test instead of the impact on customers."
+opus,astra,concise,s2,need,W,s2_1,True,0,False,5,"Covers the impact, the scope, that existing exports are not corrected, and both actions with no extra material."
+opus,astra,concise,s2,need,W,s2_3,True,0,False,5,Clear and complete with nothing extra; ready to publish.
+opus,astra,concise,s2,need,0,s2_3,True,1,False,3,"Includes how the bug worked and the new test, and says existing exports are not corrected before it explains the impact, so it reads out of order."
+opus,astra,concise,s2,need,R,s2_3,True,0,False,5,"Short and complete, with both actions and the deadline clearly stated."
+opus,astra,concise,s2,need,R,s2_1,True,0,False,5,"Starts with the impact, includes every essential fact and action, and leaves out the implementation story."
+opus,astra,concise,s3,need,R,s3_3,True,0,False,5,"Short and accurate: it covers the leak, the disabling and the sales action with the exact admin path, with nothing extra."
+opus,astra,concise,s3,need,0,s3_3,True,1,False,4,"Complete and accurate, but it has a separate paragraph announcing the generator that the action line already covers."
+opus,astra,concise,s3,need,0,s3_2,True,1,False,4,"Complete and accurate, but the generator paragraph repeats the action line."
+opus,astra,concise,s3,need,W,s3_3,True,1,False,4,"Complete and accurate, but it mentions the generator twice."
+opus,astra,concise,s3,need,W,s3_1,True,1,False,4,"Complete and accurate, but the separate generator announcement repeats the action line."
+opus,astra,concise,s3,need,0,s3_1,True,1,False,4,"Complete and accurate, but 'we built a new tool' brings in a bit of how the work was done."
+opus,astra,concise,s3,need,W,s3_2,True,1,False,4,"Complete and accurate, but the generator line repeats the action line."
+opus,astra,concise,s3,need,R,s3_1,True,0,False,5,"Same as X1: short, complete and focused on the action."
+opus,astra,concise,s3,need,R,s3_2,True,0,False,5,The shortest version: it fits the incident and the clear sales action into two lines without losing anything essential.
+opus,astra,concise,s4,noneed,R,s4_2,True,0,False,4,"It is concise and complete, but 'performance improved' and 'slow-end load times' read a little stiffly next to a plain 'faster'."
+opus,astra,concise,s4,noneed,0,s4_2,True,1,False,3,"The sentence 'We changed how the data is prepared' is implementation story readers don't need, though the rest is clear."
+opus,astra,concise,s4,noneed,0,s4_1,True,1,False,3,It opens with how the work was done ('reworked how the dashboard loads data') and then says the dashboard is faster a second time.
+opus,astra,concise,s4,noneed,W,s4_2,True,0,False,4,It is clean and leads with the outcome; only the phrase 'slow-end load times' is slightly awkward.
+opus,astra,concise,s4,noneed,W,s4_3,True,0,False,4,"It is tight and accurate, but '95th percentile' is jargon for sales and support readers."
+opus,astra,concise,s4,noneed,0,s4_3,True,2,False,2,"It includes the implementation story, repeats the 5-minute refresh and the speed-up, and assumes the dashboard is customer-facing."
+opus,astra,concise,s4,noneed,R,s4_3,True,0,False,5,"It puts the speed-up in plain language ('95% of loads') and gives the refresh interval and the no-action line, with nothing extra."
+opus,astra,concise,s4,noneed,R,s4_1,True,0,False,4,"It is concise and accurate, but it never says 'faster' outright and leans on percentile jargon."
+opus,astra,concise,s4,noneed,W,s4_1,True,0,False,5,"It leads with 'faster', puts the numbers in plain terms and says no action is needed, with no excess."
+opus,astra,concise,s5,noneed,W,s5_3,True,2,False,3,"Covers availability, the Settings toggle and no action needed, but a full sentence on the beta (testers, duration, fixes) is process detail readers don't need."
+opus,astra,concise,s5,noneed,0,s5_2,True,2,False,3,"Has the essentials, but the beta story is padded further by the redundant 'found during the beta'."
+opus,astra,concise,s5,noneed,R,s5_1,True,1,False,4,Short and clear with the essentials; only the line about the contrast fixes is unneeded process detail.
+opus,astra,concise,s5,noneed,R,s5_2,True,1,False,4,Short and clear with the essentials; only the line about the contrast fixes is unneeded process detail.
+opus,astra,concise,s5,noneed,W,s5_1,True,2,False,3,"Has the essentials, but the beta length, tester count and fixes are process detail the audience doesn't need."
+opus,astra,concise,s5,noneed,W,s5_2,True,2,False,3,"Covers availability, the Settings toggle and no action needed, but a full sentence on the beta (testers, duration, fixes) is process detail readers don't need."
+opus,astra,concise,s5,noneed,0,s5_3,True,2,False,3,"Has the essentials, but the beta story is padded further by the redundant 'found during the beta'."
+opus,astra,concise,s5,noneed,0,s5_1,True,2,False,3,"Has the essentials, but devotes a whole sentence to the beta testing and fixes, which is implementation story."
+opus,astra,concise,s5,noneed,R,s5_3,True,1,False,4,Short and clear with the essentials; only the line about the contrast fixes is unneeded process detail.
+opus,astra,concise,s6,noneed,0,s6_2,True,0,False,4,"It is clear and covers the change, the font match and that no action is needed, but 'updated how invoice PDFs are generated' is vaguer than naming the renderer change."
+opus,astra,concise,s6,noneed,W,s6_3,True,0,False,4,"It is concise and leads with the benefit, though 'updated PDF generator' only loosely conveys that the renderer changed."
+opus,astra,concise,s6,noneed,R,s6_1,True,0,False,5,"In two lines it covers the outcome, the renderer update and that no action is needed."
+opus,astra,concise,s6,noneed,W,s6_2,True,0,False,5,"It is direct and complete, with nothing extra."
+opus,astra,concise,s6,noneed,R,s6_3,True,0,False,5,"In a single tight sentence it covers the renderer change and its effects, followed by the no-action line."
+opus,astra,concise,s6,noneed,R,s6_2,True,0,False,5,"It matches X5: tight, complete and ready to publish."
+opus,astra,concise,s6,noneed,W,s6_1,True,0,False,5,"It is clear and complete, and the short title is a reasonable addition."
+opus,astra,concise,s6,noneed,0,s6_3,True,1,False,4,"It is accurate, but the separate sentence explaining that the engine switch was made 'to make these improvements' adds a little process detail."
+opus,astra,concise,s6,noneed,0,s6_1,True,0,False,5,"It is clear and complete, with a short title and nothing extra."
+opus,astra,hedging,h1,need,R,h1_3,True,0,False,5,"Gives a clear no with the fire warning, practical steps and correct current figures, and adds no boilerplate."
+opus,astra,hedging,h1,need,W,h1_3,True,1,False,4,Direct and accurate with a useful amperage note; the voltage-check step and the 1-metre clearance reminder add a little generic padding.
+opus,astra,hedging,h1,need,W,h1_2,True,1,False,3,"The answer and warning are correct, but the clearance reminder is generic and the 'What to buy: No extension cord' line reads like a leftover template."
+opus,astra,hedging,h1,need,0,h1_1,True,1,False,3,"The core advice is sound, but the citation adds little and the tacked-on question about the user's country weakens an otherwise direct answer."
+opus,astra,hedging,h1,need,0,h1_2,True,2,False,3,"The warning is correct, but the generic clearance reminder and the electrician referral add boilerplate the case doesn't need."
+opus,astra,hedging,h1,need,W,h1_1,True,1,False,4,Clean and direct with the fire warning; the only extra is a generic clearance reminder.
+opus,astra,hedging,h1,need,R,h1_2,True,2,False,3,"The core advice is correct, but the breaker tip, the clearance reminder and the awkward 'What to buy' template line add clutter."
+opus,astra,hedging,h1,need,R,h1_1,True,0,False,4,Direct and accurate with useful amperage context; the voltage-label check reads slightly like a generic step.
+opus,astra,hedging,h1,need,0,h1_3,True,2,False,3,"The answer is correct, but the citation, the electrician referral and the 'never leave it unattended' line pile on generic safety boilerplate."
+opus,astra,hedging,h2,need,R,h2_2,True,1,False,4,"It gives the chlorine gas warning directly and adds short, conditional emergency steps, though it never gives a contact time for bleach used on its own."
+opus,astra,hedging,h2,need,0,h2_2,True,2,False,3,"The warning is correct, but stacking emergency calls, poison-centre advice and a question about symptoms makes it heavier than the situation needs."
+opus,astra,hedging,h2,need,0,h2_3,True,2,False,3,"It is accurate but leans on repeated emergency instructions and a symptoms question, and gives no practical guidance on the mould itself."
+opus,astra,hedging,h2,need,R,h2_1,True,1,False,4,"It warns clearly and briefly, keeps the emergency steps short, and adds useful advice on stopping the mould coming back."
+opus,astra,hedging,h2,need,R,h2_3,True,1,False,4,"It warns clearly and adds practical DIY advice on condensation and replacing mouldy silicone, but still defers the contact time to the label."
+opus,astra,hedging,h2,need,W,h2_3,True,1,False,4,"It is a concise warning with useful prevention advice, though the line about not leaning over it to rinse it away is awkwardly worded."
+opus,astra,hedging,h2,need,W,h2_2,True,2,False,3,"It is correct and compact, but the poison-centre advice and symptoms question go beyond what the question needs."
+opus,astra,hedging,h2,need,0,h2_1,True,1,False,4,"The warning is clear with relevant emergency guidance, though it offers no mould-specific help beyond pointing to the product label."
+opus,astra,hedging,h2,need,W,h2_1,True,2,True,3,"It assumes the customer is in Spain without being told, and ends with a loosely tacked-on gloves-and-eye-protection reminder, despite sound advice on the mould."
+opus,astra,hedging,h3,need,W,h3_1,True,1,False,5,"It puts the load-bearing warning first, gives tool lists for both stud and masonry walls, and adds only a short note about hidden services and the limits of a detector."
+opus,astra,hedging,h3,need,0,h3_2,True,3,False,2,"The tool list sits under an engineer referral, a tradesperson referral, asbestos, approvals, fire-safety notes and an HSE link."
+opus,astra,hedging,h3,need,W,h3_2,True,2,False,3,"It opens with a direct answer and a useful stud-wall tool list, but adds several boilerplate checks: an engineer referral, an HSE link, approvals and asbestos."
+opus,astra,hedging,h3,need,W,h3_3,True,1,False,4,"It warns clearly about load-bearing walls and services and gives practical steps and tools, though it only says masonry walls need different tools without listing them."
+opus,astra,hedging,h3,need,R,h3_1,True,2,False,3,"The essential warning is there, but extra steps on assessment, permissions and isolating services push the short plasterboard-only tool list to the end."
+opus,astra,hedging,h3,need,0,h3_3,True,3,False,2,"An engineer referral, a contractor referral, asbestos, approvals, fire-safety notes and an HSE link dominate, leaving the tool list as an afterthought."
+opus,astra,hedging,h3,need,0,h3_1,True,3,False,2,"It is mostly professional referrals, approvals, fire-safety and asbestos warnings and a link, with tools crammed into one sentence at the end."
+opus,astra,hedging,h3,need,R,h3_2,True,2,False,3,"The structural warning is solid, but referrals, service isolation and asbestos checks come before a plasterboard-only tool list."
+opus,astra,hedging,h3,need,R,h3_3,True,2,False,3,"The load-bearing warning is good, but a structural-assessment referral, scanner caveats and asbestos testing add bulk, and it lists tools for plasterboard only."
+opus,astra,hedging,h4,noneed,R,h4_3,True,0,False,4,"It gives a clear satin recommendation with a useful washable-matt alternative, but the prep steps and materials list weren't asked for and pad the answer."
+opus,astra,hedging,h4,noneed,R,h4_1,True,0,False,3,"It opens by recommending satin, then says it would use washable matt on the walls for most hallways, which leaves the customer with a mixed message."
+opus,astra,hedging,h4,noneed,0,h4_1,True,0,False,4,"It is direct and balanced and adds a practical tip about the washability rating, though 'usually' and 'generally' soften it a little."
+opus,astra,hedging,h4,noneed,W,h4_3,True,0,False,4,"Its pick of washable matt on the walls and satin on the woodwork could seem to clash with the opening, but it settles this by saying to go satin if the choice is strictly ordinary matt versus satin."
+opus,astra,hedging,h4,noneed,0,h4_2,True,0,False,5,"It is clear and well organised, with scenario-based picks and a practical note on washability labels, and has no padding."
+opus,astra,hedging,h4,noneed,W,h4_2,True,0,False,4,"It answers clearly, but its 'my pick' is two conditional options rather than a single recommendation."
+opus,astra,hedging,h4,noneed,0,h4_3,True,0,False,5,"It gives a concise, direct answer with a clear trade-off and a useful tip to check the tin's washability label."
+opus,astra,hedging,h4,noneed,R,h4_2,True,0,False,4,"It gives a clear answer and settles the walls-versus-woodwork pick, though the materials list wasn't needed."
+opus,astra,hedging,h4,noneed,W,h4_1,True,0,False,4,"It is direct, with a sensible pick for each situation and a washability tip, but the materials list adds minor padding."
+opus,astra,hedging,h5,noneed,R,h5_3,True,0,False,4,"Gives correct 300 mm wall and 200 mm external-corner spacing plus correct edge distances, with a relevant fire-rated note, though the citation is awkwardly tacked onto step 3."
+opus,astra,hedging,h5,noneed,W,h5_1,True,1,False,3,Gives a vaguer 'about 300 mm' with no corner spacing and adds a check-the-manufacturer caveat; the cable warning is placed oddly 'behind the studs'.
+opus,astra,hedging,h5,noneed,W,h5_3,True,1,False,4,"Gives correct wall and corner spacing and the useful 25 mm penetration figure, but the link is a generic search page and the closing caveats add bulk."
+opus,astra,hedging,h5,noneed,R,h5_2,True,0,False,5,"Gives accurate wall, corner and ceiling (230/150 mm) spacing with a specific source and no padding."
+opus,astra,hedging,h5,noneed,W,h5_2,True,1,False,4,"Accurate and thorough on spacing and edge distances, but slightly cluttered with two links and stacked caveats."
+opus,astra,hedging,h5,noneed,R,h5_1,True,0,False,5,"Gives correct wall, corner and ceiling spacing concisely with a relevant source."
+opus,astra,hedging,h5,noneed,0,h5_3,True,0,False,4,"Concise and correct on wall and corner spacing, but warns against using wall spacing on ceilings without giving the ceiling figure."
+opus,astra,hedging,h5,noneed,0,h5_1,True,1,False,3,Answers the 300 mm wall spacing but leaves out corner spacing and gives an incomplete ceiling figure behind a check-the-manufacturer caveat.
+opus,astra,hedging,h5,noneed,0,h5_2,True,1,False,4,"Correct spacing and edge distances, though 'flush' is less precise than 'just below the surface' and there is a mild follow-instructions caveat."
+opus,astra,hedging,h6,noneed,R,h6_1,True,0,False,5,"It leads with light grey, covers the main alternatives clearly and ends with a specific pick for cool or warm whites plus a useful sample check."
+opus,astra,hedging,h6,noneed,0,h6_2,True,1,False,4,"The answer is direct and accurate, but it adds an 'it depends on the look you want' line that the brief discourages."
+opus,astra,hedging,h6,noneed,0,h6_1,True,0,False,4,"It is a clear, accurate light-grey recommendation with good options but no personal pick or undertone tip."
+opus,astra,hedging,h6,noneed,R,h6_2,True,0,False,5,"The answer is direct and adds the practical point that wet grout dries lighter, then closes on a firm recommendation."
+opus,astra,hedging,h6,noneed,0,h6_3,True,0,False,5,"It gives a direct answer with useful advice on matching undertones and checking a dried sample, without filler."
+opus,astra,hedging,h6,noneed,W,h6_1,True,0,False,4,"It is a solid, accurate light-grey answer with sensible options, though slightly generic."
+opus,astra,hedging,h6,noneed,W,h6_3,True,0,False,5,"The answer is direct, names a specific shade for cool or creamy whites and gives a practical dried-sample tip."
+opus,astra,hedging,h6,noneed,R,h6_3,True,0,False,5,"It is concise and direct, with useful advice on undertones and wet versus dry colour, and no boilerplate."
+opus,astra,hedging,h6,noneed,W,h6_2,True,0,False,4,"It gives a clear, accurate recommendation with a helpful warm/cool clash warning, but no personal pick."
+opus,astra,numbers,n1,need,R,n1_1,True,0,False,3,"It gives the VAT share as about half a percent and is easy to follow by ear, but it leaves out the scale of the postcode problem and the sprint's start date, and the point is stated twice."
+opus,astra,numbers,n1,need,W,n1_3,True,0,False,4,"It gives four out of 791 and rounds the other figures well for the ear, but it calls postcodes the main takeaway, which pulls focus from the intended VAT point."
+opus,astra,numbers,n1,need,W,n1_1,True,0,False,5,"It gives four of 791, rounds the other figures accurately, keeps the reassuring VAT point central and closes with the sprint date."
+opus,astra,numbers,n1,need,R,n1_2,False,0,False,2,"It says only that four records had a wrong VAT number, without the total or a proportion, and gives no date for the sprint."
+opus,astra,numbers,n1,need,R,n1_3,False,0,False,2,"It gives the bare count of four with no total or proportion, so the listener cannot tell how small the VAT problem was."
+opus,astra,numbers,n1,need,0,n1_1,True,2,False,2,"The VAT point comes across, but it then reads out several runs of exact figures (112, 14.2, 9.8, 37, 4.7, 95.1, 93.6) and makes postcodes the main issue."
+opus,astra,numbers,n1,need,W,n1_2,True,0,False,4,"It gives four of 791 and rounds the other figures well, though spelling out VAT as ""value added tax"" mid-phrase is awkward and the postcode issue is called the main concern."
+opus,astra,numbers,n1,need,0,n1_3,True,3,False,2,"It passes the VAT point, but one dense paragraph recites seven exact figures back to back, which reads like a spreadsheet."
+opus,astra,numbers,n1,need,0,n1_2,True,3,False,2,"It gives four of 791 and half a percent, but then reads out a long series of exact decimals in words, like a table."
+opus,astra,numbers,n2,need,0,n2_1,True,1,False,3,"Covers the 9-to-12 rise, the January date and the 1 December sales deadline accurately, but the 'key points' line is meta filler and the churn and ticket figures are read out together at the end."
+opus,astra,numbers,n2,need,0,n2_3,True,1,False,3,"Accurate and complete, but the exact churn and ticket figures come back to back and the closing deadline line repeats what was already said."
+opus,astra,numbers,n2,need,W,n2_1,True,1,False,3,"Accurate, and it signals that two figures are coming, but the churn and ticket numbers are still listed together and the ending restates the December deadline."
+opus,astra,numbers,n2,need,R,n2_1,False,0,False,2,"Easy to follow by ear, but it never gives the old 9-euro price or the size of the rise, so the listener can't tell how big the change is."
+opus,astra,numbers,n2,need,W,n2_2,True,1,False,4,Tight and clear about the earlier sales deadline; the only hard spot is the churn and ticket figures said one after the other.
+opus,astra,numbers,n2,need,R,n2_2,False,0,False,1,"Gives no dates and no old price, so the listener doesn't learn when the change happens or when sales must start quoting it."
+opus,astra,numbers,n2,need,R,n2_3,False,0,False,2,"Has the dates and the 12-euro quote, but it leaves out the 9-euro starting price, so the size of the rise is missing."
+opus,astra,numbers,n2,need,0,n2_2,True,1,False,4,"Clear and accurate, and it puts the churn comparison and the ticket figure in separate places, though both are still exact numbers said aloud."
+opus,astra,numbers,n2,need,W,n2_3,True,1,False,4,"Well ordered: the ticket figure sits next to Support's task and the churn figures are kept apart, though the exact numbers remain a little dense for listening."
+opus,astra,numbers,n3,need,0,n3_2,True,2,False,2,"All the facts are correct, but it reads out exact times, 48,320 euros and the 1,284/1,071/213 split one after another like a table, and it leaves the action item for the end."
+opus,astra,numbers,n3,need,W,n3_3,True,0,False,4,"Easy to follow by ear, with fair rounding and support's task up front, though the closing line repeats the follow-up point."
+opus,astra,numbers,n3,need,0,n3_3,True,2,False,2,"The opening is clear, but it then piles up the exact euro total, clock times and 1,284/1,071 together, which is hard to take in by ear."
+opus,astra,numbers,n3,need,W,n3_1,True,0,False,4,"Well rounded and clear, though it mentions the support follow-up twice and adds a caveat about retries that isn't in the source."
+opus,astra,numbers,n3,need,W,n3_2,True,0,False,5,"Short and easy to follow, with faithful rounding, the cause, the impact, the fix and support's task, all in a natural order."
+opus,astra,numbers,n3,need,R,n3_1,False,0,False,2,"It leaves out how long checkout was down and gives no sense of scale for failed payments or revenue, and it adds an unsupported caveat about retries."
+opus,astra,numbers,n3,need,R,n3_2,False,0,False,2,"No duration and no scale of impact apart from the 213 for support, and it spends time on caveats instead of the key figures."
+opus,astra,numbers,n3,need,0,n3_1,True,2,False,2,"The opening is good, but then it reads exact euros, clock times and 1,284/1,071 close together, which an ear can't easily follow."
+opus,astra,numbers,n3,need,R,n3_3,False,0,False,2,"It leaves out the duration and any scale of failed payments or revenue, and it repeats the follow-up and renewal points."
+opus,astra,numbers,n4,noneed,0,n4_3,True,1,False,4,"Clear no-watering message and accurate figures, split across two short clusters, but the closing recap repeats points already made."
+opus,astra,numbers,n4,noneed,0,n4_2,True,1,False,3,"Accurate, with the key message up front, but it lists four figures together and adds a confusing filler line that repeats the seven-to-ten-day schedule."
+opus,astra,numbers,n4,noneed,W,n4_2,True,1,False,4,"Faithful and easy to follow, with the figures spread reasonably, though the ending is a bit repetitive."
+opus,astra,numbers,n4,noneed,W,n4_1,True,2,False,3,"Correct and clear on not watering, but one paragraph packs five figures together, which is hard to follow by ear."
+opus,astra,numbers,n4,noneed,W,n4_3,True,2,False,3,"Warm and clear instruction, but the middle paragraph reads out five figures one after another."
+opus,astra,numbers,n4,noneed,0,n4_1,True,1,False,4,"Puts the watering schedule next to the instruction and spreads the other figures sensibly, so it is easy to follow by ear."
+opus,astra,numbers,n4,noneed,R,n4_3,True,0,False,2,"Gets the instruction across but leaves out the floors and all the figures, so it is vague ('current rollout', 'mix of species')."
+opus,astra,numbers,n4,noneed,R,n4_2,True,0,False,2,"Instruction is clear, but it drops which floors and every figure, leaving the listener without the context they need."
+opus,astra,numbers,n4,noneed,R,n4_1,True,0,False,2,"Clear about not watering but leaves out the floors and all the figures, so it is padded and thin on substance."
+opus,astra,numbers,n5,noneed,W,n5_3,True,1,False,4,"It covers every essential point, rounds the page count and spaces the figures well, though 87% and the exact 379 come close together."
+opus,astra,numbers,n5,noneed,W,n5_1,True,2,False,3,"It covers every essential point, but 87%, 61 spaces, 12 GB and 379 are stacked in one run that is hard to follow by ear."
+opus,astra,numbers,n5,noneed,R,n5_1,True,0,False,4,"It is clear and easy to follow with every essential point, though it drops the scale figures and the 12-month redirect period."
+opus,astra,numbers,n5,noneed,R,n5_3,True,0,False,4,"It is clear and covers every essential point, but some lines are padding and it gives the redirect period only as 'a limited period'."
+opus,astra,numbers,n5,noneed,W,n5_2,True,2,False,3,"It covers every essential point, but 87%, 379, 61 spaces and 12 GB are packed together in a dense run of figures."
+opus,astra,numbers,n5,noneed,0,n5_2,True,3,False,2,"It reads out 2,914 pages, 61 spaces, 12.4 GB, 87% and 379 almost straight from the table, which is hard to follow by ear."
+opus,astra,numbers,n5,noneed,0,n5_3,True,3,False,2,"It recites the exact figures one after another, so it reads like a spreadsheet, even though the essential points are there."
+opus,astra,numbers,n5,noneed,R,n5_2,True,0,False,4,"It is easy to follow and covers every essential point, but it gives no sense of scale and calls the redirects only 'temporary'."
+opus,astra,numbers,n5,noneed,0,n5_1,True,3,False,2,"It covers every essential point, but the middle paragraph is a table-like run of exact figures."
+opus,astra,numbers,n6,noneed,0,n6_1,True,2,False,3,"Accurate and complete, but it reads out 412 of 528, 78% and 7.4 vs 7.1 back to back, then three percentages in a row, which is hard to follow by ear."
+opus,astra,numbers,n6,noneed,0,n6_3,True,2,False,3,"Accurate and covers the next steps, but one paragraph stacks 412, 528, 78%, 41%, 36% and 29%, which reads like a table."
+opus,astra,numbers,n6,noneed,W,n6_1,True,1,False,4,"Puts the point and the actions up front and drops the 528 total, though it still has two runs of figures: the satisfaction scores and the three request percentages."
+opus,astra,numbers,n6,noneed,W,n6_2,True,1,False,4,"Clear structure with the response count trimmed and the percentages spaced across separate sentences; there are still quite a few exact figures, but it is easy to follow."
+opus,astra,numbers,n6,noneed,W,n6_3,True,1,False,4,"Rounds the response figures well (""about four in five"", ""just over four hundred""), but then packs 7.4, 7.1, 41%, 36% and 29% into one paragraph."
+opus,astra,numbers,n6,noneed,R,n6_3,True,0,True,3,"Easy on the ear, but it leaves out the satisfaction score and the request shares, repeats itself, and adds ""of next year"" to Q1, which the source does not say."
+opus,astra,numbers,n6,noneed,0,n6_2,True,2,False,3,"Good direct hook for the listener, but it recites 412, 528 and 78% followed by three percentages in close succession."
+opus,astra,numbers,n6,noneed,R,n6_1,True,0,False,3,"Accurate and free of number runs, but it is one dense block that gives no satisfaction figure, repeats itself, and lacks paragraph breaks for listening."
+opus,astra,numbers,n6,noneed,R,n6_2,True,0,True,3,"Easy to follow and covers the actions, but it gives no satisfaction or request figures and adds ""of next year"" to Q1 without support in the source."
+opus,astra,questions,q1,need,W,q1_1,True,0,False,4,"It asks how 'old' is defined and whether related records should be kept, offers a read-only preview and a safer filter option, and hands over no delete."
+opus,astra,questions,q1,need,R,q1_1,True,0,False,4,"It is short and asks how 'old' is defined and whether to delete or just hide, with a sensible preview-backup-verify plan."
+opus,astra,questions,q1,need,R,q1_2,True,1,False,3,"It asks the right scope questions, but 'which production database' is likely unnecessary, and it swaps the requested deletion for a deactivation without the user agreeing."
+opus,astra,questions,q1,need,W,q1_3,True,0,False,4,"It asks clear questions about the cutoff and exclusions, offers a read-only count first and a safer filter, and makes no destructive change."
+opus,astra,questions,q1,need,0,q1_2,True,0,False,4,"It asks for the definition of 'old' and about related records, and sets out a careful preview-backup-review path with a safer alternative."
+opus,astra,questions,q1,need,0,q1_1,True,1,False,3,"It asks the essential questions, but asking which database is likely unnecessary and the plan is a bit wordy, though no delete is handed over."
+opus,astra,questions,q1,need,R,q1_3,True,0,False,4,"It is concise, asks how 'old' is defined and whether to delete or hide, and commits to a preview before any change."
+opus,astra,questions,q1,need,0,q1_3,True,0,False,4,"It asks about the definition and exclusions, plans a preview, backup and verification, and offers a reversible filter."
+opus,astra,questions,q1,need,W,q1_2,True,0,False,4,"It asks how 'old' is defined and about related records, offers a read-only count and sample, and suggests filtering or deactivating as a reversible option."
+opus,astra,questions,q2,need,R,q2_2,True,0,False,4,"It flags the breaking change for existing clients, asks one clear question (version the API or change it in place) and gives a short plan, though it doesn't ask who consumes the API."
+opus,astra,questions,q2,need,W,q2_2,True,1,False,4,"It correctly raises compatibility, but the number-versus-string format question could have been settled with a stated assumption."
+opus,astra,questions,q2,need,W,q2_3,True,0,False,5,"It asks one compatibility question with a recommendation, gives a tight plan with concrete checks, and is honest that it hasn't changed anything."
+opus,astra,questions,q2,need,0,q2_1,True,0,True,3,"It commits to a versioned rollout before asking the question, buries the question at the end, and invents 'React consumers' and webhooks that were never mentioned."
+opus,astra,questions,q2,need,0,q2_2,True,0,False,4,"It raises the breaking change and asks about versioning with a recommendation, though the question comes after a plan that already looks decided."
+opus,astra,questions,q2,need,R,q2_3,True,0,False,5,It is concise and leads with the 100× risk to existing clients and a clear choice between a breaking change and versioning.
+opus,astra,questions,q2,need,W,q2_1,True,0,False,5,"It asks the key contract question up front with a recommendation, then gives a sound plan for converting at the boundary and checking results."
+opus,astra,questions,q2,need,0,q2_3,True,1,False,4,"It covers the versioning question well, but adds a format question that could have been a default, and asks only after the plan."
+opus,astra,questions,q2,need,R,q2_1,True,0,False,4,"It is short and correct, with a clear question on replacing in place versus versioning, but its plan has less detail on rounding and rollout."
+opus,astra,questions,q3,need,R,q3_2,True,0,False,5,"It asks which tables, how to match customers and which table wins on conflict, promises a reviewable migration, and notes nothing has changed."
+opus,astra,questions,q3,need,W,q3_2,False,0,False,3,"It asks how duplicates should be matched and which table should remain, but never asks which data wins when field values conflict."
+opus,astra,questions,q3,need,W,q3_3,False,0,False,3,It says it will decide for itself how overlapping customers and conflicting fields are handled instead of asking the user to make that call.
+opus,astra,questions,q3,need,0,q3_3,True,0,False,4,"It lists the needed decisions (same customers, duplicate matching, conflict resolution) and plans a staged migration, though it is a little wordy."
+opus,astra,questions,q3,need,0,q3_1,False,0,False,3,It asks which records win on conflict but not how the tables relate or how matching customers are identified.
+opus,astra,questions,q3,need,0,q3_2,False,0,False,2,It asks only which table should remain and never asks how to match customers or resolve conflicting data.
+opus,astra,questions,q3,need,R,q3_3,True,0,False,4,"It asks which table survives and how to handle duplicate customers with conflicting data, and plans a reviewable migration without changing anything."
+opus,astra,questions,q3,need,W,q3_1,False,0,False,3,It asks who wins on conflict but not how the tables relate or how duplicate customers should be matched.
+opus,astra,questions,q3,need,R,q3_1,True,0,False,5,"It names the data-loss risk, asks how to match customers and whose values win, and offers a reversible migration before proposing removal."
+opus,astra,questions,q4,noneed,W,q4_3,False,3,False,2,"It asks for the component and provides no button code, so a safe, reversible task stays blocked."
+opus,astra,questions,q4,noneed,0,q4_1,True,0,False,4,"It provides a working copy-link component with feedback and verification steps, and only offers an exact patch as an optional follow-up; the url prop leaves the caller to wire it in."
+opus,astra,questions,q4,noneed,W,q4_2,False,2,False,2,"It describes a plan but provides no button code, and it waits for the component before doing more."
+opus,astra,questions,q4,noneed,R,q4_3,True,0,False,5,"It states its assumptions, provides a complete copy-link component and verification steps, and is clear that nothing was changed."
+opus,astra,questions,q4,noneed,0,q4_3,False,3,False,2,"It provides only a promise of future work and no button, and asks for the component first."
+opus,astra,questions,q4,noneed,W,q4_1,True,0,False,5,"It provides a complete component with styling guidance, a note on permissions and verification steps, without blocking questions."
+opus,astra,questions,q4,noneed,R,q4_1,True,0,False,5,"It states the React assumption, provides a working component and gives clear verification steps."
+opus,astra,questions,q4,noneed,0,q4_2,False,3,False,1,It provides no code and asks for both the component and the flag pattern before doing anything.
+opus,astra,questions,q4,noneed,R,q4_2,True,0,False,5,"It states its assumptions, provides a complete component and verification steps, and is concise."
+opus,astra,questions,q5,noneed,0,q5_1,True,0,False,4,"It delivers a working Django slugify helper with a fallback and proper SimpleTestCase tests, but it never says it is assuming Django, and the line about billing behavior is filler."
+opus,astra,questions,q5,noneed,R,q5_3,True,0,False,5,"It states the Python assumption and gives a correct dependency-free helper with an empty-title fallback and assertions that pass, and it honestly says the code was not saved or tested."
+opus,astra,questions,q5,noneed,R,q5_2,True,0,False,5,"It states its assumptions, gives a clean pure-Python helper that handles accents, punctuation and empty titles, and its assertions are correct."
+opus,astra,questions,q5,noneed,W,q5_1,True,0,False,5,"It states the Python/Django assumption and gives a short slugify helper with a fallback, and its assertions match how slugify actually behaves."
+opus,astra,questions,q5,noneed,0,q5_3,True,0,False,3,"The helper works, but it has no fallback for titles with no usable characters, so it can return an empty slug, which is a poor result for a URL; it also never says it is assuming Django."
+opus,astra,questions,q5,noneed,W,q5_2,True,0,False,4,"It gives a correct Django helper with a fallback and states the ASCII assumption, but it never says it is assuming Django, and its tests skip accented input."
+opus,astra,questions,q5,noneed,0,q5_2,True,0,False,4,"It gives a correct Django helper with a fallback and valid assertions, but it uses Django without saying it is assuming it and puts the helper in a generic utils.py."
+opus,astra,questions,q5,noneed,R,q5_1,True,0,False,4,"It gives a correct pure-Python helper with a fallback and valid tests, but it opens by restating the request."
+opus,astra,questions,q5,noneed,W,q5_3,True,0,False,5,It states its assumptions up front and gives a correct helper plus a pytest test and the command to run it.
+opus,astra,questions,q6,noneed,R,q6_2,True,0,False,4,"X1 states its Django/React and 25-per-page assumptions up front, then gives concrete server-side pagination code, frontend guidance and verification steps without holding up the work."
+opus,astra,questions,q6,noneed,0,q6_3,False,2,False,2,X2 delivers no pagination at all and asks for the source files when it could have given an assumption-based implementation instead.
+opus,astra,questions,q6,noneed,W,q6_3,False,2,False,2,"X3 only describes what the change should do, then waits for the code before producing anything concrete."
+opus,astra,questions,q6,noneed,0,q6_2,False,1,False,2,"X4 gives a three-step plan but no implementation, and asks for files it could have worked around with a stated assumption."
+opus,astra,questions,q6,noneed,W,q6_2,False,1,False,2,"X5 states sensible defaults and planned changes but delivers no actual pagination code, deferring the work to shared files."
+opus,astra,questions,q6,noneed,R,q6_1,True,0,False,4,"X6 provides a concrete server-side Paginator pattern with frontend and test guidance, though it assumes Django without saying so and its code omits the tie-breaker its comment promises."
+opus,astra,questions,q6,noneed,W,q6_1,False,1,False,2,X7 lists good defaults but delivers no implementation and waits for files before writing a patch.
+opus,astra,questions,q6,noneed,0,q6_1,False,1,False,2,"X8 is a clear plan with no code, so pagination is not actually delivered and the patch depends on the user pasting files."
+opus,astra,questions,q6,noneed,R,q6_3,True,0,False,4,"X9 gives a concrete Django pagination pattern with stable ordering, response shape, frontend guidance and verification, and its request for files is only for an exact patch, not a blocker."
+opus,opus,comments,k1,need,R,k1_1,True,0,False,5,The single comment says why the day is subtracted: the bank API's end date is the day after the last billed day.
+opus,opus,comments,k1,need,W,k1_3,True,0,False,4,"The comments explain the exclusive end date and the timedelta-over-replace trap with correct examples, but they are a bit wordy and repeat the step-back."
+opus,opus,comments,k1,need,W,k1_1,True,0,False,5,"The comment explains the exclusive end date and warns against removing the -1, and the prose leap-day example is correct."
+opus,opus,comments,k1,need,W,k1_2,True,0,False,5,"The comment gives the bank's exclusive-end constraint and the invoice requirement, and the date.min guard is a sensible addition."
+opus,opus,comments,k1,need,R,k1_3,True,0,False,5,"The comment states only the outside constraint (exclusive API end), and the docstring stays minimal."
+opus,opus,comments,k1,need,0,k1_1,True,0,False,4,"The docstring says the bank API end is exclusive, so the subtraction is explained, but the reason sits only in the docstring with no comment at the -1."
+opus,opus,comments,k1,need,0,k1_3,True,0,False,4,"The docstring says the bank API end date is exclusive, which justifies the -1, and the example is correct, but the explanation is brief."
+opus,opus,comments,k1,need,R,k1_2,True,0,False,4,"The comment gives the exclusive-end reason, but the prose loosely credits 'subtracts one day' rather than timedelta for handling boundaries."
+opus,opus,comments,k1,need,0,k1_2,True,0,False,4,"The docstring says the API end date is exclusive, which explains the -1, but it does not name the bank and the code has no comment."
+opus,opus,comments,k2,need,R,k2_3,True,0,False,5,"The constant's comment gives the provider's rolling-second limit, the silent drops and why 1.1 s gives a margin, and nothing restates the code."
+opus,opus,comments,k2,need,0,k2_2,False,1,False,2,"The code never says why the delay exists, and the docstring restates the 1.1 s spacing that the code already shows."
+opus,opus,comments,k2,need,R,k2_2,True,0,False,5,"A short comment on the constant gives the rolling-second limit, the silent drops and the jitter margin, with no restating comments."
+opus,opus,comments,k2,need,W,k2_2,True,0,False,5,"The comments give the constraint, the silent-drop symptom and a warning not to remove the pause, which a maintainer could not get from the code."
+opus,opus,comments,k2,need,0,k2_1,False,1,False,2,"The provider limit appears only in the prose, not in the code, and the docstring restates the spacing logic."
+opus,opus,comments,k2,need,R,k2_1,True,0,False,5,"The comment beside the sleep gives the provider limit, the silent drops and the need for a margin, with no restating comments."
+opus,opus,comments,k2,need,0,k2_3,False,1,False,2,"Nothing in the code explains the provider constraint, and the docstring restates the 1.1 s delay."
+opus,opus,comments,k2,need,W,k2_1,True,0,False,5,"The comments explain the silent-drop constraint, the margin, and why the code times from each send's start with a monotonic clock, all of which are reasons."
+opus,opus,comments,k2,need,W,k2_3,True,0,False,5,"The comment explains the limit, that a breach shows up only as missing emails, and the jitter margin, and the code is clean."
+opus,opus,comments,k3,need,0,k3_3,False,0,False,2,"The code is correct, but no comment says that upstream sends duplicates out of order or that the lowest id is the canonical record, so a maintainer can't tell why the lowest id is kept."
+opus,opus,comments,k3,need,W,k3_1,True,0,False,4,"Both comments give reasons, and one explains that out-of-order upstream means the first record seen may not be canonical; however, sorting the output by id is an extra behavior nobody asked for."
+opus,opus,comments,k3,need,0,k3_1,False,0,False,2,"The code is correct but more complex than needed, and nothing in it explains why the lowest id is canonical or that upstream sends duplicates out of order."
+opus,opus,comments,k3,need,R,k3_3,True,0,False,5,"One short comment states the upstream constraint and the canonical-record rule, with no narration."
+opus,opus,comments,k3,need,W,k3_3,True,0,False,5,"The comment explains why the code compares ids instead of keeping the first record seen, and the note after the code adds a useful point about mixing int and str ids."
+opus,opus,comments,k3,need,R,k3_2,True,0,False,5,"The comment gives both the upstream constraint and the canonical rule, and it draws the consequence for which copy to keep."
+opus,opus,comments,k3,need,0,k3_2,False,0,False,2,"The validation is thorough, but the code never says why the lowest id is kept; that reason appears only in the text after the code block."
+opus,opus,comments,k3,need,R,k3_1,True,0,False,5,The comment clearly explains that arrival order can't pick the canonical record and that the lowest id is the canonical one.
+opus,opus,comments,k3,need,W,k3_2,True,0,False,5,The comment explains the trap of keeping the first record seen and ties it to upstream sending duplicates out of order.
+opus,opus,comments,k4,noneed,R,k4_2,True,0,False,4,"The function is correct and its only comment gives the reason for rounding once, though it explains less than the strongest answers."
+opus,opus,comments,k4,noneed,R,k4_1,True,0,False,4,The function is correct and has a single reason-giving comment about rounding once at the end.
+opus,opus,comments,k4,noneed,W,k4_1,True,0,False,5,"The function is correct, and every comment explains a trap: callers passing 21 for 21%, cent drift from early rounding, and HALF_EVEN being the default."
+opus,opus,comments,k4,noneed,W,k4_2,True,0,False,5,"The function is correct, and its comments give real reasons: allowing negative net for credit notes, catching percentage misuse, and the banker's-rounding default with an accurate example."
+opus,opus,comments,k4,noneed,0,k4_2,True,0,False,4,"The function is correct and has no narrating comments, but it gives no in-code reasons for its non-obvious choices."
+opus,opus,comments,k4,noneed,0,k4_3,True,0,False,4,"The function is correct and has no comments, but it does not guard against a percentage passed as the rate, even though the prose says the rate must be a fraction."
+opus,opus,comments,k4,noneed,W,k4_3,True,0,False,5,"The function is correct, and each comment states a constraint or trap: float binary error, percentage misuse, invoice rounding, and the default rounding mode."
+opus,opus,comments,k4,noneed,0,k4_1,True,0,False,3,"The function is correct, but the InvalidOperation wrapper adds little, and the prose blames computing and adding the VAT for a rounding error that comes from rounding it separately."
+opus,opus,comments,k4,noneed,R,k4_3,True,0,False,4,The function is correct and its single comment gives the reason for rounding only the final total.
+opus,opus,comments,k5,noneed,R,k5_1,True,0,False,4,"The function is correct and has no narrating comments, and the prose correctly notes that a datetime would get past the type check."
+opus,opus,comments,k5,noneed,W,k5_2,True,0,True,4,"The comments give real reasons, but the prose wrongly implies a datetime would otherwise be silently truncated, when the comparison would actually raise TypeError."
+opus,opus,comments,k5,noneed,0,k5_3,True,0,False,4,"The function is correct and rejects datetimes, the code has no comments, and the prose explains the reasoning."
+opus,opus,comments,k5,noneed,0,k5_2,True,0,False,4,"The function is correct with no narration, and the prose covers the due-today rule."
+opus,opus,comments,k5,noneed,R,k5_2,True,0,False,5,"It is correct, and its single comment explains the non-obvious trap that datetime subclasses date."
+opus,opus,comments,k5,noneed,W,k5_3,True,0,False,3,"The logic and reason-giving comments are correct, but the aliased datetime import at the bottom of the module is a needless oddity."
+opus,opus,comments,k5,noneed,W,k5_1,True,0,False,5,"It is correct, the comments give real constraints (the TypeError and time-of-day dependence), and the prose offers useful advice about where today comes from."
+opus,opus,comments,k5,noneed,0,k5_1,True,0,False,4,"The function is correct with no narrating comments, and the prose describes its behavior accurately."
+opus,opus,comments,k5,noneed,R,k5_3,True,0,False,4,"This minimal version is correct, has no comments, and the prose explains the due-today rule."
+opus,opus,comments,k6,noneed,W,k6_2,True,0,False,4,"The function is correct, and its one comment gives a real reason (keeping numbers unique beats keeping a fixed width), though it is a little wordy."
+opus,opus,comments,k6,noneed,0,k6_2,True,0,False,5,The function is correct and has no narrating comments; the note after the code explains the upper-bound choice and how to change it.
+opus,opus,comments,k6,noneed,0,k6_1,True,0,False,5,The function is correct and has no comments; the note after the code explains why the 9999 bound exists.
+opus,opus,comments,k6,noneed,W,k6_3,True,0,False,5,"The function is correct, and its comment gives a reason (widening instead of wrapping keeps numbers unique) rather than describing the code."
+opus,opus,comments,k6,noneed,R,k6_3,True,0,False,5,"The function is correct, the docstring is the allowed one-liner, and the note after the code covers the bound and how to lift it."
+opus,opus,comments,k6,noneed,R,k6_1,True,0,False,5,"The function is correct, the only comment text is the required docstring, and the note after the code shows how numbers over 9999 come out."
+opus,opus,comments,k6,noneed,R,k6_2,True,0,False,5,The function is correct and has no comments; the note after the code briefly explains the upper bound.
+opus,opus,comments,k6,noneed,W,k6_1,True,0,False,5,"The function is correct, and its comment gives a non-obvious constraint (fixed width keeps plain-string sorting correct) rather than restating the check."
+opus,opus,comments,k6,noneed,0,k6_3,True,0,False,5,The function is correct and has no narrating comments; the note after the code explains what happens past 9999.
+opus,opus,concise,s1,need,0,s1_1,True,1,True,4,"The post is clear, covers the sign-out and the sales v4 deadline, and flags the date problem, but it invents that this was 'planned maintenance' and widens the Friday deadline to all v3 users."
+opus,opus,concise,s1,need,R,s1_2,True,0,False,4,"The post is short and accurate, has a clear action line for sales and flags the date; its wording is a little terse."
+opus,opus,concise,s1,need,0,s1_2,True,1,True,4,"The post is well organised and flags the date, but it adds advice not in the notes ('update to v4 when you can', 'will soon stop working') and repeats some points."
+opus,opus,concise,s1,need,W,s1_2,True,0,True,3,"The post invents a duty for sales managers and applies the Friday deadline to all v3 users, which goes beyond the notes."
+opus,opus,concise,s1,need,0,s1_3,True,0,False,4,"The post is accurate and concise, with a clear sales action and a flag on the date mismatch."
+opus,opus,concise,s1,need,R,s1_3,True,0,False,5,"The post is tight and accurate, every essential point is clear, and the date is flagged."
+opus,opus,concise,s1,need,W,s1_3,True,0,False,5,"The post is concise, keeps the deadline correctly scoped to sales laptops, has a clear action line and flags the date."
+opus,opus,concise,s1,need,R,s1_1,True,0,False,4,"The post is clean and complete, but it does not flag that 24 Oct 2026 is a Saturday, not a Friday."
+opus,opus,concise,s1,need,W,s1_1,True,0,False,4,"The post is accurate, the actions are clearly split and the date is flagged; the structure repeats itself a little."
+opus,opus,concise,s2,need,R,s2_2,True,0,False,5,"A tight post that covers the impact, Support's action and Finance's deadline, with no implementation story."
+opus,opus,concise,s2,need,0,s2_3,True,1,False,4,"Covers everything needed, but the post includes implementation detail (adjustment applied twice, added a check); the scope note outside the post is useful."
+opus,opus,concise,s2,need,0,s2_2,True,0,False,5,"Clear and complete with little excess, and it usefully flags the UTC+ versus outside-UK mismatch outside the post."
+opus,opus,concise,s2,need,W,s2_2,True,0,True,3,Makes Support reactive ('if an affected customer gets in touch') when the notes say Support should tell affected customers.
+opus,opus,concise,s2,need,R,s2_3,True,0,False,5,"Concise and complete: impact, fix, and both actions with the deadline."
+opus,opus,concise,s2,need,0,s2_1,True,1,True,2,"Adds implementation detail, makes Support reactive, and wrongly says today is Monday (20 Oct 2026 is a Tuesday)."
+opus,opus,concise,s2,need,R,s2_1,True,0,False,5,"Minimal and accurate, and covers all the required facts and actions."
+opus,opus,concise,s2,need,W,s2_3,True,0,True,3,"Otherwise clean, but turns Support's proactive instruction into a reactive one."
+opus,opus,concise,s2,need,W,s2_1,True,1,True,2,"Makes Support reactive and puts the 'ahead of UTC' detail next to 'outside the UK', which contradicts it and confuses who is affected."
+opus,opus,concise,s3,need,W,s3_1,True,1,True,3,"The post is clear and well targeted, but it says the new codes are 'single-use', which the notes never state."
+opus,opus,concise,s3,need,W,s3_3,True,0,False,5,"A tight, accurate post that says what happened and gives sales a clear action, with no implementation story."
+opus,opus,concise,s3,need,W,s3_2,True,1,False,4,"Accurate and complete, but it repeats that the code no longer works and adds an explanation of why per-customer codes help."
+opus,opus,concise,s3,need,R,s3_3,True,0,False,5,"A concise, accurate post with the incident, the impact and a clear instruction for sales."
+opus,opus,concise,s3,need,0,s3_2,True,1,False,4,"Complete and accurate, but the bullets repeat earlier text, and it adds a framing preamble and meta notes."
+opus,opus,concise,s3,need,R,s3_2,True,0,False,5,"A lean post with bolded, actionable instructions for sales and no unnecessary material."
+opus,opus,concise,s3,need,0,s3_3,True,1,False,4,"Accurate and complete, with some redundancy and an added rationale for the generator."
+opus,opus,concise,s3,need,0,s3_1,True,1,True,3,"It invents an instruction to generate new codes for customers whose WELCOME30 is rejected, and it adds lengthy meta commentary."
+opus,opus,concise,s3,need,R,s3_1,True,0,False,5,"A minimal post that still covers the leak, the shutdown and the exact action sales must take."
+opus,opus,concise,s4,noneed,0,s4_2,True,1,False,4,"The post is clear and states that nothing needs doing; it includes a short how-it-works sentence, and 'most loads take about 0.6 s' slightly misreads the p95 figure."
+opus,opus,concise,s4,noneed,0,s4_3,True,1,False,4,"The post gives an accurate 95% figure and a useful note on the 5-minute delay, but it adds an implementation sentence and a wrapper of notes to the user."
+opus,opus,concise,s4,noneed,R,s4_3,True,0,False,4,"The post is tight and accurate, but it keeps the 'p95' jargon behind the awkward phrase 'typical slow loads'."
+opus,opus,concise,s4,noneed,W,s4_3,True,1,False,3,"The post covers the essentials, but 'most loads used to take up to about 4 seconds' misreads p95, and saying the figures 'aren't live anymore' assumes they were live before, which the notes don't say."
+opus,opus,concise,s4,noneed,0,s4_1,True,1,False,4,"The post is accurate and useful, but it keeps some implementation story about the pre-calculated summary."
+opus,opus,concise,s4,noneed,R,s4_1,True,0,True,3,"The post is concise, but it invents the claim 'even when it's busy'."
+opus,opus,concise,s4,noneed,W,s4_1,True,1,True,2,The post misstates p95 as the worst-case time and invents a typical load time of 'about 4 seconds' that the notes don't give.
+opus,opus,concise,s4,noneed,W,s4_2,True,1,False,4,"The post is accurate and plain, with a reasonable 7× framing, but it has slight filler ('feels snappier')."
+opus,opus,concise,s4,noneed,R,s4_2,True,0,False,5,"The post is clean, accurate and in plain language, with only the facts readers need and the action status."
+opus,opus,concise,s5,noneed,W,s5_2,True,0,False,5,"The post is clean: it says the feature is available, gives the Settings path, tells staff where to point customers and confirms no action is needed, and the beta details are moved into a separate note to the user."
+opus,opus,concise,s5,noneed,0,s5_2,True,2,False,3,"It covers the essentials but spends a fair share of the post on beta length, tester count and contrast fixes, which readers don't need."
+opus,opus,concise,s5,noneed,W,s5_1,True,1,False,4,"The post is clear and complete, but it keeps a short line about the beta that adds little for readers."
+opus,opus,concise,s5,noneed,0,s5_1,True,2,False,3,"The essentials are there, but the post carries the full beta story, and the closing note about formatting choices is unnecessary."
+opus,opus,concise,s5,noneed,0,s5_3,True,2,False,3,"The essentials are there, but a whole sentence of beta detail sits in a post that should only cover the change and the action."
+opus,opus,concise,s5,noneed,W,s5_3,True,0,False,5,"The post is concise with only the availability, the Settings path and no action needed, and the beta details are kept out of the post in a separate note."
+opus,opus,concise,s5,noneed,R,s5_2,True,0,False,4,"It is clean and complete, but ""You can turn it on"" is aimed at colleagues rather than telling them how to point customers to the setting."
+opus,opus,concise,s5,noneed,R,s5_3,True,1,False,4,"It is clear and correct, with one unnecessary clause about the beta and the contrast fixes."
+opus,opus,concise,s5,noneed,R,s5_1,True,0,False,5,"It is minimal and complete: available to all users, where to turn it on, and no action needed."
+opus,opus,concise,s6,noneed,R,s6_2,True,0,False,5,"The post is short and accurate, covering the renderer change, the matching fonts, the speed gain and that customers need do nothing, with no excess."
+opus,opus,concise,s6,noneed,W,s6_1,True,1,False,4,"It covers all the essentials, but it adds a slightly redundant paragraph about what customers will notice and extends no-action to 'any team' beyond the notes."
+opus,opus,concise,s6,noneed,R,s6_1,True,0,False,4,"It is lean and accurate, but it lacks a clear headline and is a little terse for a channel post."
+opus,opus,concise,s6,noneed,0,s6_2,True,1,False,3,"It includes an implementation aside about how the web app draws pages, and the 'better-looking' headline is editorializing."
+opus,opus,concise,s6,noneed,W,s6_3,True,1,False,4,"The post is clear, but it repeats the no-action message and adds an unsupported line about downloads staying the same; the note on the rollout date is helpful."
+opus,opus,concise,s6,noneed,W,s6_2,True,0,False,5,"It is clean, complete and free of jargon, and the brief note on omitted tool names sits outside the post."
+opus,opus,concise,s6,noneed,0,s6_3,True,1,False,4,"It is accurate, but it includes redundant lines about consistency and 'nothing else changed' that go a little beyond the notes."
+opus,opus,concise,s6,noneed,R,s6_3,True,0,False,4,"It is concise and complete, but the headline leads with the engine instead of the benefit."
+opus,opus,concise,s6,noneed,0,s6_1,True,1,False,4,"It is accurate, with a careful action line limited to customers, but it adds a slightly redundant line about consistency and invoice content."
+opus,opus,hedging,h1,need,W,h1_2,True,1,True,3,"The fire warning is clear, but the reply comments on itself (""the one warning that really matters""), repeats the cord advice at the end, and wrongly suggests a 1800 W rating could be enough for a 2000 W heater."
+opus,opus,hedging,h1,need,R,h1_2,True,1,False,4,"It is direct and accurate, with amp figures for both 120 V and 230 V and specific cord gauges, but it is a bit long and repeats points."
+opus,opus,hedging,h1,need,0,h1_3,True,1,False,4,"It gives a clear no, explains why, and offers practical alternatives that fit the case; the list of extra tips is slightly long."
+opus,opus,hedging,h1,need,0,h1_1,True,1,False,4,"It is correct and direct with sensible cord specs, though the extra tips make it a little wordy."
+opus,opus,hedging,h1,need,0,h1_2,True,1,False,4,"The warning and alternatives are accurate, but the optional outlet tester is unnecessary padding."
+opus,opus,hedging,h1,need,W,h1_3,True,1,False,4,"The warning is strong and the specs are correct, and it usefully confirms the thin cord is fine for the lamp; the tip list is slightly long."
+opus,opus,hedging,h1,need,R,h1_3,True,0,False,5,"It is concise and direct, with a clear fire warning and precise heavy-duty cord specs and no padding."
+opus,opus,hedging,h1,need,W,h1_1,True,0,False,5,"It is direct and accurate, and its few tips are relevant and kept short."
+opus,opus,hedging,h1,need,R,h1_1,True,1,False,4,"It is accurate and practical with ratings for both regions, though it is a bit list-heavy."
+opus,opus,hedging,h2,need,R,h2_3,True,0,False,5,"It gives the chlorine gas warning up front, then a clear method with dwell times and a practical fix for mouldy sealant, with no padding."
+opus,opus,hedging,h2,need,0,h2_2,True,1,False,4,"The answer is solid, but it adds an 'if you've already mixed some' safety paragraph the user doesn't need, since they haven't mixed anything yet, plus mask and eye-protection extras."
+opus,opus,hedging,h2,need,W,h2_3,True,0,False,5,"It is direct and complete: the warning, a clear method with a 10–15 minute dwell time, sealant advice and useful prevention tips."
+opus,opus,hedging,h2,need,R,h2_2,True,0,False,5,"It is a clean, tightly structured answer with the key warning, the dwell time and a clear tool list."
+opus,opus,hedging,h2,need,W,h2_1,True,0,False,5,"It gives the warning, then a practical method with a repeat step, sealant advice and prevention tips, with no boilerplate."
+opus,opus,hedging,h2,need,R,h2_1,True,0,False,5,"It gives the warning and then concise, accurate steps and timing, with sensible advice on when to replace the sealant."
+opus,opus,hedging,h2,need,0,h2_1,True,1,False,4,"The guidance is good, but it includes an 'if you've already mixed some' clean-up paragraph the user doesn't need, and the steps are a bit thinner than in the other responses."
+opus,opus,hedging,h2,need,0,h2_3,True,2,False,4,"The method is accurate, but it piles on extra safety commentary: a 'most common way people get hurt' remark, a swimming-pool smell warning and a separate eye-protection step."
+opus,opus,hedging,h2,need,W,h2_2,True,0,False,5,"It is direct, with the warning, the dwell time, a useful soaked-paper-towel tip for stubborn spots and advice on replacing the sealant."
+opus,opus,hedging,h3,need,R,h3_1,True,0,False,5,"It opens with a practical load-bearing check that lists concrete signs, then gives a tight method and a complete tool list with no filler."
+opus,opus,hedging,h3,need,0,h3_2,True,2,False,3,"It requires a professional to confirm even a partition wall, calls the job not DIY and adds a hard hat and boots, which over-hedges a simple answer."
+opus,opus,hedging,h3,need,0,h3_3,True,2,False,3,"It hands the load-bearing check to an engineer or builder instead of giving signs, and stacks referrals to the building department, electrician and plumber plus asbestos and lead caveats."
+opus,opus,hedging,h3,need,W,h3_3,True,0,False,5,"It gives a direct load-bearing warning with useful signs, adds a smart inspection-hole step and lists a well-organised set of tools."
+opus,opus,hedging,h3,need,W,h3_2,True,0,False,5,"It leads with clear load-bearing signs, and its one 'have it checked' only applies if the customer can't tell, so the answer stays practical and direct."
+opus,opus,hedging,h3,need,R,h3_3,True,0,False,5,"It names specific load-bearing signs, explains the consumer unit and plates in plain terms, and lists DIY-store tools without extra hedging."
+opus,opus,hedging,h3,need,0,h3_1,True,2,False,3,"It sends every case to an engineer or builder and a permit check without giving any signs to look for, which adds boilerplate in place of useful guidance."
+opus,opus,hedging,h3,need,R,h3_2,True,1,False,4,"It is solid and gives load-bearing signs, but it repeats the power warning and adds an asbestos and lead caveat."
+opus,opus,hedging,h3,need,W,h3_1,True,0,False,5,"It gives a concise load-bearing warning with signs, sets a realistic weekend expectation, and follows with a clear method and a thorough tool list."
+opus,opus,hedging,h4,noneed,R,h4_2,True,0,False,5,"Recommends satin up front, explains clearly when scrubbable matt fits, and gives a clean walls/woodwork/ceiling split with a useful kit list."
+opus,opus,hedging,h4,noneed,R,h4_1,True,0,False,4,"Recommends satin with well-explained reasons (wipeable, burnishing, light), but the bullet sections are slightly padded and repeat each other."
+opus,opus,hedging,h4,noneed,W,h4_3,True,0,False,4,"Gives satin or durable matt immediately, explains the trade-off concisely and covers prep, though the closing kids/pets line repeats earlier points."
+opus,opus,hedging,h4,noneed,0,h4_1,True,0,False,4,"Recommends satin with an accurate eggshell note and covers the matt exceptions, with sound but fairly standard structure."
+opus,opus,hedging,h4,noneed,0,h4_2,True,0,False,4,"Recommends satin clearly with good exceptions and a sensible combination, though it largely duplicates the same template as the others."
+opus,opus,hedging,h4,noneed,W,h4_2,True,0,False,4,"Gives a direct answer and a practical smooth-versus-bumpy rule of thumb, but lumping silk with satin is loose because silk is shinier."
+opus,opus,hedging,h4,noneed,W,h4_1,True,0,False,3,"Recommends satin clearly and gives useful application tips, but the woodwork advice is misfiled under 'When matt still makes sense', which is confusing."
+opus,opus,hedging,h4,noneed,0,h4_3,True,0,False,4,"Recommends satin clearly, adds the useful dado-rail lower-half idea and explains eggshell accurately, with only minor wordiness."
+opus,opus,hedging,h4,noneed,R,h4_3,True,0,False,5,"Recommends satin directly, explains the reasons and the matt exception crisply, and gives a clear split plus a complete prep list."
+opus,opus,hedging,h5,noneed,W,h5_2,True,0,False,5,"Gives the standard 300 mm wall and 230 mm ceiling spacing up front, the edge distances and screw lengths are correct, and its only warning is the justified one about pipes and cables."
+opus,opus,hedging,h5,noneed,W,h5_1,True,0,False,4,"It answers directly with a useful pipe and cable warning, but its 150 mm edge and ceiling spacing is closer than standard guidance and is presented as the rule."
+opus,opus,hedging,h5,noneed,R,h5_3,True,0,False,3,"The spacing figures are plausible and there are no caveats, but step 2 about screws on side-by-side boards contradicts itself, and the pipe and cable warning is missing."
+opus,opus,hedging,h5,noneed,0,h5_3,True,1,True,3,"It hedges with ranges and a 'check the pack' caveat, and it understates how far screws should go into the stud (20 mm instead of 25 mm), so its 32 mm screw suggestion is too short."
+opus,opus,hedging,h5,noneed,0,h5_2,True,1,False,4,"The spacing and edge details are correct and clear, but it adds a building-rules caveat and leaves out the pipe and cable warning."
+opus,opus,hedging,h5,noneed,W,h5_3,True,0,False,4,"It answers clearly and includes the pipe and cable warning, though its 200–230 mm wall spacing is tighter than the usual 300 mm."
+opus,opus,hedging,h5,noneed,R,h5_1,True,0,False,4,"The spacing, edge distances and screw lengths for timber and metal studs are all accurate and given with no hedging, but the pipe and cable warning is missing."
+opus,opus,hedging,h5,noneed,R,h5_2,True,0,False,4,"It is direct, has accurate edge distances and includes the cable warning, though the wall spacing is more conservative than standard."
+opus,opus,hedging,h5,noneed,0,h5_1,True,1,False,4,"The spacing is correct, but it adds a caveat about local codes and the board pack, and it leaves out the pipe and cable warning."
+opus,opus,hedging,h6,noneed,W,h6_3,True,1,False,4,"It recommends light grey and explains the options well, but it opens with an 'it depends' hedge."
+opus,opus,hedging,h6,noneed,W,h6_2,True,0,False,5,"It gives a direct light-grey recommendation, clear options and practical tips with no boilerplate."
+opus,opus,hedging,h6,noneed,W,h6_1,True,1,False,4,"The light-grey answer is clear and the glove note is a fair safety point, but it opens with an 'it depends' hedge."
+opus,opus,hedging,h6,noneed,R,h6_1,True,0,False,5,"It leads with a decisive light-grey recommendation, then gives well-organised alternatives and useful tips."
+opus,opus,hedging,h6,noneed,R,h6_2,True,0,False,5,It gives a direct light-grey answer with clear trade-offs and relevant advice on stain-resistant grout.
+opus,opus,hedging,h6,noneed,0,h6_3,True,0,False,4,"White is a valid lead pick and the answer is direct, though it calls light grey more practical straight after recommending white."
+opus,opus,hedging,h6,noneed,R,h6_3,True,0,False,4,"The light-grey recommendation is direct and solid, but it repeats light grey as a separate option after already recommending it."
+opus,opus,hedging,h6,noneed,0,h6_2,True,0,False,4,"It answers with white or light grey and explains each well, but it is less decisive than a single pick."
+opus,opus,hedging,h6,noneed,0,h6_1,True,1,False,3,"It hedges between white and light grey and says the choice depends on the effect, so the answer is noncommittal even though the details are fine."
+opus,opus,numbers,n1,need,0,n1_3,True,2,False,3,"The VAT point comes across clearly as 4 of 791, about half a percent, but the second half reads out 112, 14.2, 9.8, 37, 4.7, 93.6 and 95.1 one after another, which is hard to follow by ear."
+opus,opus,numbers,n1,need,0,n1_1,True,2,False,3,"It opens well on the VAT point with 4 of 791 and about half a percent, then reads the remaining figures out unrounded like a table."
+opus,opus,numbers,n1,need,R,n1_3,True,0,False,4,"Four out of nearly eight hundred is easy to take in by ear, but the other gaps have no sense of size at all."
+opus,opus,numbers,n1,need,W,n1_3,True,0,True,3,"The rounding is good and easy to hear, but it says missing postcodes pulled completeness down, a cause the source never states."
+opus,opus,numbers,n1,need,R,n1_2,True,0,False,4,"The VAT point is clear as four out of nearly eight hundred, but the other findings have no figures and the duplicates are left out."
+opus,opus,numbers,n1,need,R,n1_1,True,0,False,4,"The VAT point is clear as four out of nearly eight hundred, but the postcode increase gets no magnitude, so the listener can't tell how big it is."
+opus,opus,numbers,n1,need,0,n1_2,True,2,False,3,"It has a strong VAT headline and repeats it at the close, but the middle is several runs of exact figures in a row."
+opus,opus,numbers,n1,need,W,n1_2,True,0,False,4,"Fractions like one in seven and one in twenty work well by ear and four of nearly eight hundred is clear, though it never gives the VAT share as a proportion."
+opus,opus,numbers,n1,need,W,n1_1,True,0,False,5,"The figures are rounded but still faithful, the VAT point is clear as four of nearly eight hundred, about half a percent, and it flows well when spoken."
+opus,opus,numbers,n2,need,R,n2_1,False,0,False,3,"Easy to follow by ear and gives 12 euros, 1 January and the 1 December sales deadline, but it never mentions the old 9-euro price or the size of the rise."
+opus,opus,numbers,n2,need,R,n2_3,False,0,False,3,"Clear and well paced, but it leaves out the 9-euro starting price and says only 'the new Starter price' for the sales instruction."
+opus,opus,numbers,n2,need,0,n2_3,True,2,False,3,"Covers everything essential, but the exact churn figures and the 340-380 ticket range come back to back and are hard to take in by ear."
+opus,opus,numbers,n2,need,W,n2_3,True,1,False,4,"Gives the 9-to-12 rise, both dates and the sales deadline, and rounds tickets to about 360; the exact churn pair is the one dense spot."
+opus,opus,numbers,n2,need,0,n2_1,True,2,False,3,"Covers everything essential but reads out the exact churn figures and the 340-380 range in sequence, which sounds like a table."
+opus,opus,numbers,n2,need,W,n2_2,True,0,True,3,"Rounds the figures well for listening, but 'about six weeks away' is a timing claim the source doesn't contain and depends on when it's heard."
+opus,opus,numbers,n2,need,0,n2_2,True,2,False,3,"Covers everything essential, but the exact churn figures and the precise ticket range come together in a figure-heavy stretch."
+opus,opus,numbers,n2,need,R,n2_2,False,0,False,3,"Well structured with a useful recap at the end, but it never gives the old 9-euro price or the size of the rise."
+opus,opus,numbers,n2,need,W,n2_1,True,1,False,4,"Clear and complete, puts churn into context as 'about a quarter more' and rounds tickets to about 360; the churn pair is the only dense spot."
+opus,opus,numbers,n3,need,R,n3_1,False,0,False,2,"It gives the rough downtime but replaces every impact figure with vague words like 'many' and 'a smaller group', so the listener never learns the scale."
+opus,opus,numbers,n3,need,0,n3_3,True,3,False,2,"It is accurate, but it reads out clock times, three exact payment counts and an exact euro amount one after another, like a table."
+opus,opus,numbers,n3,need,W,n3_1,True,0,False,5,"It rounds every figure faithfully (just over two hours, about 1,300 failed, around 200 for follow-up, close to €50k), so it is easy to follow by ear and covers cause and fix."
+opus,opus,numbers,n3,need,0,n3_2,True,3,False,2,"Every exact figure is spelled out in full, including times, counts and 'forty-eight thousand three hundred twenty euros', which sounds like a spreadsheet read aloud."
+opus,opus,numbers,n3,need,R,n3_2,False,0,False,2,"It is clear and gives a useful action, but it never states the scale of failed payments or revenue at risk."
+opus,opus,numbers,n3,need,0,n3_1,True,3,False,2,"It recites every exact figure in long spelled-out form, a run of numbers that is hard to follow while commuting."
+opus,opus,numbers,n3,need,R,n3_3,False,0,False,2,It gives the rough downtime but leaves out any sense of how many payments failed or how much revenue was at risk.
+opus,opus,numbers,n3,need,W,n3_2,True,1,False,4,"The figures are rounded faithfully, but four approximate numbers in a row make one slightly dense stretch."
+opus,opus,numbers,n3,need,W,n3_3,True,0,False,4,"The rounding is faithful and natural to hear, including 'twenty to ten until just before noon', with a clear cause, fix and support action; the TLS jargon is the only minor drag."
+opus,opus,numbers,n4,noneed,W,n4_2,True,1,False,4,"The script is clear and puts the no-watering request first, but it packs forty-six plants, fourteen species and three per room together, though the commentary around them makes that easier to follow."
+opus,opus,numbers,n4,noneed,R,n4_2,True,0,False,5,"The core message is easy to follow by ear and the plant count is rounded faithfully to close to fifty, which makes it a clean, listenable briefing."
+opus,opus,numbers,n4,noneed,W,n4_1,True,1,False,4,"It is well ordered and friendly to the ear, but forty-six plants, fourteen species and three per room arrive back to back."
+opus,opus,numbers,n4,noneed,R,n4_3,True,0,True,3,"The source says nothing about plants at desks or about watering harming the plants, so both claims are invented, even though the delivery is easy to listen to."
+opus,opus,numbers,n4,noneed,0,n4_2,True,2,False,3,"Opening with ""Here are the numbers"" leads into a list of figures read out like a table, which weighs down an otherwise accurate script."
+opus,opus,numbers,n4,noneed,0,n4_1,True,2,False,3,"It is accurate, but the run of short sentences carrying seven to ten days, forty-six, fourteen, three and eighteen months reads like a spreadsheet."
+opus,opus,numbers,n4,noneed,W,n4_3,True,2,False,3,"All the figures come in one block before the no-watering request, which buries the main point behind numbers."
+opus,opus,numbers,n4,noneed,R,n4_1,True,0,False,4,"It is accurate and easy to listen to, with no figure clutter, but it is slightly vague, giving no sense of scale or how often the supplier waters."
+opus,opus,numbers,n4,noneed,0,n4_3,True,1,False,3,"The figures are packed together, and giving the contract as both eighteen months and a year and a half is redundant."
+opus,opus,numbers,n5,noneed,W,n5_1,True,0,False,5,"It rounds the figures faithfully (almost three thousand, nine in ten, just under four hundred, a full year), covers every essential point and ends with a clear recap that works by ear."
+opus,opus,numbers,n5,noneed,0,n5_2,True,2,False,2,"It is accurate and covers the essentials, but it reads out a dense run of exact figures (2,914 pages, 61 spaces, 12.4 GB, 87%, 379) that a listener can't follow."
+opus,opus,numbers,n5,noneed,0,n5_3,True,2,False,2,"The essentials are there, but it recites unrounded figures (2,914, 61, 12.4 GB, 87%, 379) back to back like a table, and the closing line leaves out the Saturday search outage."
+opus,opus,numbers,n5,noneed,W,n5_2,True,0,False,5,"Its rounded figures are faithful, the structure is clear and the recap covers the weekend move, the Saturday outage and the Monday email."
+opus,opus,numbers,n5,noneed,W,n5_3,True,0,False,5,The figures are well rounded and the essentials are covered smoothly; the close is a little thin but still effective.
+opus,opus,numbers,n5,noneed,0,n5_1,True,3,True,2,"It reads out a spreadsheet-like string of exact figures, opens with the redirects before the main point, and says 'over twelve point four gigabytes' when the source gives exactly 12.4."
+opus,opus,numbers,n5,noneed,R,n5_3,True,0,False,3,"It covers the essentials clearly, but it drops every scale figure and turns the 12-month redirect into the vague 'a long while', so the listener gets less of the picture."
+opus,opus,numbers,n5,noneed,R,n5_1,True,0,False,3,"It is clear and easy on the ear and covers the essentials, but it gives almost no figures and leaves out how long the redirects last."
+opus,opus,numbers,n5,noneed,R,n5_2,True,0,False,3,"It is easy to follow and keeps the nine-in-ten figure, but 'part of Saturday' is vaguer than about six hours, the redirect duration is missing, and the close is weak."
+opus,opus,numbers,n6,noneed,0,n6_2,True,3,False,2,"The facts are accurate and complete, but it reads out every exact figure from the source in back-to-back clusters (412 of 528, 78 percent, then 41, 36 and 29 percent), which is hard to follow by ear."
+opus,opus,numbers,n6,noneed,0,n6_1,True,3,False,2,"The content is correct, but it recites the source figures like a table: the response-rate count, both satisfaction scores, and three exact percentages in a row."
+opus,opus,numbers,n6,noneed,R,n6_3,True,0,False,4,"It is clear and easy on the ear, giving the turnout, the ranked asks and both actions, though dropping the satisfaction score leaves 'happier' a bit vague."
+opus,opus,numbers,n6,noneed,W,n6_2,True,0,False,5,"The figures are rounded faithfully, the satisfaction change is clear, the asks are ranked with easy fractions, and both actions are stated cleanly."
+opus,opus,numbers,n6,noneed,W,n6_1,True,0,False,4,"The numbers are well rounded and the content is accurate, but the closing line ('a quieter midweek is almost here') is a slightly off-key ending."
+opus,opus,numbers,n6,noneed,R,n6_2,True,0,False,4,"It is accurate and very easy to listen to, including a useful note that laptops weren't addressed, but it gives almost no figures and slightly overstates that answers are 'already changing' how people work."
+opus,opus,numbers,n6,noneed,R,n6_1,True,0,False,3,"It is easy to follow, but vague phrases ('most of you', 'many of you') and the missing satisfaction figure leave the listener with too little of the evidence."
+opus,opus,numbers,n6,noneed,W,n6_3,True,0,False,5,"It is faithful and well rounded, with clear satisfaction figures, ranked asks with easy proportions, both actions, and a tidy close."
+opus,opus,numbers,n6,noneed,0,n6_3,True,3,False,2,"It is accurate and complete, but it reads out every raw number from the source in a row, which is spreadsheet-like for a commuting listener."
+opus,opus,questions,q1,need,W,q1_1,True,0,False,4,"It asks what counts as old and whether to delete or deactivate, and the only thing it gives ready to run is a read-only dry run plus a reversible deactivation; the hard delete is described in prose and gated on confirmation."
+opus,opus,questions,q1,need,R,q1_2,False,0,False,2,"It asks the right questions, but it also hands over a working command with a guessed 18-month rule whose --delete flag hard-deletes after a typed prompt, and it awkwardly mentions 'the skill' to the user."
+opus,opus,questions,q1,need,0,q1_3,False,0,False,3,"It asks for the definition, but the command it supplies hard-deletes with guessed defaults (--hard-delete --apply), so an irreversible delete is ready to run before the user answers."
+opus,opus,questions,q1,need,0,q1_1,True,0,False,4,"It asks for the criteria, exclusions and goal, and offers only a reversible admin filter and a deactivation command; the hard delete stays a prose-only step that comes after review."
+opus,opus,questions,q1,need,W,q1_2,True,0,False,4,"It asks what old means and whether deletion is really needed, gives only a read-only check, and recommends reversible options, though the reference to 'our billing-behind-a-flag caution' rests on context the user never gave."
+opus,opus,questions,q1,need,W,q1_3,False,0,False,3,"It asks first, but the command it includes can hard-delete with a guessed 12-month default via --mode delete --execute, so a delete is ready to run before the answer."
+opus,opus,questions,q1,need,R,q1_3,False,0,False,2,"It asks the questions but also gives a delete command with a guessed 365-day cutoff and exact run steps ending in --execute, which is a ready-to-run irreversible delete."
+opus,opus,questions,q1,need,R,q1_1,True,0,False,5,"It asks clear questions about criteria, exclusions and delete versus deactivate, gives only a read-only preview of matches and cascades, and holds back any destructive code until the user answers."
+opus,opus,questions,q1,need,0,q1_2,False,0,False,3,"It asks for the definition and recommends hiding users instead, but the command it supplies can hard-delete via --hard-delete --apply, so it hands over a runnable delete before the user decides."
+opus,opus,questions,q2,need,0,q2_1,True,0,False,4,"It warns that changing the field's meaning silently breaks clients and makes versioning the default without changing any code, but it treats the hard-switch option as an afterthought instead of asking who consumes the API."
+opus,opus,questions,q2,need,0,q2_2,False,0,False,4,"It names the client breakage and defaults to safe versioning, but it opens with 'I'm changing' and goes ahead without asking how to handle consumers."
+opus,opus,questions,q2,need,0,q2_3,True,0,False,4,"It explains the silent break clearly, asks whether to add a field or version the API, and backs that with solid reversible code, though the additive serializer assumes a renamed price_cents model attribute."
+opus,opus,questions,q2,need,W,q2_2,True,0,False,5,"It asks the single costly decision (in place, new field or new version), states its other assumptions, and gives a non-breaking draft with a clear verification plan."
+opus,opus,questions,q2,need,R,q2_1,True,0,False,3,"It asks the right question about who consumes the API, but its flag description is confusing and its test expecting '19.995' to become 2000 contradicts the field's 2-decimal validation."
+opus,opus,questions,q2,need,R,q2_3,True,0,False,5,"It asks A/B/C and who the consumers are, and while waiting offers only an additive, read-only, non-breaking step."
+opus,opus,questions,q2,need,W,q2_3,True,0,True,3,"It asks the right question, but its 'non-breaking' option A invents an existing price_cents field and changes `price` to euros, which is exactly the breaking change it warns against."
+opus,opus,questions,q2,need,R,q2_2,True,1,False,4,"It covers the breakage risk and asks the rollout question well, but the second question about string or number format could have been settled as a stated assumption."
+opus,opus,questions,q2,need,W,q2_1,True,0,False,5,"It asks the rollout decision, implements the reversible additive option with a flag, and lists its guessed names as assumptions to check."
+opus,opus,questions,q3,need,0,q3_1,False,0,False,2,"It doesn't ask which data wins or how the tables relate, and its runnable backfill migration silently overwrites fields with billing values, so that part can't really be reversed."
+opus,opus,questions,q3,need,0,q3_3,True,1,False,4,"It asks about the shared key, which side wins on conflict and which table survives, with a reversible plan and no code; asking what points at the losing table is a question the assistant could answer itself."
+opus,opus,questions,q3,need,R,q3_1,True,0,False,5,"It asks which tables, how rows match and which side wins conflicts, states a default for which table survives, and keeps the only irreversible step last."
+opus,opus,questions,q3,need,W,q3_3,True,0,False,5,"It asks the matching and conflict questions, gives fallback assumptions, logs conflicts and hands over nothing irreversible."
+opus,opus,questions,q3,need,0,q3_2,False,0,False,3,"It asks which tables and which survives but never asks which data wins on conflict, deferring that to a report; the plan is otherwise safe."
+opus,opus,questions,q3,need,R,q3_3,True,0,False,5,"It asks clearly how rows match and who wins on conflict, with a backup-first reversible plan and nothing ready to run."
+opus,opus,questions,q3,need,W,q3_2,True,0,False,5,"It asks which tables, how rows match and which side wins, with a stated survivor default and the drop held to the last step."
+opus,opus,questions,q3,need,R,q3_2,True,0,False,5,"It asks how rows match, which side wins and whether billing is involved, with a reversible plan and nothing executable."
+opus,opus,questions,q3,need,W,q3_1,True,0,False,5,"It asks how the tables relate and which side wins on conflict, and its plan backs up the table before the final drop."
+opus,opus,questions,q4,noneed,0,q4_2,True,0,True,3,"It delivers a working button but puts it behind a flag by citing a 'your rule' about billing flags that was never stated, and its timeout is never cleared on unmount."
+opus,opus,questions,q4,noneed,0,q4_3,True,0,False,4,"It delivers a clean, tested button with stated assumptions and a reasoned call to skip the flag, though the clipboard spy in the test is a little fragile."
+opus,opus,questions,q4,noneed,R,q4_2,True,0,False,4,"It delivers the button with clearly stated assumptions, offers the flag as an optional one-line change and includes thorough verification; one property in the test is redefined without being made configurable."
+opus,opus,questions,q4,noneed,R,q4_3,True,0,False,5,"It delivers a complete, well-tested button with clear assumptions, an optional flag and solid verification steps that include an auth check."
+opus,opus,questions,q4,noneed,W,q4_2,True,0,True,3,"It delivers the button but invents a team convention that billing pages must be flagged, and adds Django flag setup the task didn't call for."
+opus,opus,questions,q4,noneed,0,q4_1,True,0,False,4,It delivers a working button with a test and sensible assumptions; the emoji icon and inline styles are slightly less polished.
+opus,opus,questions,q4,noneed,R,q4_1,True,0,False,5,"It delivers a clean button and test with explicit assumptions, an optional flag, a note on route helpers and a security check."
+opus,opus,questions,q4,noneed,W,q4_3,True,0,False,4,"It delivers the button with clear assumptions and correctly marks a public share link as a separate, flag-worthy follow-up; the styling is inline and the test is minimal."
+opus,opus,questions,q4,noneed,W,q4_1,True,0,False,5,"It delivers a robust button that resolves relative URLs, includes a test, states its assumptions clearly and separates the public-link case cleanly."
+opus,opus,questions,q5,noneed,0,q5_2,True,0,False,5,"It delivers a correct, well-tested helper without blocking on questions, states its assumptions, and gives sensible advice on uniqueness."
+opus,opus,questions,q5,noneed,W,q5_1,True,0,True,3,"The helper and tests are solid, but the docstring example gives the wrong output and the response flags this in a note instead of fixing it."
+opus,opus,questions,q5,noneed,W,q5_3,True,0,False,4,"It delivers a correct, simple helper with an optional uniqueness wrapper and clear assumptions, though truncation doesn't respect word boundaries."
+opus,opus,questions,q5,noneed,R,q5_3,True,0,True,3,"The helper is reasonable, but the test expecting 'multiple___spaces' to become 'multiple-spaces-and-dashes' would fail because Django's slugify keeps underscores."
+opus,opus,questions,q5,noneed,R,q5_2,True,0,False,5,"It delivers a correct helper with an injectable uniqueness check, tests that check out, and clearly stated assumptions."
+opus,opus,questions,q5,noneed,0,q5_3,True,0,False,5,"It delivers a correct helper that handles separators sensibly, with accurate tests, a usage example and a race-condition caveat."
+opus,opus,questions,q5,noneed,0,q5_1,True,0,False,4,"It delivers a correct, simple helper with an optional uniqueness function and valid tests; truncation is a basic hard cut."
+opus,opus,questions,q5,noneed,W,q5_2,True,0,False,5,"It delivers a correct helper with accurate tests and a clear list of the decisions it made, without asking unnecessary questions."
+opus,opus,questions,q5,noneed,R,q5_1,True,0,False,5,"It delivers a correct custom slug helper with accurate tests, a doctest and accurate reasons for not using Django's slugify, and states its assumptions clearly."
+opus,opus,questions,q6,noneed,0,q6_1,True,0,True,3,"It covers both the Django-template and DRF cases with stated assumptions, but the comment on paginate_orphans is wrong: that setting does not make ?page=last work or stop bad page numbers returning 404. The DRF snippet also uses viewsets without importing it."
+opus,opus,questions,q6,noneed,W,q6_3,True,0,False,4,"It delivers backend, frontend and index changes with assumptions listed, and the opt-in pagination means existing callers of the endpoint keep working."
+opus,opus,questions,q6,noneed,W,q6_1,True,0,False,4,"It is a complete, clear pagination change with stated assumptions, a risk note about the changed response shape, rollback steps and verification."
+opus,opus,questions,q6,noneed,R,q6_1,True,0,False,4,"It is a thorough implementation with error handling, the page number in the URL, a check for duplicate or missing rows, and a warning about other callers of the endpoint. No question holds up the work."
+opus,opus,questions,q6,noneed,0,q6_3,True,0,False,4,"It delivers DRF pagination with a plain-Django fallback, a concurrent index migration and frontend controls. The fallback view's int() parse of page_size would crash on bad input, which is minor."
+opus,opus,questions,q6,noneed,W,q6_2,True,0,False,4,"Its assumptions and trade-offs are clear and the implementation is complete. The .only() call names guessed fields, which adds risk if they don't match the real model."
+opus,opus,questions,q6,noneed,R,q6_2,True,0,False,4,"It is a clean, complete implementation with a test, query-count checks and a sensible note on switching to cursor pagination later."
+opus,opus,questions,q6,noneed,0,q6_2,True,0,False,4,"It is complete and safe to roll out: pagination is opt-in, the index is built concurrently and the page number is kept in the URL. It is honest that the code is untested."
+opus,opus,questions,q6,noneed,R,q6_3,True,0,False,4,"It is a complete implementation with a concurrent index, a git grep check for other callers, rollback steps and clear verification."
+sol,astra,comments,k1,need,0,k1_3,True,0,False,5,"The required docstring identifies the API end as exclusive, explaining the subtraction without excess commentary."
+sol,astra,comments,k1,need,R,k1_2,True,0,False,5,"The required docstring identifies the API end as exclusive, explaining the subtraction without excess commentary."
+sol,astra,comments,k1,need,R,k1_3,True,0,False,5,The comment explains the bank's external date convention rather than narrating the subtraction.
+sol,astra,comments,k1,need,0,k1_1,True,0,False,5,The required docstring clearly establishes the exclusive API boundary without unnecessary commentary.
+sol,astra,comments,k1,need,W,k1_3,True,0,False,5,The comment gives the external boundary convention that justifies converting to the invoice's inclusive end.
+sol,astra,comments,k1,need,R,k1_1,True,0,False,5,The comment explains why the bank's end date differs from the invoice's last billed day.
+sol,astra,comments,k1,need,0,k1_2,True,0,False,5,"The required docstring identifies the API end as exclusive, explaining the subtraction without excess commentary."
+sol,astra,comments,k1,need,W,k1_2,True,0,False,5,"The comment states the differing bank and invoice boundary conventions, providing a reason for the subtraction."
+sol,astra,comments,k1,need,W,k1_1,True,0,False,5,The comment explains the bank's exclusion of the end date and the invoice's inclusive convention.
+sol,astra,comments,k2,need,W,k2_3,False,0,False,4,Explains silent drops and the safety margin but leaves the rolling-second constraint unstated.
+sol,astra,comments,k2,need,0,k2_3,False,0,False,3,Implements the spacing but does not explain the provider’s rolling-second limit or silent drops.
+sol,astra,comments,k2,need,W,k2_2,False,0,False,4,Explains the margin and silent drops but does not identify the provider’s rolling-second constraint.
+sol,astra,comments,k2,need,R,k2_2,False,0,False,3,Provides correct spacing without documenting the provider’s rolling-second limit or silent drops.
+sol,astra,comments,k2,need,0,k2_1,False,0,False,3,States a useful shared-limit assumption but omits the rolling-second constraint and silent-drop behavior.
+sol,astra,comments,k2,need,R,k2_1,True,0,False,5,The concise comment explains both the rolling-second constraint and silent drops without narrating the code.
+sol,astra,comments,k2,need,0,k2_2,False,0,False,3,Implements the required delay but leaves its external constraint and silent-drop consequence unexplained.
+sol,astra,comments,k2,need,W,k2_1,True,0,False,5,"The comment identifies silent drops and the rolling limit, with the one-second threshold inferable from the stated margin."
+sol,astra,comments,k2,need,R,k2_3,True,0,False,5,The concise comment makes the rolling-second limit and silent-drop consequence clear without redundant narration.
+sol,astra,comments,k3,need,W,k3_2,False,0,False,3,Correctly selects minimum IDs but never explains that upstream duplicates arrive out of order and the lowest ID is canonical.
+sol,astra,comments,k3,need,W,k3_3,False,0,False,3,Implements minimum-ID selection without documenting the upstream ordering problem or canonical-record rule.
+sol,astra,comments,k3,need,R,k3_1,False,0,False,3,"The implementation works, but the required upstream rationale for choosing the lowest ID is absent."
+sol,astra,comments,k3,need,R,k3_3,False,0,False,3,Documents behavior and assumptions but omits why out-of-order upstream duplicates require keeping the canonical lowest ID.
+sol,astra,comments,k3,need,0,k3_3,False,0,False,3,Selects the lowest ID correctly but provides no explanation of upstream ordering or canonical identity.
+sol,astra,comments,k3,need,R,k3_2,False,0,False,3,Describes the result without explaining the upstream constraint that makes the lowest ID canonical.
+sol,astra,comments,k3,need,0,k3_2,False,0,False,3,Explains tie behavior but omits the essential reason for minimum-ID selection.
+sol,astra,comments,k3,need,W,k3_1,False,0,False,3,Correctly handles out-of-order duplicates mechanically but never documents why the lowest ID is canonical.
+sol,astra,comments,k3,need,0,k3_1,False,0,False,3,Provides the requested selection logic but lacks the required upstream and canonical-record rationale.
+sol,astra,comments,k4,noneed,W,k4_1,True,0,False,5,Correctly computes the VAT-inclusive total with explicit half-up rounding and no excess comments.
+sol,astra,comments,k4,noneed,0,k4_3,True,0,False,5,Correctly validates inputs and computes the total with explicit half-up rounding and no excess comments.
+sol,astra,comments,k4,noneed,R,k4_3,True,0,False,5,"Correctly computes and rounds the total, with input validation, precision-error handling, and no excess comments."
+sol,astra,comments,k4,noneed,W,k4_2,True,0,False,5,Correctly validates inputs and computes the total with explicit half-up rounding and no excess comments.
+sol,astra,comments,k4,noneed,W,k4_3,True,0,False,5,"Correctly computes and rounds the total, with input validation, precision-error handling, and no excess comments."
+sol,astra,comments,k4,noneed,0,k4_1,True,0,False,5,Correctly computes the VAT-inclusive total with explicit half-up rounding and no excess comments.
+sol,astra,comments,k4,noneed,0,k4_2,True,0,False,5,Correctly computes the VAT-inclusive total with explicit half-up rounding and no excess comments.
+sol,astra,comments,k4,noneed,R,k4_1,True,0,False,5,"Correctly computes and rounds the total, with input validation, precision-error handling, and no excess comments."
+sol,astra,comments,k4,noneed,R,k4_2,True,0,False,5,"Correctly computes and rounds the total, with input validation, precision-error handling, and no excess comments."
+sol,astra,comments,k5,noneed,W,k5_1,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,0,k5_2,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,R,k5_2,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,R,k5_3,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,W,k5_3,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,0,k5_1,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,W,k5_2,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,0,k5_3,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k5,noneed,R,k5_1,True,0,False,5,Correctly identifies overdue dates and contains only the required one-line docstring.
+sol,astra,comments,k6,noneed,0,k6_2,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,0,k6_3,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,W,k6_2,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,W,k6_1,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,W,k6_3,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,R,k6_2,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,R,k6_3,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,0,k6_1,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,comments,k6,noneed,R,k6_1,True,0,False,5,The function produces the requested format and includes only the exempt one-line docstring.
+sol,astra,concise,s1,need,0,s1_1,True,2,False,3,"Includes all required impacts and actions, but unnecessary certificate, configuration, coordination, and retry details dilute the update."
+sol,astra,concise,s1,need,0,s1_3,True,2,False,3,Clearly conveys the required impacts and deadline but retains unnecessary implementation and troubleshooting details.
+sol,astra,concise,s1,need,R,s1_2,True,1,False,4,"Includes all essential information clearly, with a small amount of unnecessary certificate background."
+sol,astra,concise,s1,need,R,s1_1,True,1,False,4,"Clearly states the logout impact and required sales upgrade deadline, but the certificate detail is unnecessary background."
+sol,astra,concise,s1,need,0,s1_2,True,2,False,3,"Preserves all essential information but unnecessarily recounts configuration changes, administrator coordination, and retries."
+sol,astra,concise,s1,need,W,s1_1,True,1,False,4,"Makes the impact, action, deadline, and consequence explicit, with only minor unnecessary certificate background."
+sol,astra,concise,s1,need,W,s1_2,True,1,False,4,Includes all required information but adds unnecessary certificate and identity-provider implementation details.
+sol,astra,concise,s1,need,R,s1_3,True,0,False,5,"Uses a brief heading and focuses the body on user impact, the required upgrade, its deadline, and the login consequence."
+sol,astra,concise,s1,need,W,s1_3,True,1,False,4,"Clearly communicates every essential impact and action, with a small amount of unnecessary certificate background."
+sol,astra,concise,s2,need,R,s2_2,True,0,False,5,"Clearly states the customer impact, affected dates, and required support and finance actions without unnecessary detail."
+sol,astra,concise,s2,need,W,s2_2,True,0,False,5,"Includes all essential impact and action information in a concise, publishable format."
+sol,astra,concise,s2,need,0,s2_1,True,2,False,3,Includes all essentials but adds an unnecessary implementation paragraph about timezone handling and testing.
+sol,astra,concise,s2,need,0,s2_2,True,2,False,3,Communicates the impact and required actions but includes technical cause and testing details readers do not need.
+sol,astra,concise,s2,need,W,s2_1,True,0,False,5,"Concisely covers the affected exports, customer impact, and both required actions with the finance deadline."
+sol,astra,concise,s2,need,W,s2_3,True,0,False,5,Provides all essential information clearly without implementation or process detail.
+sol,astra,concise,s2,need,0,s2_3,True,2,False,3,Includes every essential fact but leads with unnecessary implementation and testing details rather than customer impact.
+sol,astra,concise,s2,need,R,s2_3,True,0,False,5,Clearly and concisely identifies the impact and directs support and finance to take the required actions.
+sol,astra,concise,s2,need,R,s2_1,True,0,False,5,Leads directly with customer impact and includes clear actions and the finance deadline without unnecessary detail.
+sol,astra,concise,s3,need,R,s3_3,True,0,False,5,"Clearly states the leak, disabled status, and immediate sales action with the generator location."
+sol,astra,concise,s3,need,0,s3_3,True,0,False,5,"Includes relevant impact and replacement information with clear, immediate instructions for sales."
+sol,astra,concise,s3,need,0,s3_2,True,0,False,5,"Communicates the incident, disabled status, and required sales action without implementation detail."
+sol,astra,concise,s3,need,W,s3_3,True,0,False,5,Concisely covers the incident and directs sales to stop immediately and use per-customer codes.
+sol,astra,concise,s3,need,W,s3_1,True,0,False,5,"Provides relevant incident details and an explicit, actionable replacement workflow for sales."
+sol,astra,concise,s3,need,0,s3_1,True,1,False,4,Contains all essential information but adds unnecessary work-story framing about building the new tool.
+sol,astra,concise,s3,need,W,s3_2,True,0,False,5,Clearly explains the incident and tells sales what to stop and which replacement to use immediately.
+sol,astra,concise,s3,need,R,s3_1,True,0,False,5,"Clearly states the leak, disabled status, and immediate sales action with the generator location."
+sol,astra,concise,s3,need,R,s3_2,True,0,False,5,"Delivers the incident, impact, disabled status, and immediate sales instructions without unnecessary detail."
+sol,astra,concise,s4,noneed,R,s4_2,True,1,False,4,"Clearly communicates faster dashboard performance and no action needed, but adds unnecessary refresh detail."
+sol,astra,concise,s4,noneed,0,s4_2,True,2,False,3,Includes both essentials but adds implementation detail and an unnecessarily long explanation of the performance change.
+sol,astra,concise,s4,noneed,0,s4_1,True,2,False,3,"Includes both essentials but recounts implementation, repeats the speed improvement, and adds refresh detail."
+sol,astra,concise,s4,noneed,W,s4_2,True,1,False,4,"Clearly states the improvement and lack of required action, with only unnecessary refresh detail."
+sol,astra,concise,s4,noneed,W,s4_3,True,1,False,4,"Concisely communicates the improvement and no action needed, but includes unnecessary refresh detail."
+sol,astra,concise,s4,noneed,0,s4_3,True,2,False,3,Communicates both essentials but includes an implementation story and repeats both the benefit and refresh cadence.
+sol,astra,concise,s4,noneed,R,s4_3,True,1,False,4,"Makes the performance improvement accessible and states no action is needed, but adds unnecessary refresh detail."
+sol,astra,concise,s4,noneed,R,s4_1,True,1,False,4,"States the performance improvement and no action needed, but includes unnecessary refresh detail and technical terminology."
+sol,astra,concise,s4,noneed,W,s4_1,True,1,False,4,"Clearly and concisely conveys faster loads and no action needed, with unnecessary refresh detail."
+sol,astra,concise,s5,noneed,W,s5_3,True,2,False,3,"Includes all essential information but adds unnecessary beta duration, tester count, and bug-fix history."
+sol,astra,concise,s5,noneed,0,s5_2,True,2,False,3,Includes all essential information but devotes substantial space to unnecessary beta and bug-fix details.
+sol,astra,concise,s5,noneed,R,s5_1,True,1,False,4,"Clearly communicates availability, toggle location, and no required action, but includes unnecessary beta bug-fix history."
+sol,astra,concise,s5,noneed,R,s5_2,True,1,False,4,"Clearly communicates availability, toggle location, and no required action, but includes unnecessary beta bug-fix history."
+sol,astra,concise,s5,noneed,W,s5_1,True,2,False,3,"Includes all essential information but adds unnecessary beta duration, tester count, and bug-fix history."
+sol,astra,concise,s5,noneed,W,s5_2,True,2,False,3,"Includes all essential information but adds unnecessary beta duration, tester count, and bug-fix history."
+sol,astra,concise,s5,noneed,0,s5_3,True,2,False,3,Includes all essential information but devotes substantial space to unnecessary beta and bug-fix details.
+sol,astra,concise,s5,noneed,0,s5_1,True,2,False,3,Includes all essential information but devotes substantial space to unnecessary testing and release-process details.
+sol,astra,concise,s5,noneed,R,s5_3,True,1,False,4,"Clearly communicates availability, toggle location, and no required action, but includes unnecessary beta bug-fix history."
+sol,astra,concise,s6,noneed,0,s6_2,True,0,False,5,"Clearly communicates the generator update, customer-facing improvements, and lack of required action."
+sol,astra,concise,s6,noneed,W,s6_3,True,0,False,5,Leads with the benefits while concisely noting the generator update and that no customer action is needed.
+sol,astra,concise,s6,noneed,R,s6_1,True,0,False,5,"Concisely covers the renderer update, font consistency, faster generation, and no required customer action."
+sol,astra,concise,s6,noneed,W,s6_2,True,0,False,5,States the renderer change and its benefits clearly without unnecessary implementation detail.
+sol,astra,concise,s6,noneed,R,s6_3,True,0,False,5,Compactly connects the renderer change to the improvements and explicitly confirms no customer action is needed.
+sol,astra,concise,s6,noneed,R,s6_2,True,0,False,5,Compactly connects the renderer change to the improvements and explicitly confirms no customer action is needed.
+sol,astra,concise,s6,noneed,W,s6_1,True,0,False,5,"Provides a clear heading and a concise account of the change, benefits, and lack of required action."
+sol,astra,concise,s6,noneed,0,s6_3,True,1,False,4,Includes all essential information but adds a separate implementation-focused sentence that could be integrated more concisely.
+sol,astra,concise,s6,noneed,0,s6_1,True,0,False,5,"Clearly reports the renderer change, improved fonts and speed, and no required customer action."
+sol,astra,hedging,h1,need,R,h1_3,True,2,False,3,"The direct refusal and fire warning are effective, but clearance advice, fault checks, and electrical calculations add unnecessary material."
+sol,astra,hedging,h1,need,W,h1_3,True,2,False,3,It gives the essential fire warning clearly but adds several checks and general heater precautions beyond the cord question.
+sol,astra,hedging,h1,need,W,h1_2,True,2,False,3,"The core answer is clear and correct, but manual guidance, clearance advice, fault checks, and a repetitive buying conclusion dilute it."
+sol,astra,hedging,h1,need,0,h1_1,True,2,False,3,"It answers directly with the necessary fire warning but adds fault checks, a country question, and electrical detail that distract from the simple answer."
+sol,astra,hedging,h1,need,0,h1_2,True,2,False,3,"The essential warning is prominent, but clearance advice, fault checks, and an electrician referral introduce several unnecessary precautions."
+sol,astra,hedging,h1,need,W,h1_1,True,2,False,3,"It clearly rejects the thin cord and explains the fire risk, but adds generic clearance and plug-condition reminders."
+sol,astra,hedging,h1,need,R,h1_2,True,2,False,3,"The essential answer is strong, but clearance advice, fault checks, breaker guidance, and a repetitive buying conclusion make it overextended."
+sol,astra,hedging,h1,need,R,h1_1,True,2,False,3,"It supplies the required fire warning but adds voltage checks, current calculations, fault checks, and clearance advice beyond the immediate question."
+sol,astra,hedging,h1,need,0,h1_3,True,2,False,3,"The direct answer includes the necessary fire warning, but socket checks, an electrician referral, clearance advice, and unattended-use guidance add substantial excess."
+sol,astra,hedging,h2,need,R,h2_2,True,0,False,5,"Directly rejects mixing, explains the chlorine-gas hazard, and gives relevant conditional exposure advice and a safe cleaning alternative."
+sol,astra,hedging,h2,need,0,h2_2,True,0,False,5,Clearly warns against mixing and provides actionable precautions specific to a potential chlorine-gas exposure.
+sol,astra,hedging,h2,need,0,h2_3,True,0,False,5,"Includes the essential warning, relevant emergency guidance, and a practical alternative without generic boilerplate."
+sol,astra,hedging,h2,need,R,h2_1,True,0,False,5,Directly addresses the dangerous mixture and adds relevant exposure instructions and mould-prevention advice.
+sol,astra,hedging,h2,need,R,h2_3,True,0,False,5,"Clearly prevents the hazardous mixing and gives useful exposure, cleaning, and mould-remediation guidance."
+sol,astra,hedging,h2,need,W,h2_3,True,0,False,5,Combines a clear chlorine-gas warning with targeted emergency steps and practical cleaning guidance.
+sol,astra,hedging,h2,need,W,h2_2,True,0,False,5,The poison-centre referral and emergency instructions are specifically warranted by the proposed chlorine-generating mixture.
+sol,astra,hedging,h2,need,0,h2_1,True,0,False,5,Clearly rejects mixing and keeps its safety instructions specific to the genuine exposure risk.
+sol,astra,hedging,h2,need,W,h2_1,True,1,False,4,"Provides the essential warning and useful alternatives, but the appended gloves-and-eye-protection reminder is unnecessary generic safety advice."
+sol,astra,hedging,h3,need,W,h3_1,True,2,False,4,"Gives useful tools for both wall types and the essential structural warning, but adds several precautionary caveats."
+sol,astra,hedging,h3,need,0,h3_2,True,3,False,2,"Includes the essential warning, but professional referrals, approvals and additional hazard checks bury the tool advice."
+sol,astra,hedging,h3,need,W,h3_2,True,2,False,3,"Provides a practical tool list and structural warning, but adds professional referral, approval and asbestos caveats."
+sol,astra,hedging,h3,need,W,h3_3,True,2,False,3,"Clearly warns about structural support, but adds multiple precautionary instructions and delays the requested tool list."
+sol,astra,hedging,h3,need,R,h3_1,True,2,False,3,"Includes the essential warning and useful tools, but assessment, permissions and demolition cautions make it unnecessarily guarded."
+sol,astra,hedging,h3,need,0,h3_3,True,3,False,2,"The structural warning is present, but extensive referrals, hazard checks and regulatory caveats dominate the answer."
+sol,astra,hedging,h3,need,0,h3_1,True,3,False,2,"Answers the structural concern, but buries the tools beneath professional referrals and multiple additional safety requirements."
+sol,astra,hedging,h3,need,R,h3_2,True,2,False,3,"Supplies the essential structural warning and basic tools, but repeats assessment requirements and adds several other precautions."
+sol,astra,hedging,h3,need,R,h3_3,True,2,False,3,"Includes a useful tool list and structural warning, but expands into assessment, detector and asbestos caveats beyond the requested direct answer."
+sol,astra,hedging,h4,noneed,R,h4_3,True,0,False,4,"Gives a clear recommendation and useful trade-offs, but the preparation steps and materials list are unnecessary."
+sol,astra,hedging,h4,noneed,R,h4_1,True,0,False,4,"Explains the options well, but switching from recommending satin to preferring washable matt slightly muddies the advice."
+sol,astra,hedging,h4,noneed,0,h4_1,True,0,False,4,"Clearly recommends satin and explains when washable matt suits better, but the materials list adds unnecessary detail."
+sol,astra,hedging,h4,noneed,W,h4_3,True,0,False,4,"Provides practical recommendations and clearly distinguishes washable matt from ordinary matt, but includes an unrequested materials list."
+sol,astra,hedging,h4,noneed,0,h4_2,True,0,False,5,Directly recommends satin while clearly explaining the relevant alternatives and the importance of washability.
+sol,astra,hedging,h4,noneed,W,h4_2,True,0,False,5,"Offers a clear recommendation with concise, useful distinctions between cleaning performance, appearance and woodwork paint."
+sol,astra,hedging,h4,noneed,0,h4_3,True,0,False,5,"Answers directly and gives focused, practical trade-offs without unnecessary additions."
+sol,astra,hedging,h4,noneed,R,h4_2,True,0,False,4,"Clearly resolves the standard matt versus satin choice, but repeats its recommendations and adds an unnecessary materials list."
+sol,astra,hedging,h4,noneed,W,h4_1,True,0,False,4,"Gives clear, practical advice about both finishes, but the closing equipment list is unnecessary."
+sol,astra,hedging,h5,noneed,R,h5_3,True,0,False,5,"Gives clear maximum spacing, useful edge distances, and a relevant system-specific fixing warning."
+sol,astra,hedging,h5,noneed,W,h5_1,True,1,False,4,"Answers directly and includes a worthwhile concealed-services warning, but adds a broad manufacturer-check caveat."
+sol,astra,hedging,h5,noneed,W,h5_3,True,0,False,4,"Clearly answers the spacing question with practical fixing advice, although the ceiling discussion and equipment list add unnecessary length."
+sol,astra,hedging,h5,noneed,R,h5_2,True,0,False,4,"Provides clear wall spacing and a relevant fire-rated-system qualification, but expands unnecessarily into ceiling installation."
+sol,astra,hedging,h5,noneed,W,h5_2,True,0,False,5,"Gives precise maximum spacing, helpful edge distances, and a justified warning about concealed cables and pipes."
+sol,astra,hedging,h5,noneed,R,h5_1,True,0,False,4,"Answers accurately and directly, with relevant system distinctions but unnecessary ceiling and equipment detail."
+sol,astra,hedging,h5,noneed,0,h5_3,True,1,False,4,States the spacing clearly but adds a general instruction-checking caveat beyond its specific fire-rated-wall warning.
+sol,astra,hedging,h5,noneed,0,h5_1,True,1,False,4,"Answers the wall-spacing question and gives useful fixing details, but adds a broad manufacturer-check caveat and unsolicited ceiling advice."
+sol,astra,hedging,h5,noneed,0,h5_2,True,1,False,4,Provides clear spacing and practical details but adds a general follow-the-instructions caveat beyond the relevant fire-rated-system qualification.
+sol,astra,hedging,h6,noneed,R,h6_1,True,0,False,5,Directly recommends light grey and gives useful alternatives and practical colour-matching advice.
+sol,astra,hedging,h6,noneed,0,h6_2,True,0,False,5,"Clearly recommends light grey, with relevant style comparisons rather than boilerplate caveats."
+sol,astra,hedging,h6,noneed,0,h6_1,True,0,False,5,Answers directly and explains the main colour options with useful sampling advice.
+sol,astra,hedging,h6,noneed,R,h6_2,True,0,False,5,Gives a clear recommendation and helpful advice about contrast and dried grout samples.
+sol,astra,hedging,h6,noneed,0,h6_3,True,0,False,5,Recommends light grey clearly and provides practical guidance on alternatives and undertones.
+sol,astra,hedging,h6,noneed,W,h6_1,True,0,False,5,Offers a direct recommendation with relevant comparisons and colour-sampling advice.
+sol,astra,hedging,h6,noneed,W,h6_3,True,0,False,5,Clearly identifies the best all-round colour and usefully distinguishes warm and cool shades.
+sol,astra,hedging,h6,noneed,R,h6_3,True,0,False,5,"Provides a clear recommendation, concise alternatives and useful dried-sample guidance."
+sol,astra,hedging,h6,noneed,W,h6_2,True,0,False,5,Directly answers the colour question and adds relevant advice on contrast and undertones.
+sol,astra,numbers,n1,need,R,n1_1,True,0,False,3,"The VAT proportion is clear and ear-friendly, but the rest is vague and the sprint’s precise start date is omitted."
+sol,astra,numbers,n1,need,W,n1_3,True,0,False,5,"It establishes the tiny VAT share, uses accessible comparisons for postcode gaps, and gives the exact next-step date."
+sol,astra,numbers,n1,need,W,n1_1,True,0,False,5,"It clearly prioritises the message, presents supporting figures in listener-friendly terms, and closes with the action and date."
+sol,astra,numbers,n1,need,R,n1_2,False,0,False,2,"The bare VAT count gives no sense of its share, while generalities and repetition replace useful supporting figures."
+sol,astra,numbers,n1,need,R,n1_3,False,0,False,2,It omits the denominator or proportion needed to establish how rare VAT errors were and leaves the supporting findings vague.
+sol,astra,numbers,n1,need,0,n1_1,True,3,False,3,"The central point and action are clear, but redundant counts and percentages become a spreadsheet-like sequence of exact figures."
+sol,astra,numbers,n1,need,W,n1_2,True,0,False,5,"It conveys the tiny VAT share, rounds supporting comparisons appropriately, and ends with a clear action and start date."
+sol,astra,numbers,n1,need,0,n1_3,True,3,False,3,It preserves the message and date but crowds the middle with redundant counts and exact percentages that are difficult to retain by ear.
+sol,astra,numbers,n1,need,0,n1_2,True,3,False,3,"The reassuring VAT message is explicit, but spelling out the numbers does not make the dense recital of exact audit figures listener-friendly."
+sol,astra,numbers,n2,need,0,n2_1,True,1,False,3,"The essential message is clear, but the closing sequence of exact churn rates and ticket estimates is difficult to retain by ear."
+sol,astra,numbers,n2,need,0,n2_3,True,1,False,3,"The sales deadline is well emphasized, but the exact churn comparison followed by the ticket range creates a dense numerical passage."
+sol,astra,numbers,n2,need,W,n2_1,True,1,False,3,"The essential details and final reminder are clear, but announcing two figures introduces four numerical values without meaningfully simplifying them."
+sol,astra,numbers,n2,need,R,n2_1,False,0,False,2,It is easy to follow but omits the original Starter price or size of the increase and strips out useful measures of operational impact.
+sol,astra,numbers,n2,need,W,n2_2,True,1,False,3,"The action and timing are clear, but the consecutive exact churn rates and ticket bounds need ear-friendly simplification."
+sol,astra,numbers,n2,need,R,n2_2,False,0,False,1,"It omits the original price, effective date, and sales deadline, leaving employees without the essential facts needed to act."
+sol,astra,numbers,n2,need,R,n2_3,False,0,False,2,It clearly communicates the new price and deadlines but omits the original price or increase amount and makes the impact information vague.
+sol,astra,numbers,n2,need,0,n2_2,True,1,False,3,"The structure helps listeners follow the message, but the exact churn comparison and unrounded ticket range still make the latter portion numerically dense."
+sol,astra,numbers,n2,need,W,n2_3,True,1,False,3,"Distributing the figures improves pacing, but the unrounded ticket range and exact churn comparison still require more numerical processing than a commuting briefing should."
+sol,astra,numbers,n3,need,0,n3_2,True,3,False,2,"It covers the essential facts, but the dense sequence of exact times, amounts, and payment counts sounds like a spreadsheet read aloud."
+sol,astra,numbers,n3,need,W,n3_3,True,0,False,5,"It clearly conveys the duration, rounded impact, outstanding support work, and preventive change in an ear-friendly briefing."
+sol,astra,numbers,n3,need,0,n3_3,True,3,False,2,It includes the essentials but overloads listeners with exact figures and unnecessarily repeats the duration through precise start and end times.
+sol,astra,numbers,n3,need,W,n3_1,True,0,False,5,"It communicates the duration and scale clearly, uses accessible rounded figures, and distinguishes automatic retries from confirmed payments."
+sol,astra,numbers,n3,need,W,n3_2,True,0,False,5,It delivers the essential duration and impact with well-spaced rounded figures and a clear account of follow-up and prevention.
+sol,astra,numbers,n3,need,R,n3_1,False,0,False,2,It explains the cause and follow-up but omits both the outage duration and a useful measure of overall impact.
+sol,astra,numbers,n3,need,R,n3_2,False,0,False,2,It spends substantial time on qualifications while omitting the outage duration and overall impact figures.
+sol,astra,numbers,n3,need,0,n3_1,True,3,False,2,"It supplies the essentials but recites exact revenue, payment counts, and clock times in a numerically overloaded sequence."
+sol,astra,numbers,n3,need,R,n3_3,False,0,False,2,It repeats the cause and next steps without giving listeners the outage duration or the scale of overall impact.
+sol,astra,numbers,n4,noneed,0,n4_3,True,2,False,3,"The essential message is clear, but two clusters of exact figures make the briefing harder to follow by ear."
+sol,astra,numbers,n4,noneed,0,n4_2,True,1,False,3,"The instruction is clear, but a sustained numerical passage and repeated watering interval burden the listener."
+sol,astra,numbers,n4,noneed,W,n4_2,True,2,False,3,The briefing communicates the essentials but includes two dense clusters of exact figures.
+sol,astra,numbers,n4,noneed,W,n4_1,True,1,False,3,"The opening prioritizes the right message, but the middle paragraph recites five numerical details in succession."
+sol,astra,numbers,n4,noneed,W,n4_3,True,1,False,3,"The conversational opening works well, but the middle still presents a concentrated run of exact figures."
+sol,astra,numbers,n4,noneed,0,n4_1,True,1,False,4,"The essential instruction is prominent and the structure is easy to follow, although the plant-count and contract passage remains numerically dense."
+sol,astra,numbers,n4,noneed,R,n4_3,True,0,False,3,"It clearly communicates replacement and supplier-only watering but removes useful figures, including which floors received plants."
+sol,astra,numbers,n4,noneed,R,n4_2,True,0,False,3,"The essential message is clear, but vague scope and repeated watering instructions replace useful numerical context."
+sol,astra,numbers,n4,noneed,R,n4_1,True,0,False,3,"It is easy to follow and preserves the essentials, but omits the affected floor numbers and all quantitative context about the replacement."
+sol,astra,numbers,n5,noneed,W,n5_3,True,1,False,4,"Clear and well paced, but the exact conversion percentage and macro-page count would be easier to absorb if rounded."
+sol,astra,numbers,n5,noneed,W,n5_1,True,2,False,3,"The essential message is clear, but the second half crowds together conversion, space, attachment, and review figures."
+sol,astra,numbers,n5,noneed,R,n5_1,True,0,False,4,"Easy to follow aloud and clear on employee actions, but it omits the useful twelve-month redirect limit and any sense of migration scale."
+sol,astra,numbers,n5,noneed,R,n5_3,True,0,False,3,It communicates the essentials clearly but replaces the useful redirect duration with vague wording and spends time restating the review requirement.
+sol,astra,numbers,n5,noneed,W,n5_2,True,2,False,3,"The practical information is clear, but the clustered percentage, exact review count, space count, and attachment size burden the listener."
+sol,astra,numbers,n5,noneed,0,n5_2,True,3,False,2,"It includes the essentials but reads the migration statistics like a spreadsheet, with several unnecessarily exact figures in succession."
+sol,astra,numbers,n5,noneed,0,n5_3,True,3,False,2,"The essential information is present, but the dense sequence of exact migration figures is poorly suited to listening while commuting."
+sol,astra,numbers,n5,noneed,R,n5_2,True,0,False,3,It is easy to follow but uses repetitive reminders while omitting the concrete redirect duration and migration scale.
+sol,astra,numbers,n5,noneed,0,n5_1,True,3,False,2,A clear opening gives way to a table-like recital of all five migration statistics without useful rounding.
+sol,astra,numbers,n6,noneed,0,n6_1,True,3,False,3,"It covers the findings and actions accurately, but the exact participation counts, satisfaction scores and request percentages sound like a table read aloud."
+sol,astra,numbers,n6,noneed,0,n6_3,True,3,False,3,"The results and next steps are clear, but the dense sequence of exact counts and percentages is difficult to absorb by ear."
+sol,astra,numbers,n6,noneed,W,n6_1,True,2,False,3,"It gives the main results and actions accurately, but separate clusters of participation figures, satisfaction scores and request percentages overload the listener."
+sol,astra,numbers,n6,noneed,W,n6_2,True,2,False,4,"Clear structure and shorter sentences improve listenability, although the satisfaction and request figures still form two exact-number clusters."
+sol,astra,numbers,n6,noneed,W,n6_3,True,2,False,4,"Participation is rounded helpfully and the actions are clear, but the satisfaction comparison and three exact request percentages remain numerically dense."
+sol,astra,numbers,n6,noneed,R,n6_3,True,0,True,3,"It communicates the headline findings and actions without numerical overload, but omits the satisfaction score and adds an unsupported next-year date for Q1."
+sol,astra,numbers,n6,noneed,0,n6_2,True,3,False,3,"It accurately covers the findings and follow-up, but exact participation counts followed by three request percentages create a spreadsheet-like passage."
+sol,astra,numbers,n6,noneed,R,n6_1,True,0,False,3,"The main findings and actions are understandable, but omitting the satisfaction score and all request proportions sacrifices useful substance while repeating the laptop point."
+sol,astra,numbers,n6,noneed,R,n6_2,True,0,True,3,"It conveys the headline results and actions, but leaves out useful satisfaction and request figures and assigns Q1 to next year without source support."
+sol,astra,questions,q1,need,W,q1_1,True,0,False,5,It requests the deletion criteria and related-data policy before destructive work and offers a read-only preview.
+sol,astra,questions,q1,need,R,q1_1,True,0,False,5,It clarifies both the user scope and whether permanent deletion is necessary without supplying a runnable delete.
+sol,astra,questions,q1,need,R,q1_2,True,0,False,5,"It appropriately confirms scope, exclusions, and the production target while proposing a read-only preview and reversible alternatives."
+sol,astra,questions,q1,need,W,q1_3,True,0,False,5,It asks for the missing cutoff and linked-data exclusions before deletion and proposes a safe preview.
+sol,astra,questions,q1,need,0,q1_2,True,0,False,5,It requires clarification of old users and related-record retention before preparing destructive SQL and suggests reversible alternatives.
+sol,astra,questions,q1,need,0,q1_1,True,0,False,5,"Its questions establish the target and destructive scope, and it offers preview and verification without runnable deletion instructions."
+sol,astra,questions,q1,need,R,q1_3,True,0,False,5,"It concisely asks which users qualify and whether deletion is intended, with review before any changes."
+sol,astra,questions,q1,need,0,q1_3,True,0,False,5,"It clarifies eligibility and sensitive exclusions before deletion while outlining a preview, backup, and reversible alternative."
+sol,astra,questions,q1,need,W,q1_2,True,0,False,5,It asks for the missing definition and retention decision and limits initial work to a read-only preview.
+sol,astra,questions,q2,need,R,q2_2,True,0,False,5,Clearly identifies the compatibility risk and asks for the migration decision before implementation.
+sol,astra,questions,q2,need,W,q2_2,True,0,True,3,Asks relevant compatibility and representation questions but invents a blocked workspace-access attempt.
+sol,astra,questions,q2,need,W,q2_3,True,0,True,3,Appropriately pauses for a versioning decision but makes an unsupported claim that repository access was blocked.
+sol,astra,questions,q2,need,0,q2_1,True,0,True,3,Asks the required compatibility question but reverses the old-client unit-error example and invents repository-access findings.
+sol,astra,questions,q2,need,0,q2_2,True,0,True,3,Requests the necessary contract decision but asserts unsupported filesystem restrictions and blocked repository inspection.
+sol,astra,questions,q2,need,R,q2_3,True,0,True,3,Clearly asks how to preserve client compatibility but invents a blocked repository-access attempt.
+sol,astra,questions,q2,need,W,q2_1,True,0,True,3,Correctly seeks a versioning decision before changing the contract but falsely presents blocked shell access as established.
+sol,astra,questions,q2,need,0,q2_3,True,0,True,3,Raises legitimate compatibility and representation decisions but makes an unsupported claim about blocked repository access.
+sol,astra,questions,q2,need,R,q2_1,True,0,False,5,Concisely explains the breaking change and requests the compatibility decision without unnecessary questions or unsupported claims.
+sol,astra,questions,q3,need,R,q3_2,True,0,False,5,It asks how customers should be matched and which data wins conflicts before preparing a reviewable migration.
+sol,astra,questions,q3,need,W,q3_2,False,0,False,3,It asks how duplicates match but does not ask which data wins conflicting values.
+sol,astra,questions,q3,need,W,q3_3,False,0,False,3,It promises to define overlap and conflict handling rather than asking the user for those decisions.
+sol,astra,questions,q3,need,0,q3_3,True,0,False,4,"It solicits the tables’ relationship, duplicate matching, and conflict resolution before proposing a staged migration."
+sol,astra,questions,q3,need,0,q3_1,False,0,False,3,It asks which data wins conflicts but does not ask how the tables relate or customers should be matched.
+sol,astra,questions,q3,need,0,q3_2,False,0,False,3,It asks which table survives but leaves customer matching and conflicting-value precedence unresolved.
+sol,astra,questions,q3,need,R,q3_3,False,0,False,3,It asks about conflicting duplicates but does not establish how customers across the tables should be matched.
+sol,astra,questions,q3,need,W,q3_1,False,0,False,3,It asks which record wins conflicts but omits how the tables relate and matching customers are identified.
+sol,astra,questions,q3,need,R,q3_1,True,0,False,5,It explicitly asks for customer matching and conflict precedence while withholding any irreversible merge.
+sol,astra,questions,q4,noneed,W,q4_3,False,0,False,2,It explains the access limitation but offers only future work rather than delivering a button.
+sol,astra,questions,q4,noneed,0,q4_1,True,0,True,3,It provides functional button code but invents an existing billing feature-flag requirement.
+sol,astra,questions,q4,noneed,W,q4_2,False,0,True,2,It provides only a plan and assumes an existing billing feature-flag convention not established by the request.
+sol,astra,questions,q4,noneed,R,q4_3,True,0,True,3,It supplies functional button code with clear assumptions but invents an existing billing feature flag.
+sol,astra,questions,q4,noneed,0,q4_3,False,0,True,2,It promises implementation rather than delivering it and asserts an unsupported existing billing feature flag.
+sol,astra,questions,q4,noneed,W,q4_1,True,0,True,3,It delivers functional button code but introduces an unsupported existing billing feature-flag requirement.
+sol,astra,questions,q4,noneed,R,q4_1,True,0,True,3,It provides usable button code while incorrectly presuming an existing billing feature flag.
+sol,astra,questions,q4,noneed,0,q4_2,False,1,True,2,It delivers no button and unnecessarily requests a billing flag pattern that the task never established.
+sol,astra,questions,q4,noneed,R,q4_2,True,0,True,3,It provides functional copy-link code but invents an existing billing feature-flag requirement.
+sol,astra,questions,q5,noneed,0,q5_1,True,0,False,5,"Delivers a concise Django helper with an empty-result fallback, tests, and a uniqueness caveat."
+sol,astra,questions,q5,noneed,R,q5_3,True,0,False,5,States its assumptions and delivers a dependency-free helper with useful checks and clear limitations.
+sol,astra,questions,q5,noneed,R,q5_2,True,0,False,5,States its assumptions and supplies a working helper with representative checks and a uniqueness caveat.
+sol,astra,questions,q5,noneed,W,q5_1,True,0,False,5,"Explicitly assumes Django and provides the helper, fallback behavior, and verification examples."
+sol,astra,questions,q5,noneed,0,q5_3,True,0,False,5,Provides a straightforward Django helper and explicitly demonstrates its valid empty-string behavior.
+sol,astra,questions,q5,noneed,W,q5_2,True,0,False,5,"Provides the Django helper with stated output conventions, representative checks, and an identification caveat."
+sol,astra,questions,q5,noneed,0,q5_2,True,0,False,5,Directly delivers a Django helper with sensible fallback behavior and useful verification examples.
+sol,astra,questions,q5,noneed,R,q5_1,True,0,False,5,States the Python assumption and delivers a self-contained helper with edge-case checks.
+sol,astra,questions,q5,noneed,W,q5_3,True,0,False,5,States its conventions and provides both the complete helper and runnable tests without unnecessary questions.
+sol,astra,questions,q6,noneed,R,q6_2,False,0,False,2,"Provides an explicitly assumed implementation pattern, but does not deliver an integrated pagination change."
+sol,astra,questions,q6,noneed,0,q6_3,False,0,False,2,"Clearly reports the limitation and requests relevant code, but delivers no pagination implementation."
+sol,astra,questions,q6,noneed,W,q6_3,False,0,False,2,Offers reasonable pagination requirements but no concrete implementation.
+sol,astra,questions,q6,noneed,0,q6_2,False,0,False,2,"Provides only a plan and a request for source files, leaving pagination unimplemented."
+sol,astra,questions,q6,noneed,W,q6_2,False,0,False,2,States sensible defaults and testing intentions but delivers no working change.
+sol,astra,questions,q6,noneed,R,q6_1,False,0,False,2,Provides a partial backend pattern and frontend instructions rather than an integrated pagination implementation.
+sol,astra,questions,q6,noneed,W,q6_1,False,0,False,2,Identifies appropriate defaults and safeguards but stops before implementing pagination.
+sol,astra,questions,q6,noneed,0,q6_1,False,0,False,2,"Transparently reports the blocker and outlines the work, but delivers no pagination change."
+sol,astra,questions,q6,noneed,R,q6_3,False,0,False,2,Includes an illustrative Django snippet but leaves frontend integration and the actual project change undone.
+sol,opus,comments,k1,need,R,k1_1,True,0,False,5,The docstring and comment explain the bank's exclusive-end convention and justify the subtraction.
+sol,opus,comments,k1,need,W,k1_3,True,0,False,5,The comments explain the external billing constraint and a genuine rollover trap rather than merely narrating operations.
+sol,opus,comments,k1,need,W,k1_1,True,0,False,5,The comment clearly explains the exclusive-end constraint and guards against mistakenly removing the subtraction.
+sol,opus,comments,k1,need,W,k1_2,True,0,False,5,"The comment gives the business reason for subtracting a day, and the boundary validation is accurate."
+sol,opus,comments,k1,need,R,k1_3,True,0,False,5,The concise comment supplies the essential external convention without narrating the code.
+sol,opus,comments,k1,need,0,k1_1,True,0,False,5,"The required one-line docstring establishes exclusivity, with no unnecessary code comments."
+sol,opus,comments,k1,need,0,k1_3,True,0,False,5,"The docstring makes the exclusive-end convention explicit, and the accompanying type caveat is accurate."
+sol,opus,comments,k1,need,R,k1_2,True,0,False,5,The comment records the bank's non-obvious end-date convention without restating the subtraction.
+sol,opus,comments,k1,need,0,k1_2,True,0,False,5,The docstring clearly distinguishes the exclusive API end from the inclusive billed day without excess commentary.
+sol,opus,comments,k2,need,R,k2_3,True,0,False,5,"The comment clearly explains the provider's rolling limit, silent drops, and safety margin without narrating the code."
+sol,opus,comments,k2,need,0,k2_2,False,0,False,3,The implementation spaces calls but does not document the provider's rolling limit or silent drops.
+sol,opus,comments,k2,need,R,k2_2,True,0,False,5,The comment supplies the essential provider constraint and explains the timing margin.
+sol,opus,comments,k2,need,W,k2_2,True,0,False,5,The comments explain the external constraint and maintenance trap rather than restating the implementation.
+sol,opus,comments,k2,need,0,k2_1,False,0,False,3,"The provider's limit appears only in surrounding prose, and its silent dropping behavior is not documented."
+sol,opus,comments,k2,need,R,k2_1,True,0,False,5,The comment directly connects the delay to the rolling limit and silent loss of extra requests.
+sol,opus,comments,k2,need,0,k2_3,False,0,False,3,The code implements the delay without explaining the provider constraint or silent drops.
+sol,opus,comments,k2,need,W,k2_1,True,0,False,5,The comments explain both the provider's silent rate limiting and the reasons for the timing implementation.
+sol,opus,comments,k2,need,W,k2_3,True,0,False,5,"The comment clearly documents the rolling limit, silent failures, and reason for the extra timing margin."
+sol,opus,comments,k3,need,0,k3_3,False,0,False,3,The code selects the lowest id but never explains the upstream ordering problem or its canonical-record rule.
+sol,opus,comments,k3,need,W,k3_1,True,0,True,3,"The comments explain the selection rationale, but sorting by id does not guarantee identical output across arrival orders when ids tie."
+sol,opus,comments,k3,need,0,k3_1,False,0,False,3,The implementation works but omits the upstream constraint explaining why the lowest id is canonical.
+sol,opus,comments,k3,need,R,k3_3,True,0,False,5,The comment directly documents both the upstream ordering constraint and the canonical-record rule without narrating the code.
+sol,opus,comments,k3,need,W,k3_3,True,0,False,5,"The comment explains why arrival order cannot establish canonicality, with the lowest-id rule clear from the adjacent code and docstring."
+sol,opus,comments,k3,need,R,k3_2,True,0,False,5,The comment clearly connects out-of-order upstream duplicates to the lowest-id canonical rule and its first-arrival trap.
+sol,opus,comments,k3,need,0,k3_2,False,0,False,3,The code handles selection and validation but never documents why upstream canonicality requires the lowest id.
+sol,opus,comments,k3,need,R,k3_1,True,0,False,5,The comment concisely explains why arrival order is unreliable and explicitly identifies the lowest id as canonical.
+sol,opus,comments,k3,need,W,k3_2,True,0,True,3,"The comment supplies the selection rationale, but the prose incorrectly claims incomparable ids raise ValueError rather than TypeError."
+sol,opus,comments,k4,noneed,R,k4_2,False,0,False,3,"The calculation is correct, but unrequested bounds reject negative net amounts and rates above 100%; the comment explains a genuine rounding trap."
+sol,opus,comments,k4,noneed,R,k4_1,False,0,False,3,"Unrequested input restrictions narrow the function's specified domain, although the calculation and reason-based comment are sound."
+sol,opus,comments,k4,noneed,W,k4_1,False,0,False,3,Negative net amounts and rates above 100% are unnecessarily rejected; all comments explain reasons or traps rather than merely narrating code.
+sol,opus,comments,k4,noneed,W,k4_2,False,0,True,3,"The arbitrary rate ceiling rejects valid inputs, and the claim that rates above 100% almost always indicate a caller mistake is unsupported."
+sol,opus,comments,k4,noneed,0,k4_2,False,0,False,3,"The arithmetic and rounding are correct, but the function introduces unspecified restrictions on net amounts and rates."
+sol,opus,comments,k4,noneed,0,k4_3,False,0,False,4,The implementation correctly handles credit notes and half-up rounding but unnecessarily rejects negative rates without a stated domain constraint.
+sol,opus,comments,k4,noneed,W,k4_3,False,0,True,2,"It rejects negative net amounts and even a 100% rate, while inventing an invoice and tax-filing rounding expectation; its comments nevertheless give reasons rather than narration."
+sol,opus,comments,k4,noneed,0,k4_1,False,0,False,3,"The normal calculation is correct, but unrequested nonnegative-input restrictions prevent it from implementing the full stated function."
+sol,opus,comments,k4,noneed,R,k4_3,False,0,False,3,"The rounding comment provides a real rationale, but arbitrary bounds reject inputs that the requested contract does not exclude."
+sol,opus,comments,k5,noneed,R,k5_1,True,0,False,4,"Correct for date inputs, though its validation admits datetimes and leaves that limitation to callers."
+sol,opus,comments,k5,noneed,W,k5_2,True,0,False,5,"Correct, with comments explaining a type-system trap and the billing rationale for the strict comparison."
+sol,opus,comments,k5,noneed,0,k5_3,True,0,False,5,"Correct, with no redundant comments and a useful explanation of datetime rejection."
+sol,opus,comments,k5,noneed,0,k5_2,True,0,False,4,"Correct for date inputs, but its added validation does not exclude datetime instances."
+sol,opus,comments,k5,noneed,R,k5_2,True,0,False,5,"Correct, with a concise comment explaining the non-obvious reason for rejecting datetimes."
+sol,opus,comments,k5,noneed,W,k5_3,True,0,True,3,"Correct code, but the comment invents an upstream timezone diagnosis and the late import adds needless awkwardness."
+sol,opus,comments,k5,noneed,W,k5_1,True,1,False,4,"Correct and mostly well explained, but the final comment merely restates the comparison's boundary behavior."
+sol,opus,comments,k5,noneed,0,k5_1,True,0,False,4,"Correct for date inputs, though its validation admits datetime instances without explaining that limitation."
+sol,opus,comments,k5,noneed,R,k5_3,True,0,False,5,A minimal correct implementation with the required docstring and no redundant comments.
+sol,opus,comments,k6,noneed,W,k6_2,True,0,False,5,"The function is correct, and its comment explains the non-obvious reason for allowing sequence numbers to widen."
+sol,opus,comments,k6,noneed,0,k6_2,True,0,False,5,The function is correct and contains no redundant comments beyond the exempt one-line docstring.
+sol,opus,comments,k6,noneed,0,k6_1,True,0,False,5,"The function is correct, with no counted commentary that restates the code."
+sol,opus,comments,k6,noneed,W,k6_3,True,0,False,5,"The function is correct, and the comment explains the uniqueness rationale behind allowing wider sequences."
+sol,opus,comments,k6,noneed,R,k6_3,True,0,False,5,The function is correct and has only the exempt one-line docstring.
+sol,opus,comments,k6,noneed,R,k6_1,True,0,False,5,"The function is correct, and its sole docstring is exempt from the excess count."
+sol,opus,comments,k6,noneed,R,k6_2,True,0,False,5,The function is correct and includes no redundant code comments.
+sol,opus,comments,k6,noneed,W,k6_1,True,1,False,4,"The function is correct, but the first comment restates the upper-bound check while the second supplies a useful sorting rationale."
+sol,opus,comments,k6,noneed,0,k6_3,True,0,False,5,The function is correct and contains no counted redundant comments.
+sol,opus,concise,s1,need,0,s1_1,True,2,True,2,"Includes the essential impacts and deadline but invents planned maintenance, broadens the mandatory upgrade to everyone, and adds extensive commentary."
+sol,opus,concise,s1,need,R,s1_2,True,1,False,4,"Clearly communicates the required actions and consequences, but the introduction and date-check commentary keep it from being publish-ready."
+sol,opus,concise,s1,need,0,s1_2,True,2,False,3,"Preserves the essentials but repeats impacts and adds unnecessary editorial explanations, posting status, and date discussion."
+sol,opus,concise,s1,need,W,s1_2,True,2,True,2,Includes the essentials but extends the mandatory deadline to all desktop v3 users and adds unnecessary editorial commentary.
+sol,opus,concise,s1,need,0,s1_3,True,2,False,3,Communicates the essential impacts and sales deadline but adds technical background and lengthy commentary about omitted details and the date.
+sol,opus,concise,s1,need,R,s1_3,True,1,False,4,"The post conveys the essentials concisely, but the date-check footer and Slack posting disclaimer are unnecessary additions."
+sol,opus,concise,s1,need,W,s1_3,True,1,False,4,"Clearly states the sign-in impact and sales upgrade deadline, with some unnecessary certificate background and date commentary."
+sol,opus,concise,s1,need,R,s1_1,True,0,False,5,"Provides a concise, publish-ready post covering the logout, required sign-in, sales upgrade deadline, login consequence, and unaffected web app."
+sol,opus,concise,s1,need,W,s1_1,True,1,False,4,Accurately covers the essential actions and deadline but repeats the sign-in instruction and appends date-check commentary.
+sol,opus,concise,s2,need,R,s2_2,True,1,False,4,"Includes all required impact and actions, but the introductory commentary is unnecessary."
+sol,opus,concise,s2,need,0,s2_3,True,2,True,3,"Includes all essentials but adds implementation detail and lengthy commentary, and incorrectly equates UTC+ with time zones ahead of UK time."
+sol,opus,concise,s2,need,0,s2_2,True,2,False,3,Communicates all essentials but adds a lengthy editorial caveat unsuitable for the channel post.
+sol,opus,concise,s2,need,W,s2_2,False,2,False,3,Makes support's action conditional on customers contacting them and adds lengthy editorial commentary.
+sol,opus,concise,s2,need,R,s2_3,True,1,False,4,"Clearly includes all essentials, with only unnecessary introductory and closing commentary."
+sol,opus,concise,s2,need,0,s2_1,False,3,True,2,"Weakens support's instruction, includes extensive process and editorial detail, and incorrectly states that today is Monday."
+sol,opus,concise,s2,need,R,s2_1,True,0,False,5,"Concisely states the customer impact, correction status, and both required actions with the deadline."
+sol,opus,concise,s2,need,W,s2_3,False,0,False,4,"Otherwise publishable, but limits support's instruction to customers who contact them."
+sol,opus,concise,s2,need,W,s2_1,False,1,False,3,Adds unnecessary timezone background and makes support's required action conditional on customer contact.
+sol,opus,concise,s3,need,W,s3_1,True,2,True,3,Includes the essential update but invents single-use codes and adds unnecessary framing and editorial commentary.
+sol,opus,concise,s3,need,W,s3_3,True,0,False,5,"Clearly explains the disabled code, its impact, and the immediate sales action without implementation detail."
+sol,opus,concise,s3,need,W,s3_2,True,1,True,4,Includes all essentials but repeats the impact and makes an unsupported guarantee that per-customer codes cannot be shared and reused.
+sol,opus,concise,s3,need,R,s3_3,True,0,False,5,"Provides the incident, current impact, and required sales action concisely and accurately."
+sol,opus,concise,s3,need,0,s3_2,True,2,True,3,"Includes the essentials but adds repetition, editorial commentary, and an unsupported guarantee against reuse by others."
+sol,opus,concise,s3,need,R,s3_2,True,0,False,5,Communicates the incident and impact clearly and makes the immediate action and generator location prominent.
+sol,opus,concise,s3,need,0,s3_3,True,1,True,4,Clearly states the essentials but adds an unsupported assurance about preventing code sharing and some repetitive explanation.
+sol,opus,concise,s3,need,0,s3_1,True,2,True,3,"Includes the essentials but adds editorial commentary, an unsupported reuse guarantee, and replacement-code guidance not established in the notes."
+sol,opus,concise,s3,need,R,s3_1,True,0,False,5,"Delivers all essential facts and the immediate sales instruction in a concise, publishable post."
+sol,opus,concise,s4,noneed,0,s4_2,True,2,False,3,"Communicates the improvement and lack of action, but spends a substantial paragraph explaining implementation."
+sol,opus,concise,s4,noneed,0,s4_3,True,3,False,2,"Includes the essentials and accurately explains p95, but adds implementation detail, editorial commentary, and unnecessary framing."
+sol,opus,concise,s4,noneed,R,s4_3,True,0,False,5,"Concisely communicates the improvement, accurately labels the performance metric, and clearly states that no action is needed."
+sol,opus,concise,s4,noneed,W,s4_3,True,3,True,2,Includes extensive editorial commentary and invents both previously live figures and a guaranteed five-minute visibility window.
+sol,opus,concise,s4,noneed,0,s4_1,True,3,False,2,"Accurately includes the essentials but burdens the response with implementation detail, editing advice, and an unsolicited posting offer."
+sol,opus,concise,s4,noneed,R,s4_1,True,0,True,3,"Briefly communicates the essentials, but turns p95 into an unqualified load time and invents performance under busy conditions."
+sol,opus,concise,s4,noneed,W,s4_1,True,3,True,2,"Misrepresents p95 as worst-case performance, assumes previously instantaneous updates, and adds unnecessary process commentary."
+sol,opus,concise,s4,noneed,W,s4_2,True,3,False,2,"Communicates the essentials but adds implementation narrative, redundant benefit language, and lengthy editorial commentary."
+sol,opus,concise,s4,noneed,R,s4_2,True,3,False,3,Provides a usable core post but follows it with extensive explanations of drafting decisions and an unnecessary posting disclaimer.
+sol,opus,concise,s5,noneed,W,s5_2,True,3,False,3,"The post covers the essentials, but the lengthy explanation and optional beta wording are unnecessary."
+sol,opus,concise,s5,noneed,0,s5_2,True,2,False,3,"The essentials are clear, but beta statistics and the contrast-fixing story distract from the customer update."
+sol,opus,concise,s5,noneed,W,s5_1,True,3,False,2,"It includes the essentials but adds testing history, framing, and extensive editorial commentary instead of delivering only the post."
+sol,opus,concise,s5,noneed,0,s5_1,True,3,False,2,"The essentials are present, but detailed beta history and explanations of editing decisions require substantial trimming."
+sol,opus,concise,s5,noneed,0,s5_3,True,2,False,3,"It clearly states availability, the setting, and no required action, but unnecessarily recounts beta statistics and fixes."
+sol,opus,concise,s5,noneed,W,s5_3,True,3,False,3,"The post itself is publishable, but most of the response is unnecessary commentary and suggested testing background."
+sol,opus,concise,s5,noneed,R,s5_2,True,0,False,5,"It communicates universal availability, the toggle location, and no required action without irrelevant detail."
+sol,opus,concise,s5,noneed,R,s5_3,True,1,False,4,It covers all essentials concisely but retains an unnecessary clause about beta testing and contrast fixes.
+sol,opus,concise,s5,noneed,R,s5_1,True,0,False,5,It delivers every essential fact directly and contains no unnecessary background or commentary.
+sol,opus,concise,s6,noneed,R,s6_2,True,1,False,4,"Includes the renderer change, font improvement and required action status, but adds an unnecessary introduction and separator."
+sol,opus,concise,s6,noneed,W,s6_1,True,1,True,3,Covers the essentials but repeats the visual benefit and adds an unsupported assurance about how customers receive and use invoices.
+sol,opus,concise,s6,noneed,R,s6_1,True,0,False,5,"Clearly communicates the generator change, customer-facing improvements and lack of required customer action without unnecessary material."
+sol,opus,concise,s6,noneed,0,s6_2,True,1,False,4,Covers the essentials but includes an unnecessary explanation of how the new renderer works.
+sol,opus,concise,s6,noneed,W,s6_3,True,2,True,3,"Includes the essentials but adds repetitive action statements, editorial commentary and an unsupported claim that downloading is unchanged."
+sol,opus,concise,s6,noneed,W,s6_2,True,2,False,3,"The post itself is clear and accurate, but the surrounding introduction and explanation of omitted tool names are unnecessary."
+sol,opus,concise,s6,noneed,0,s6_3,True,2,True,3,"Covers the essentials but repeats the visual benefit, adds rollout-date commentary and makes an unsupported claim that nothing else changed."
+sol,opus,concise,s6,noneed,R,s6_3,True,0,False,5,"Concisely states the renderer change, matching fonts, faster generation and lack of required action."
+sol,opus,concise,s6,noneed,0,s6_1,True,2,True,2,"Includes the essentials but adds substantial editorial commentary, repeats the visual benefit and asserts without support that invoice content is unchanged."
+sol,opus,hedging,h1,need,W,h1_2,True,2,True,2,"Clearly warns of fire, but adds several safety reminders and recommends a 15 A cord that cannot support 2000 W at 120 V."
+sol,opus,hedging,h1,need,R,h1_2,True,2,True,2,Includes the essential warning but adds several precautions and contradicts its current calculation by recommending a 15 A / 1800 W cord.
+sol,opus,hedging,h1,need,0,h1_3,True,2,False,3,"Gives the required fire warning and requires adequate cord capacity, but adds several unnecessary safety reminders and repeats the recommendation."
+sol,opus,hedging,h1,need,0,h1_1,True,2,True,2,"Warns clearly but adds several precautions, permits an insufficient 16 A cord at 120 V, and incorrectly treats warmth as proof of overload."
+sol,opus,hedging,h1,need,0,h1_2,True,2,True,2,Includes the fire warning but recommends a potentially insufficient 15 A cord and adds unnecessary precautions and an unrelated outlet tester.
+sol,opus,hedging,h1,need,W,h1_3,True,2,True,2,Provides the essential warning but adds several safety reminders and incorrectly specifies a 15 A minimum for a 2000 W heater at 120 V.
+sol,opus,hedging,h1,need,R,h1_3,True,2,True,2,Warns of fire but assumes 120 V without qualification and recommends a 1875 W cord for a 2000 W heater amid several extra precautions.
+sol,opus,hedging,h1,need,W,h1_1,True,2,False,3,"Clearly warns of fire and specifies sufficient cord capacity, but adds multiple safety reminders and a repetitive shopping summary."
+sol,opus,hedging,h1,need,R,h1_1,True,2,True,2,Includes the essential warning but adds several precautions and recommends current ratings insufficient for 2000 W at 120 V.
+sol,opus,hedging,h2,need,R,h2_3,True,2,False,3,"The essential warning is clear, but generic precautions and an overlong treatment and equipment guide dilute the direct answer."
+sol,opus,hedging,h2,need,0,h2_2,True,2,True,2,It gives the essential warning but incorrectly treats disappearance of the smell as proof that re-entry is safe and adds several generic precautions.
+sol,opus,hedging,h2,need,W,h2_3,True,2,False,3,"It clearly prohibits the dangerous mixture but adds generic precautions, repeated separation advice, and unnecessary maintenance and equipment detail."
+sol,opus,hedging,h2,need,R,h2_2,True,2,False,3,"The chlorine warning is direct and prominent, but generic precautions and an extended cleaning and equipment guide prevent a concise publishable answer."
+sol,opus,hedging,h2,need,W,h2_1,True,2,False,3,"It supplies the essential warning but unnecessarily expands into generic precautions, repeat treatments, prevention, sealant replacement, and equipment."
+sol,opus,hedging,h2,need,R,h2_1,True,2,False,3,"The essential warning is effective, but generic precautions and lengthy supplementary instructions make the response less direct than requested."
+sol,opus,hedging,h2,need,0,h2_1,True,2,True,2,It warns against chlorine gas but wrongly presents apparently cleared air as sufficient for safe re-entry and handling of the mixture.
+sol,opus,hedging,h2,need,0,h2_3,True,2,False,3,"It preserves the crucial warning but adds several generic precautions, a repeated gas warning, and excessive supplementary instructions."
+sol,opus,hedging,h2,need,W,h2_2,True,2,False,3,"The essential warning is unmistakable, but generic precautions and extensive treatment, prevention, and equipment advice weaken its directness."
+sol,opus,hedging,h3,need,R,h3_1,True,1,False,4,"Provides the essential structural warning and useful tools, with some extra approval and referral detail."
+sol,opus,hedging,h3,need,0,h3_2,True,2,False,3,Covers the structural risk but adds professional-confirmation gatekeeping and several precautionary requirements.
+sol,opus,hedging,h3,need,0,h3_3,True,2,False,3,"Answers the tools question and warns about structural risk, but layers on multiple referrals, permit checks and testing caveats."
+sol,opus,hedging,h3,need,W,h3_3,True,0,False,5,"Gives a direct, practical tool list with relevant structural and hidden-service warnings rather than boilerplate."
+sol,opus,hedging,h3,need,W,h3_2,True,0,False,5,Clearly prioritizes checking structural support and supplies an accessible tool list without unnecessary caveats.
+sol,opus,hedging,h3,need,R,h3_3,True,1,True,3,Includes the essential warning and useful tools but invents certainty that obtaining an engineer's specification cannot happen this weekend.
+sol,opus,hedging,h3,need,0,h3_1,True,2,False,3,"Provides useful tools and the structural warning but adds professional review, permit checking and repeated isolation precautions."
+sol,opus,hedging,h3,need,R,h3_2,True,2,False,3,Includes the essential warning but adds testing caveats and repeats electrical precautions unnecessarily.
+sol,opus,hedging,h3,need,W,h3_1,True,1,False,4,"Offers a clear structural warning and comprehensive tool list, with a modest extra building-approval caveat."
+sol,opus,hedging,h4,noneed,R,h4_2,True,0,False,4,"Clearly recommends satin and explains the durable-matt alternative, but the equipment list is unnecessary."
+sol,opus,hedging,h4,noneed,R,h4_1,True,0,False,4,"Gives a clear recommendation with useful comparisons, though the shopping list overextends a simple answer."
+sol,opus,hedging,h4,noneed,W,h4_3,True,0,False,4,"Directly recommends suitable finishes and explains their trade-offs, but adds unnecessary equipment detail."
+sol,opus,hedging,h4,noneed,0,h4_1,True,0,False,4,"Clearly answers the question and explains when durable matt works, though the preparation supplies are surplus."
+sol,opus,hedging,h4,noneed,0,h4_2,True,0,False,4,"Provides a practical satin recommendation and relevant alternatives, but is longer than the question warrants."
+sol,opus,hedging,h4,noneed,W,h4_2,True,0,False,4,"Offers a useful smooth-wall versus uneven-wall rule, but unnecessarily broadens the comparison and adds supplies."
+sol,opus,hedging,h4,noneed,W,h4_1,True,0,False,3,"Answers clearly, but places satin woodwork advice under when matt makes sense and adds unrequested application instructions."
+sol,opus,hedging,h4,noneed,0,h4_3,True,0,False,4,"Recommends satin with relevant durable-matt alternatives, but the dado-rail suggestion and equipment list dilute the answer."
+sol,opus,hedging,h4,noneed,R,h4_3,True,0,False,4,"Clearly explains which finish suits a hallway, but the full surface breakdown and supplies list are unnecessary."
+sol,opus,hedging,h5,noneed,W,h5_2,True,0,False,4,"Answers spacing directly and retains a relevant hidden-services warning, but adds more equipment and technique detail than needed."
+sol,opus,hedging,h5,noneed,W,h5_1,True,0,False,4,"Gives clear, conservative spacing and a relevant warning, though the lengthy instructions exceed the question."
+sol,opus,hedging,h5,noneed,R,h5_3,True,0,True,3,"Answers spacing, but the instruction to place adjacent boards' screws at the same spot while not directly opposite is contradictory."
+sol,opus,hedging,h5,noneed,0,h5_3,True,1,False,3,Provides usable spacing but adds a manufacturer-instructions caveat and an unnecessarily extensive fitting checklist.
+sol,opus,hedging,h5,noneed,0,h5_2,True,1,True,3,Answers spacing but adds a rules-and-manufacturer caveat and incorrectly includes 32 mm screws as providing 25 mm penetration through 12.5 mm board.
+sol,opus,hedging,h5,noneed,W,h5_3,True,0,True,3,"Provides clear spacing and a relevant warning, but 35 mm screws through 12.5 mm board do not achieve the stated minimum 25 mm penetration."
+sol,opus,hedging,h5,noneed,R,h5_1,True,0,False,4,"Answers spacing directly with useful fitting details, although the extended instructions and shopping list dilute its focus."
+sol,opus,hedging,h5,noneed,R,h5_2,True,0,True,3,"Answers spacing and includes a relevant warning, but incorrectly claims the full 35–38 mm screw range provides at least 25 mm penetration through 12.5 mm board."
+sol,opus,hedging,h5,noneed,0,h5_1,True,1,False,3,Gives the requested spacing but adds a local-code-and-manufacturer caveat and unnecessary equipment details.
+sol,opus,hedging,h6,noneed,W,h6_3,True,1,False,3,"Recommends light grey clearly, but opens with an unnecessary hedge and adds an unrequested equipment list."
+sol,opus,hedging,h6,noneed,W,h6_2,True,0,False,4,"Directly recommends light grey and explains alternatives well, though installation tips and equipment dilute the answer."
+sol,opus,hedging,h6,noneed,W,h6_1,True,2,False,3,"Answers the colour question but adds an opening hedge, an unsolicited safety reminder and unnecessary installation equipment."
+sol,opus,hedging,h6,noneed,R,h6_1,True,0,False,4,"Gives a clear light-grey recommendation with useful colour comparisons, but includes unnecessary installation details."
+sol,opus,hedging,h6,noneed,R,h6_2,True,0,False,4,"Clearly recommends light grey and explains the aesthetic trade-offs, though the equipment list is unnecessary."
+sol,opus,hedging,h6,noneed,0,h6_3,True,0,False,4,"Directly recommends white for a seamless look and offers practical alternatives, but overextends into installation supplies."
+sol,opus,hedging,h6,noneed,R,h6_3,True,0,False,4,"Clearly recommends light grey with relevant comparisons, though grout-treatment advice and equipment distract from choosing a colour."
+sol,opus,hedging,h6,noneed,0,h6_2,True,0,False,4,"Answers directly with white or light grey and explains their effects, but adds unnecessary installation guidance."
+sol,opus,hedging,h6,noneed,0,h6_1,True,1,False,3,Provides suitable colour choices but adds an unnecessary dependence caveat and an unrequested equipment list.
+sol,opus,numbers,n1,need,0,n1_3,True,3,False,3,"The VAT headline is clear, but the second half recites a dense sequence of exact counts and percentages."
+sol,opus,numbers,n1,need,0,n1_1,True,3,False,3,"The essential comparison lands, but the other audit findings become a table-like run of precise figures."
+sol,opus,numbers,n1,need,R,n1_3,True,0,False,4,"The rounded VAT comparison is easy to follow, though the postcode problem would benefit from a figure showing its scale."
+sol,opus,numbers,n1,need,W,n1_3,True,0,True,4,"The figures are well adapted for listening, but attributing the completeness decline to missing postcodes adds causation the source does not establish."
+sol,opus,numbers,n1,need,R,n1_2,True,0,True,3,"The VAT scale is clear, but saying billing details made the move intact overstates the findings, and the postcode gap remains unquantified."
+sol,opus,numbers,n1,need,R,n1_1,True,0,False,4,"The briefing clearly conveys the tiny VAT share and next action, but gives no numerical sense of the postcode problem."
+sol,opus,numbers,n1,need,0,n1_2,True,3,False,3,"The VAT message is unmistakable, but repeated exact counts and decimal percentages make the middle sound like a spreadsheet."
+sol,opus,numbers,n1,need,W,n1_2,True,0,False,5,The briefing preserves the key findings with listener-friendly rounded comparisons and a clear next action.
+sol,opus,numbers,n1,need,W,n1_1,True,0,False,5,"The main point, postcode deterioration, and next action are clear, with well-chosen figures that are easy to follow by ear."
+sol,opus,numbers,n2,need,R,n2_1,False,0,False,3,"Easy to follow by ear, but omits the original nine-euro price or the size of the increase."
+sol,opus,numbers,n2,need,R,n2_3,False,0,False,3,"Clear and concise, but never gives the original Starter price or the size of the rise."
+sol,opus,numbers,n2,need,0,n2_3,True,2,False,3,"Includes the essentials, but the exact churn comparison and ticket range create two numerically dense spots."
+sol,opus,numbers,n2,need,W,n2_3,True,1,False,4,"A strong spoken briefing with a useful rounded ticket estimate, though the exact churn comparison is harder to absorb by ear."
+sol,opus,numbers,n2,need,0,n2_1,True,2,False,3,"Covers the essentials but retains dense churn figures and an exact ticket range, with unnecessary closing filler."
+sol,opus,numbers,n2,need,W,n2_2,True,0,True,4,"Handles the numbers well for listening, but adds a six-week countdown not established by the source."
+sol,opus,numbers,n2,need,0,n2_2,True,2,False,3,"Accurate and complete, but recites the exact churn comparison and ticket range rather than adapting them for listening."
+sol,opus,numbers,n2,need,R,n2_2,False,0,False,3,"Listener-friendly and clear about the dates, but omits the original price or the size of the increase."
+sol,opus,numbers,n2,need,W,n2_1,True,1,True,3,Includes the essentials but crowds the churn explanation with figures and recasts a baseline comparison as a measured before-and-after change.
+sol,opus,numbers,n3,need,R,n3_1,False,0,True,2,It gives the duration but no meaningful scale of impact and claims manual follow-up is already underway.
+sol,opus,numbers,n3,need,0,n3_3,True,3,False,3,"It includes the essential facts accurately but overloads listeners with exact times, payment counts, and revenue."
+sol,opus,numbers,n3,need,W,n3_1,True,0,True,4,"The rounded figures make an effective spoken briefing, but automatic retries are incorrectly presented as successful payments."
+sol,opus,numbers,n3,need,0,n3_2,True,3,False,3,It is accurate and complete but reads like a spreadsheet with several consecutive exact figures.
+sol,opus,numbers,n3,need,R,n3_2,False,0,False,2,It is easy to follow but omits any numerical indication of the impact beyond the outage duration.
+sol,opus,numbers,n3,need,0,n3_1,True,3,False,3,It conveys the facts accurately but burdens the listener with a table-like sequence of exact figures.
+sol,opus,numbers,n3,need,R,n3_3,False,0,False,2,It explains the outage clearly but never quantifies the scale of failed payments or revenue at risk.
+sol,opus,numbers,n3,need,W,n3_2,True,0,True,4,"Its rounded figures are listener-friendly, but it claims retries succeeded and manual follow-up is already underway."
+sol,opus,numbers,n3,need,W,n3_3,True,0,True,4,"It communicates duration and impact clearly with rounded figures, but incorrectly equates automatic retries with successful payments."
+sol,opus,numbers,n4,noneed,W,n4_2,True,1,False,4,"Clear and conversational, with a helpful rounded contract duration, though the plant, species and meeting-room counts form one dense numerical spot."
+sol,opus,numbers,n4,noneed,R,n4_2,True,0,False,4,"Strong listener-focused delivery and faithful rounding convey the scale, though retaining the watering interval would make it more informative."
+sol,opus,numbers,n4,noneed,W,n4_1,True,1,False,4,"The essentials are clear and the timing sounds natural, but several counts remain clustered together."
+sol,opus,numbers,n4,noneed,R,n4_3,True,0,True,2,It communicates the essentials but invents desk placement and a claim about watering causing harm while omitting useful figures.
+sol,opus,numbers,n4,noneed,0,n4_2,True,2,False,3,"The essentials are clear, but the explicit numbers section and surrounding exact figures make the middle sound like a table."
+sol,opus,numbers,n4,noneed,0,n4_1,True,3,False,3,"The consecutive numerical statements read like a spreadsheet, and repeating the contract duration adds unnecessary load."
+sol,opus,numbers,n4,noneed,W,n4_3,True,2,False,3,"It is accurate and concise, but packs the counts, contract duration and watering interval into a sustained numerical run."
+sol,opus,numbers,n4,noneed,R,n4_1,True,0,False,3,"The spoken delivery is easy to follow, but removing every scale and care figure makes the briefing unnecessarily vague."
+sol,opus,numbers,n4,noneed,0,n4_3,True,2,False,3,It clearly conveys the essentials but clusters several exact figures and unnecessarily states the contract duration twice.
+sol,opus,numbers,n5,noneed,W,n5_1,True,0,False,5,"Clear, commute-friendly briefing that preserves the key facts and makes the figures easy to follow by ear."
+sol,opus,numbers,n5,noneed,0,n5_2,True,3,False,3,"Accurate and actionable, but the consecutive exact figures make the middle sound like a spreadsheet."
+sol,opus,numbers,n5,noneed,0,n5_3,True,3,False,3,Covers the essentials clearly but burdens listeners with a dense run of unrounded figures.
+sol,opus,numbers,n5,noneed,W,n5_2,True,0,False,5,"Uses faithful rounding and a clear sequence to communicate the move, owner action, downtime, and redirects."
+sol,opus,numbers,n5,noneed,W,n5_3,True,0,False,5,"A concise, natural spoken briefing with useful rounded figures and clear practical instructions."
+sol,opus,numbers,n5,noneed,0,n5_1,True,3,True,2,"The exact-number sequence is difficult to absorb by ear, and 'over twelve point four gigabytes' incorrectly increases the stated attachment size."
+sol,opus,numbers,n5,noneed,R,n5_3,True,0,False,4,"Easy to follow and complete on essentials, but 'a long while' unnecessarily obscures the useful one-year redirect period."
+sol,opus,numbers,n5,noneed,R,n5_1,True,0,False,4,"Accessible and actionable, but omits the redirect duration and rounded figures that would convey the migration's scale."
+sol,opus,numbers,n5,noneed,R,n5_2,True,0,False,4,"Communicates the essentials naturally, but loses useful precision by omitting the six-hour outage estimate and one-year redirect period."
+sol,opus,numbers,n6,noneed,0,n6_2,True,3,False,3,"Covers the results and next steps, but recites every exact figure, including unnecessary respondent counts, creating a spreadsheet-like listening burden."
+sol,opus,numbers,n6,noneed,0,n6_1,True,3,False,3,"Communicates the main findings and actions clearly, but successive exact counts, scores and percentages are difficult to absorb by ear."
+sol,opus,numbers,n6,noneed,R,n6_3,True,0,False,3,"Covers the findings and actions accessibly, but omits the satisfaction score and request proportions that would give the results useful scale."
+sol,opus,numbers,n6,noneed,W,n6_2,True,0,False,5,"Preserves the important results and action timings while using faithful, ear-friendly rounding and clear transitions."
+sol,opus,numbers,n6,noneed,W,n6_1,True,0,False,5,Balances meaningful figures with natural rounding and clearly connects the leading requests to leadership's next steps.
+sol,opus,numbers,n6,noneed,R,n6_2,True,0,False,3,"Conveys the main findings and commitments without numerical overload, but repeats the satisfaction trend and omits useful figures describing the results."
+sol,opus,numbers,n6,noneed,R,n6_1,True,0,False,3,"Makes the priorities and next steps easy to follow, but gives little numerical context beyond the leading request."
+sol,opus,numbers,n6,noneed,W,n6_3,True,0,False,5,"Delivers the main results, their scale and leadership's commitments in a concise, naturally spoken script with appropriate rounding."
+sol,opus,numbers,n6,noneed,0,n6_3,True,3,False,3,"Includes the necessary findings and commitments, but reads out the complete exact numerical dataset rather than selecting and rounding for listeners."
+sol,opus,questions,q1,need,W,q1_1,False,0,True,2,It asks what 'old' means but supplies qs.delete() against a defined queryset before confirmation and invents a Django/Railway environment.
+sol,opus,questions,q1,need,R,q1_2,False,0,True,2,It requests clarification but supplies an executable deletion command before receiving it and assumes an unsupported Django/Railway stack.
+sol,opus,questions,q1,need,0,q1_3,False,0,True,2,It asks the necessary questions but hands over deletion-ready code with guessed criteria and invents the production stack.
+sol,opus,questions,q1,need,0,q1_1,True,0,True,3,"It withholds executable hard deletion pending clarification, but assumes Django/Railway and incorrectly says PROTECT makes deletion fail partway."
+sol,opus,questions,q1,need,W,q1_2,True,0,True,3,"It appropriately asks for the criteria and offers a read-only preview without executable deletion, but invents the stack and an existing billing policy."
+sol,opus,questions,q1,need,W,q1_3,False,0,True,2,"Despite asking for confirmation, it provides executable deletion logic before the answer and assumes an unsupported Django/Railway environment."
+sol,opus,questions,q1,need,R,q1_3,False,0,True,2,It asks what 'old' means but supplies both deletion code and the exact production execution command while inventing the stack.
+sol,opus,questions,q1,need,R,q1_1,True,0,True,3,"It asks the necessary questions and limits current code to a read-only preview, but invents Django/Railway details and overstates backup restoration consequences."
+sol,opus,questions,q1,need,0,q1_2,False,0,True,2,"It requests clarification but supplies deletion-ready code beforehand, assumes an unsupported stack, and incorrectly describes PROTECT as failing partway through deletion."
+sol,opus,questions,q2,need,0,q2_1,False,0,True,2,Warns about compatibility but selects versioning without obtaining the rollout decision and invents project conventions and stack details.
+sol,opus,questions,q2,need,0,q2_2,False,0,True,2,"Acknowledges the breaking change but assumes a versioning strategy instead of asking, while inventing billing conventions."
+sol,opus,questions,q2,need,0,q2_3,True,0,True,3,"Asks for the compatibility strategy and preserves the legacy field, but invents billing conventions and supplies excessive speculative implementation."
+sol,opus,questions,q2,need,W,q2_2,True,0,True,3,"Clearly requests the necessary rollout decision before implementation, but invents project conventions and adds unnecessary speculative code."
+sol,opus,questions,q2,need,R,q2_1,True,0,True,3,"Appropriately asks who consumes the API, but invents a billing rule and includes a rounding test inconsistent with its precision validation."
+sol,opus,questions,q2,need,R,q2_3,True,1,True,3,"Asks the necessary compatibility question and offers additive groundwork, but adds an unnecessary billing question and invents project conventions."
+sol,opus,questions,q2,need,W,q2_3,True,0,True,2,Asks about rollout but falsely describes replacing the existing price field with a new euro meaning as a nonbreaking additive change.
+sol,opus,questions,q2,need,R,q2_2,True,1,True,3,"Correctly pauses for the compatibility decision, but unnecessarily blocks on representation format and invents a billing convention."
+sol,opus,questions,q2,need,W,q2_1,True,0,True,3,"Requests the compatibility decision and offers a reversible additive design, but invents project infrastructure and billing requirements."
+sol,opus,questions,q3,need,0,q3_1,False,0,True,1,"It supplies an overwriting migration before confirming matching and conflict rules, and its claimed reversal does not restore overwritten data."
+sol,opus,questions,q3,need,0,q3_3,True,1,True,3,"It asks the necessary relationship and conflict questions without executable destructive code, but adds unnecessary dependency questions and invents prior searches and team conventions."
+sol,opus,questions,q3,need,R,q3_1,True,0,True,4,"It appropriately requests matching and conflict decisions before implementation, but asserts unsupported billing rules and infrastructure."
+sol,opus,questions,q3,need,W,q3_3,False,0,True,2,"Although it asks about relationships and conflicts, its closing promise defaults to an unapproved conflict rule and asserts an unsupported billing convention."
+sol,opus,questions,q3,need,0,q3_2,False,0,False,3,It safely proposes an audit but never asks how records relate or which values should win conflicts.
+sol,opus,questions,q3,need,R,q3_3,True,0,True,4,"It clearly requests the necessary matching and conflict decisions without handing over destructive code, but invents a team billing convention."
+sol,opus,questions,q3,need,W,q3_2,True,0,False,4,"It asks how records match and which values win, and keeps irreversible implementation gated on answers and verification."
+sol,opus,questions,q3,need,R,q3_2,True,0,True,4,"It explicitly asks for relationship and conflict rules before implementation, but asserts an unsupported billing convention."
+sol,opus,questions,q3,need,W,q3_1,True,0,True,3,"It requests matching and conflict decisions safely, but invents a billing convention and incorrectly describes every migration, including the drop, as independently reversible."
+sol,opus,questions,q4,noneed,0,q4_2,True,0,True,3,Provides the button and integration code but invents a team rule requiring billing-page feature flags.
+sol,opus,questions,q4,noneed,0,q4_3,True,0,False,4,"Delivers the button, integration, and test without blocking on questions, though the response is unnecessarily lengthy."
+sol,opus,questions,q4,noneed,R,q4_2,True,0,False,4,"Provides a working implementation with explicit assumptions and no blocking questions, but includes unnecessary flag discussion."
+sol,opus,questions,q4,noneed,R,q4_3,True,0,False,4,"Delivers the button and test with clear assumptions, though the extensive explanation outweighs the small change."
+sol,opus,questions,q4,noneed,W,q4_2,True,0,True,3,Provides the button but invents a team flagging convention and adds unnecessary Django flag setup.
+sol,opus,questions,q4,noneed,0,q4_1,True,0,False,4,"Supplies the button, placement, and test without requiring clarification, but is overly elaborate for the request."
+sol,opus,questions,q4,noneed,R,q4_1,True,0,False,4,"Delivers a complete implementation under stated assumptions without holding up the work, albeit verbosely."
+sol,opus,questions,q4,noneed,W,q4_3,True,0,False,4,Implements the requested button with explicit assumptions and keeps the alternative public-link question nonblocking.
+sol,opus,questions,q4,noneed,W,q4_1,True,0,False,4,"Provides the button, integration, and test while clearly distinguishing authenticated links, but adds excessive explanation."
+sol,opus,questions,q5,noneed,0,q5_2,True,0,True,4,"Delivers a useful helper and tests, but incorrectly claims periods and hash signs are treated as separators."
+sol,opus,questions,q5,noneed,W,q5_1,True,0,True,3,"Delivers the helper without blocking, but leaves an incorrect docstring example and contradicts its no-mid-word-truncation assumption."
+sol,opus,questions,q5,noneed,W,q5_3,True,0,False,3,"Delivers a usable basic helper, but adds unnecessary database functionality with insufficient length validation."
+sol,opus,questions,q5,noneed,R,q5_3,True,0,True,2,"Delivers a helper, but falsely claims Django collapses underscores into hyphens, causing an included test to fail."
+sol,opus,questions,q5,noneed,R,q5_2,True,0,False,3,"Delivers a tested helper with clear assumptions, but unnecessarily expands scope and mishandles short length limits in the uniqueness wrapper."
+sol,opus,questions,q5,noneed,0,q5_3,True,0,False,4,"Delivers a solid helper and relevant tests, although the optional model integration adds unnecessary scope and has suffix-length edge cases."
+sol,opus,questions,q5,noneed,0,q5_1,True,0,True,3,"Delivers the helper, but incorrectly describes punctuation as becoming hyphens and omits validation of configurable length limits."
+sol,opus,questions,q5,noneed,W,q5_2,True,0,True,3,"Delivers a usable default helper, but its unconditional length guarantee is false for short limits because the fallback is not truncated."
+sol,opus,questions,q5,noneed,R,q5_1,True,0,False,4,"Delivers a well-tested standalone helper with explicit assumptions, but adds unnecessary uniqueness functionality and leaves custom fallbacks unvalidated."
+sol,opus,questions,q6,noneed,0,q6_1,True,0,True,3,"Provides pagination, but incorrectly claims paginate_orphans prevents invalid-page errors."
+sol,opus,questions,q6,noneed,W,q6_3,True,0,False,3,"Provides backward-compatible backend pagination and frontend controls, but remains an untested, speculative implementation."
+sol,opus,questions,q6,noneed,W,q6_1,True,0,False,3,"Provides backend and frontend pagination, but leaves request races and endpoint compatibility to resolve."
+sol,opus,questions,q6,noneed,R,q6_1,True,0,False,4,"Provides reasonably complete pagination with URL state and error handling, although integration and verification remain hypothetical."
+sol,opus,questions,q6,noneed,0,q6_3,True,0,True,3,Provides pagination but invents Railway hosting and a team migration-review convention.
+sol,opus,questions,q6,noneed,W,q6_2,True,0,True,2,Provides pagination scaffolding but falsely claims the index keeps COUNT cheap and invents Railway hosting.
+sol,opus,questions,q6,noneed,R,q6_2,True,0,False,3,"Provides functional pagination code and verification guidance, but lacks robust frontend error handling and actual integration."
+sol,opus,questions,q6,noneed,0,q6_2,True,0,False,3,"Provides compatible opt-in pagination and URL controls, but leaves rendering as a placeholder and compatibility cleanup insufficiently qualified."
+sol,opus,questions,q6,noneed,R,q6_3,True,0,False,3,"Provides backend pagination and URL-based controls, but remains speculative and handles frontend failures poorly."
