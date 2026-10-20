@@ -25,6 +25,7 @@ from tasks import TASKS
 HERE = Path(__file__).parent
 OUT = HERE / "data" / "judge"
 CONDS = ("0", "R", "W")
+DEFAULT_REPS = frozenset({1, 2, 3})
 
 GOALS = {
     "numbers": (
@@ -134,12 +135,14 @@ Return only a JSON array, one object per response, in the order given:
 "quality" 5 means a demanding editor would publish it as is; 1 means unusable."""
 
 
-def build(model, task, case):
+def build(model, task, case, reps):
     items = []
     for cond in CONDS:
         for f in sorted((RAW / model / task / cond).glob(f"{case['id']}_*.md")):
+            if int(f.stem.split("_")[1]) not in reps:
+                continue
             items.append((cond, f.stem, f.read_text(encoding="utf-8").strip()))
-    rng = random.Random(f"{model}/{task}/{case['id']}")
+    rng = random.Random(f"{model}/{task}/{case['id']}" + ("" if reps == DEFAULT_REPS else f"/{min(reps)}"))
     rng.shuffle(items)
     labels = [f"X{i + 1}" for i in range(len(items))]
     responses = "\n\n".join(f"### {lab}\n<response>\n{text}\n</response>" for lab, (_, _, text) in zip(labels, items))
@@ -160,11 +163,13 @@ def parse(out):
         return None
 
 
-def judge_one(judge, model, task, case):
-    dest = OUT / judge / f"{model}_{task}_{case['id']}.json"
+def judge_one(judge, model, task, case, reps=None):
+    reps = reps or DEFAULT_REPS
+    suffix = "" if reps == DEFAULT_REPS else f"_r{min(reps)}-{max(reps)}"
+    dest = OUT / judge / f"{model}_{task}_{case['id']}{suffix}.json"
     if dest.exists():
         return "skip"
-    prompt, key = build(model, task, case)
+    prompt, key = build(model, task, case, reps)
     out = call(judge, "You are a careful, strict evaluator. Output only what is asked.", prompt,
                dest.with_suffix(".work"))
     rows = parse(out) if is_valid(out) else None
@@ -185,15 +190,18 @@ def main():
     ap.add_argument("--models", default="opus,astra")
     ap.add_argument("--tasks", default=",".join(TASKS))
     ap.add_argument("--cases", default="")
+    ap.add_argument("--reps", default="1-3", help="range of reps judged together, e.g. 4-6")
     args = ap.parse_args()
     only = set(filter(None, args.cases.split(",")))
+    lo, hi = map(int, args.reps.split("-"))
+    reps = frozenset(range(lo, hi + 1))
     results = []
     # One call at a time: this machine kills the session when saturated.
     for m in args.models.split(","):
         for t in args.tasks.split(","):
             for c in TASKS[t]["cases"]:
                 if not only or c["id"] in only:
-                    results.append(judge_one(args.judge, m, t, c))
+                    results.append(judge_one(args.judge, m, t, c, reps))
     print({s: results.count(s) for s in set(results)})
 
 
