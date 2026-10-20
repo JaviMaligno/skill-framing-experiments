@@ -138,14 +138,6 @@ tie.
 **Questions**: no effect of the framing. Failures are the same in every condition (handing over
 a ready-to-run delete while asking, or not asking how two tables relate).
 
-### Not supported
-
-- *The way-of-doing-it framing makes Opus invent details.* It looked so at three reps. At six,
-  its factual errors in concision are at the base level (11 vs 15 of 36, judge Sol) and the
-  rule's lower count (5) comes from cutting text (W vs R, p = 0.16). In numbers it is one
-  repeated slip, counting automatically retried payments as collected (p = 0.08 with Sol, 0.36
-  with Opus). A lead, not a finding.
-
 ### Limits
 
 - One base skill per task, written by us. Corrections in the wild are messier.
