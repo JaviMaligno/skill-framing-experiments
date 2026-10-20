@@ -87,12 +87,13 @@ def main():
     ap.add_argument("--models", default="opus,astra")
     ap.add_argument("--conds", default="0,R,W")
     ap.add_argument("--tasks", default=",".join(TASKS))
+    ap.add_argument("--workers", type=int, default=2)
     args = ap.parse_args()
     jobs = [(m, t, k, c, r) for r in range(1, args.reps + 1) for m in args.models.split(",")
             for t in args.tasks.split(",") for k in args.conds.split(",") for c in TASKS[t]["cases"]]
     print(f"{len(jobs)} jobs", flush=True)
-    # Two at a time: this machine kills the session when saturated.
-    with ThreadPoolExecutor(2) as pool:
+    # Few at a time: this machine kills the session when saturated.
+    with ThreadPoolExecutor(args.workers) as pool:
         results = list(pool.map(lambda j: generate(*j), jobs))
     print({s: results.count(s) for s in set(results)})
     if abort.is_set():
