@@ -160,6 +160,9 @@ sets concurrency (this machine runs out of memory above two).
 
 - **Claude** (Opus, Sonnet, Haiku 5.5) via `claude -p --system-prompt … --setting-sources ""
   --tools ""`: replaces Claude Code's default prompt and keeps the user's CLAUDE.md out.
+  The isolation is not perfect: one Haiku response out of 1,512 named the account holder, who
+  appears in no prompt (`corrections/data/raw/haiku/concise/0/s3_4.md`, name redacted). Some
+  account context still reaches the model.
 - **Codex** (`gpt-6-astra`, `gpt-6.1-sol`, `gpt-6-luna`) via `codex exec` with a `CODEX_HOME`
   holding only `auth.json` (keeps `~/.codex/AGENTS.md` and config out) and
   `model_instructions_file` (replaces the base instructions). Reasoning effort fixed at medium.
