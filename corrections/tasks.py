@@ -46,7 +46,9 @@ to avoid is reading a table aloud.
 """
 
 NUMBERS_CASES = [
-    dict(id="n1", kind="need", key=[r"\b4\b|\bfour\b", r"791|seven hundred|eight hundred|800"],
+    # The point is the proportion: "4 of 791" or "half a percent" both say it; "four" alone does not.
+    dict(id="n1", kind="need", key=[r"(?s)(?=.*(\b4\b|\bfour\b))(?=.*(791|seven hundred|eight hundred|800))"
+                                    r"|half (a|of one) percent|0\.5"],
          src="Q3 data-quality audit. Of 791 customer records migrated to the new CRM, 4 had a wrong VAT "
              "number (0.51 %). Duplicates: 37 (4.7 %). Missing postcodes: 112 (14.2 %), up from 9.8 % in Q2. "
              "Average record completeness 93.6 % vs 95.1 % in Q2. The point of the briefing: the VAT problem "
