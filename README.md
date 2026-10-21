@@ -11,31 +11,36 @@ condition has a skill; only the framing of one part of it changes.
 ## Where it came from
 
 A narration skill for explainer videos (`agilabs-video-studio/skills/explainer-script`). The
-author asked it not to string together non-round numbers; the next video said no numbers at
-all; the rule then grew into a natural-language `if`; it was finally fixed by describing a way
-of narrating: "as you'd explain it to a colleague". `skills/narration/` holds the four real
-commits:
+author asked it not to string together non-round numbers; the next revision of two scripts said
+no numbers at all; the rule then grew into a natural-language `if`; it was finally fixed by
+describing a way of narrating: "as you'd explain it to a colleague". `skills/narration/` holds
+the real commits (all 2026-10-19 except the first):
 
-| commit | framing |
-|---|---|
-| `a84ecb6` | rule: say only the number that carries the point (led to a video with no numbers) |
-| `4ccc13f` | corrected rule with exceptions |
-| `1c81e93` | natural-language conditional, "judge by ear" |
-| `2d8f6fa` | role: "as you'd explain it to a colleague" |
+| commit | version | numbers line |
+|---|---|---|
+| `d658477` | before | no numbers guidance (used to write the fresh drafts in experiment 3) |
+| `a84ecb6` | rule, introduced | "say the one number that carries the point… leave the rest on screen or out" |
+| `0993f3d` | **rule** | same line, in force when the scripts were revised |
+| `4ccc13f` | **pile-ups** | "the problem is the pile-up, not the number" |
+| `1c81e93` | **if, by ear** | case by case; when awkward, say what it means in words |
+| `2d8f6fa` | **colleague** | "the way you would explaining the result to a colleague" |
 
-It is the motivating example, not data: it was tested by hand and each version is tuned to
-the video that provoked it. Everything below uses fresh material.
+Experiment 3 reproduces the episode with these versions and then tests them on fresh scripts.
+Experiment 2 asks the same question on simpler material, written from scratch.
 
 ## Result in one paragraph
 
-When a correction **caps a quantity** ("say at most the one figure that carries the point"),
-writing it as a rule makes every model tested drop the figure the message needed, and the
-more capable the model the more often it does (Opus 6/18 and gpt-6-astra 4/18 keep it, against
-18/18 with the same correction written as a way of speaking). Written as a way of doing it, the
-correction never loses the essential, but it only changes behaviour much on the large models:
-the small ones keep reciting exact figures. When the correction is plain **restraint** (be
-shorter, drop the caveats), the rule works as well or slightly better. There is no universal
-winner; the failure mode of the rule is the cap read to the letter.
+On the real narration skill, revising fresh scripts, the rule and the patched `if` drop the
+finding's number and "colleague" never does: Opus keeps it in 1/18 revisions under the rule,
+4/18 under the `if`, 18/18 under "colleague" (judge Opus; Sol 0, 0, 18). The more obedient the
+model, the worse the rule: Astra and Haiku survive the `if`, Opus doesn't. The same holds for a
+rule that **caps a quantity** in a spoken briefing written from scratch (Opus 6/18, gpt-6-astra
+4/18 keep the essential figure, against 18/18 written as a way of speaking). A rule **without**
+the cap or the "move it elsewhere" outlet keeps the essential 17-18/18 in every model and
+removes recitation better. When the correction is plain **restraint** (be shorter, drop the
+caveats), the rule works as well or slightly better. There is no universal winner; the rule
+fails when it offers a cap or another place to put the thing, and a capable model applies it
+to every instance.
 
 ## Experiment 2: corrections (`corrections/`)
 
@@ -112,6 +117,22 @@ hundred payments… close to fifty thousand euros"); the small ones mostly keep 
 figures ("1,284 failed payments, of which 1,071…"), so the rule, which at least sounds easy,
 scores higher there.
 
+The rule above has a cap ("at most the one figure"), and these cases need two. Two more rules
+without the cap, same length (`NUMBERS_S`: "do not string numbers together… round when the
+source allows"; `NUMBERS_E`: the same plus "keep the figures the point depends on"), judged
+together with the other three conditions (`data/judge_numbers5/`):
+
+| model | essential S / E (judge Opus) | excess S / E / way | quality S / E / way |
+|---|---|---|---|
+| Opus | 18 / 18 | 0.0 / 0.2 / 0.3 | 4.4 / 4.3 / 4.1 |
+| Astra | 18 / 18 | 0.0 / 0.3 / 0.9 | 4.3 / 4.2 / 3.5 |
+| Haiku | 18 / 18 | 0.4 / 0.4 / 1.8 | 3.9 / 4.3 / 2.9 |
+| Luna | 17 / 17 | 0.6 / 1.1 / 1.3 | 3.8 / 3.6 / 3.4 |
+
+Sol gives the same essential counts except Luna E 18. Sol's Luna cells hold 27 of 36 responses.
+Without the cap the rule keeps the essential and trims the recitation better than the way of
+speaking.
+
 **Comments** (9 need-responses): the external constraint explained in the code.
 
 | model | base | rule | way |
@@ -141,9 +162,58 @@ a ready-to-run delete while asking, or not asking how two tables relate).
 ### Limits
 
 - One base skill per task, written by us. Corrections in the wild are messier.
-- Single-turn responses; no agent loop, no tools.
+- Single-turn responses; no agent loop, no tools (the original episode happened inside an
+  agent session).
 - Six reps on numbers and concision, three on the rest: the comments and questions tables are
   directional.
+
+## Experiment 3: the real narration skill (`narration_repro/`, `narration_fresh/`)
+
+Experiment 2 did not reproduce the original episode with a cap-free rule. What it lacked was
+the real setup: the actual skill, a second channel for numbers ("leave the rest on screen"),
+and **revision** of a script that already has them.
+
+**Reproduction** (`narration_repro/`). The two v1.1 scripts from the episode
+(`agilabs-video-studio` at `74eb78b^`), revised by Opus under each of the four versions, three
+times. The headline "4 times in 791":
+
+| version | what the three revisions say |
+|---|---|
+| rule | "almost never" ×2, "only 4 times" ×1 (no 791) |
+| pile-ups | "4 times in 791" ×3 |
+| if, by ear | "almost never" ×3 |
+| colleague | "4 times in 791" ×3 |
+
+The rule also turns "47% with long context" into "more often" every time. Read by the author
+line by line; this is what the judge below was calibrated on.
+
+**Fresh material** (`narration_fresh/`). Six articles with experimental results that never had a
+video (`articles/`). Opus wrote one draft each with `d658477` (no numbers guidance); the drafts
+are fixed (`drafts/`). Four models revised every draft under each version, three times: 288
+revisions. Two blind judges (Opus, gpt-6.1-sol) read only the spoken column. **Essential** =
+every finding the draft said with a number is still said with a number or an exact fraction;
+"almost never", "more often", or moving it to the screen fail.
+
+Essential kept, of 18 (judge Opus · judge Sol):
+
+| model | rule | pile-ups | if, by ear | colleague |
+|---|---|---|---|---|
+| Opus | 1 · 0 | 9 · 6 | 4 · 0 | 18 · 18 |
+| Astra | 3 · 0 | 9 · 3 | 18 · 14 | 18 · 18 |
+| Haiku | 5 · 4 | 9 · 7 | 14 · 14 | 18 · 18 |
+| Luna | 18 · 18 | 18 · 18 | 18 · 18 | 18 · 18 |
+
+Rule vs colleague: Fisher p < 0.0001 for Opus, Astra and Haiku under both judges; `if` vs
+colleague p < 0.0001 for Opus only. Luna barely revises: it returns the draft nearly unchanged
+under every version. Judges agree on 92 % of essential verdicts, 99 % on excess within one
+point, 93 % on quality within one point.
+
+Leftover figure-reading (excess, 0-3) is higher under "colleague" (Opus 1.4, Astra 1.4-1.7)
+than under the rule (0). That score was **not** calibrated against the author's reading, and
+in the video the author made with the colleague version no pile-up is heard, so it is reported
+here without a conclusion.
+
+`python narration_fresh/score.py` prints the full table (excess, quality, errors) and the tests.
 
 ## Pilot: release notes (`release_notes/`)
 
