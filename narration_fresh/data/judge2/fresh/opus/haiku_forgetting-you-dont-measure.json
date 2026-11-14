@@ -1,0 +1,163 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged and all figures survive, but scene 4 and scene 6 still recite dense decimal runs, and the claimed spoken forms section is empty.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is identical to the original, so every finding is kept, but scenes 4 and 6 still read as runs of unround decimals.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "size of general accuracy drop",
+   "IFEval fall/rise sizes",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Several findings become vague comparatives ('dropped, on average', 'lost ground', 'went the other way', 'held up') that drop the size.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "size of general accuracy drop",
+   "IFEval fall/rise sizes"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The general-accuracy drop and the IFEval changes are reduced to bare 'dropped', 'fell' and 'rose' with no magnitude.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Only 'by' is added, so all findings stay, but the decimal-heavy runs in scenes 4 and 6 remain.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "size of general accuracy drop",
+   "73% recovery (now 'most')",
+   "IFEval fall/rise sizes"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The drop, the recovery share and the IFEval changes lose their magnitudes to vague wording.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged, so findings are kept, but the figure runs in scenes 4 and 6 are hard to follow by ear.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "size of general accuracy drop",
+   "IFEval fall/rise sizes"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Good word fractions are used elsewhere, but the general drop and the IFEval changes are said without any size.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The note claims scenes 4 and 6 were reduced, but the narration is unchanged, so findings survive with dense figure runs.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "size of general accuracy drop",
+   "IFEval fall/rise sizes"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The general drop and the IFEval changes are reduced to directional words with no magnitude.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is converted to accurate rounded spoken forms (a third to nine in ten, nearly eight points, three quarters, seven/three points), with only scene 6 still somewhat number-dense.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All exact decimals are kept with only small wording tweaks, so scenes 4 and 6 still recite unround figures.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ }
+]

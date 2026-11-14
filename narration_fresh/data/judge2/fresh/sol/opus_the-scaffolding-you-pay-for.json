@@ -1,0 +1,164 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice preserves universal rule compliance, the approximate token-cost ratio, and the delivery gap against free runs.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The one-third failure rate survives, but the voice drops the fully successful free baseline.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All findings survive, with the delivery comparison spoken naturally rather than recited as fractions.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice retains every finding and clearly contrasts four failures out of twelve with complete free-run delivery.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Universal domain-rule compliance.",
+   "Token-cost increase of more than double.",
+   "Delivery gap: one-third failed with planning versus none without."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The placeholder lines convey none of the headline findings, and the remaining note concerns only study size.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The spoken forms preserve the exact findings through an understandable sentence-level comparison.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Qualitative compliance, more-than-doubled tokens, and one-third failure versus universal delivery preserve all findings.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps the planning failure rate but leaves its free-run comparison solely to the visuals.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "Token-cost increase of more than double.",
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“Far more” loses the cost magnitude, and the successful free baseline is no longer spoken.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Token-cost increase of more than double.",
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice drops both the token-cost magnitude and the free-run delivery baseline.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The cost ratio and planning failure rate survive, but the voice omits the fully successful free baseline.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Delivery comparison: free runs all delivered code."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The spoken findings omit the free-run delivery baseline; an on-screen comparison does not restore it.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ }
+]

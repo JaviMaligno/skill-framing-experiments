@@ -1,0 +1,161 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All headline numbers stay spoken and accurate, but the three unround percentages on consecutive lines make one dense spot.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The narration is unchanged, so every finding is carried, with the same back-to-back run of three percentages.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The narration is unchanged, so every finding is carried, with three consecutive percentages forming one dense spot.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All percentages and 3 of 4 are kept and the phrasing is clearer, though the three percentages are still close together.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings are carried accurately, with one run of three consecutive percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)",
+   "rescued 3 of 4 features"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Solved fewer' drops the size of the gap and the rescue count becomes unquantified.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Solved fewer tasks' is a vague comparative that drops how much worse clean restarts did.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Solved fewer' loses the magnitude of the main comparison, though 3 of 4 is kept.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All numbers are kept and accurate, with three percentages in a row forming one dense spot.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Did worse' is a vague comparative that drops the size of the gap.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)",
+   "rescued 3 of 4 features"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only 86% survives; the clean-restart gap and the rescue count become vague.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap (86% vs 69%)",
+   "rescued 3 of 4 features"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only 86% is spoken; 'solved fewer tasks' and the unquantified rescue drop the sizes.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ }
+]

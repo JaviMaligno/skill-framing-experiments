@@ -1,0 +1,160 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, but the delivery ratios remain a table-like recitation.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The one-third failure rate survives, but the comparison with perfect free-run delivery disappears.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The one-third failure rate survives, but the comparison with perfect free-run delivery disappears.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, but embedding both delivery ratios in a sentence does not remove the numerical clutter.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice preserves universal rule compliance, approximately the token-cost ratio, and the delivery contrast without crowded figures.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The one-third failure rate survives, but the comparison with perfect free-run delivery disappears.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "More than twice preserves the token-cost magnitude, but the free-run delivery baseline is omitted.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The spoken findings retain the cost magnitude and planning failure rate but omit perfect free-run delivery.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All headline findings, including the perfect free-run baseline in the reported comparison, survive in natural spoken language.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Keeping the exact delivery comparison on screen does not restore the omitted spoken free-run baseline.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Free runs delivered code in every case."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The cost magnitude and one-third failure rate survive, but the free-run delivery comparison does not.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, but the adjacent percentage and paired delivery ratios remain cumbersome by ear.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "haiku",
+  "script": "the-scaffolding-you-pay-for"
+ }
+]

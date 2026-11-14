@@ -1,0 +1,148 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "The sizes of iteration's advantage over clean restarts and the button's edge over iteration."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Speaking 86% as about eight in ten understates iteration, shrinking its advantage over fresh restarts and exaggerating the button's small edge.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive accurately, but three exact percentages in succession form one table-like stretch.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings remain accurate when spoken as written, with one dense sequence of exact percentages.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The unchanged narration preserves every finding accurately but retains one table-like run of percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Writing the numbers as words preserves their meaning but does not reduce the density of the three consecutive percentages.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every numerical finding survives accurately, although the spoken-forms note inconsistently describes the formatting and leaves the percentage run intact.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All numerical findings are faithfully spoken, with one table-like sequence of exact percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Adding about preserves the reported magnitudes but still leaves three unrounded percentages close together.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Spelling out every number preserves all findings accurately without easing the dense percentage sequence.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings remain accurate, but spelling out the counts does not address the consecutive exact percentages.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The unchanged narration carries every finding accurately and retains one table-like run of percentages.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The spoken counts and unchanged percentages preserve all findings, with one dense sequence of exact percentage values.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "luna",
+  "script": "restart-vs-iterate"
+ }
+]

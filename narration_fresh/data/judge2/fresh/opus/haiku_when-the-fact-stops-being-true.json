@@ -1,0 +1,156 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "token saving collapsing to 1.4x in money"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "Scene 6 is now voiced only as 'most of that saving never reaches the bill', which drops the size of the cost twist, while scene 4 still recites both fractions.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "transcript applied the fix in only 10 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Fell far behind' is a vague comparative that drops the size of the transcript result, although the money ratio is kept.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "transcript applied the fix in only 10 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Far less often' loses the size of the transcript result, while '1.4x money saving' keeps the cost finding.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Both fractions are still spoken, and the cost line keeps 'one point four times in money', so only the scene-4 pair is dense.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Every figure is still spoken, so both the scene-4 fraction pair and the chained 7.5x/1.4x remain number-heavy.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "token saving collapsing to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost every episode' and 'about one time in seven' carry the correction finding accurately, but 'a small money saving' drops the cost magnitude.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Only line 9 was rephrased into a full sentence, so all figures and both dense spots remain.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Line 9 is reworded but keeps 10 of 72, and the 7.5x/1.4x chain is untouched.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "'Just 10' reads naturally against the preceding 'of 72', and the cost line keeps 1.4x while 7.5x moves to the screen.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": true,
+  "reason": "'Almost every time' against 'only rarely' conveys the gap, but 'about one and a half times' overstates the 1.39x money saving.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "transcript applied the fix in only 10 of 72"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Far less often' drops the size of the transcript result, though 'one point four times' keeps the cost finding.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All figures are kept with a minor rewording of line 9, so both dense spots remain.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

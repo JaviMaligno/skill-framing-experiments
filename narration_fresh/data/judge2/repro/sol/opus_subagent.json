@@ -1,0 +1,159 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice preserves rarity, the quarter-to-almost-half increase, the Gemini checking gap and its 95% adoption rate.",
+  "version": "1c81e93",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings survive, but the exact episode counts and Gemini's three-percentage comparison remain demanding by ear.",
+  "version": "2d8f6fa",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Opus's 47% unchecked rate with long context"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'More often' drops the size of the long-context increase.",
+  "version": "0993f3d",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Gemini's 88% unchecked rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost every time' conveys frequency but does not retain the near-nine-in-ten magnitude of the checking comparison.",
+  "version": "1c81e93",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, including nearly half with long context, though four in 791 remains an awkward exact-number pair.",
+  "version": "4ccc13f",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Opus's 47% unchecked rate with long context"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Even more often' preserves direction but loses the size of the long-context effect.",
+  "version": "0993f3d",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Opus's 47% unchecked rate with long context"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "'More often' loses the long-context magnitude, while four in 791 retains a difficult exact-number pair.",
+  "version": "4ccc13f",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings remain explicit, but sentence framing does not remove the dense episode counts and three-percentage Gemini comparison.",
+  "version": "2d8f6fa",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The findings retain their magnitudes while the Gemini comparison is simplified, leaving the exact episode-count pair as the main numerical burden.",
+  "version": "2d8f6fa",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Natural fractions preserve the checking magnitudes and comparison, while the voice retains the 95% adoption finding.",
+  "version": "1c81e93",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Opus's near-zero wrong-adoption rate with the fact in context",
+   "Opus's 47% unchecked rate with long context"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Only four times' lacks the denominator needed to establish rarity, and 'more often still' loses the long-context magnitude.",
+  "version": "0993f3d",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Opus's 47% unchecked rate with long context"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "'Even more often' drops the size of the long-context effect, and four in 791 remains numerically cumbersome.",
+  "version": "4ccc13f",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ }
+]

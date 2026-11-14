@@ -1,0 +1,148 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps every finding: the 0.999 is not read aloud, but 'absorbed it' still carries the article's point that the transcript arm lost nothing.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Never failed', 'a cascade of failures' and 'absorbed the errors' carry the qualitative findings, and 17 of 24 is still spoken.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Every finding is still spoken, and the only change is dropping the hard-to-hear decimal.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The spoken form drops 0.999 but keeps 'absorbed it', and every other finding stays intact.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "17 of 24 runs wrote a wrong patch (now just 'most runs')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Most runs' drops the size of the 17-of-24 finding, which is a rate, so the vague word does not carry it.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative findings are said in faithful words and 17 of 24 is still spoken, though 'repeated failures' is a weak stand-in for the cascade.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is kept, but the voice still reads the decimal 0.999 aloud, which is hard to follow by ear.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "This is unchanged from the original: every finding is kept, and the spoken 0.999 is still the one hard-to-hear spot.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The spoken form drops 0.999 and keeps every finding in the voice.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Every finding is kept, and the decimal is replaced by 'absorbed the errors'.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Never failed in 75 episodes' keeps the main claim, and the other findings are unchanged.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is kept and the content is accurate, but the decimal 0.999 is still read aloud.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ }
+]

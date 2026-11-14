@@ -1,0 +1,154 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The voice preserves the failure counts and cascade size, while the qualitative transcript finding does not require its decimal score.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "About 25 failures from one wrong copy"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "A cascade of failures preserves the mechanism but drops the stated size of its consequences.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, including the cascade size and wrong-patch frequency, without needing the transcript score spoken.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The spoken override removes only a decimal supporting the faithfully retained qualitative transcript finding.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Wrong patches in 17 of 24 runs"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Most runs is accurate but does not convey the original wrong-patch frequency with near-exact magnitude.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "About 25 failures from one wrong copy"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice retains the central wrong-patch ratio but replaces the quantified cascade with an unspecified number of repeated failures.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings remain accurate, but the model versions, episode figures, failure counts and exact decimal create several numerically dense passages.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_1",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The unchanged narration preserves every finding but retains the original numerical density, including the exact decimal.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The voice preserves every finding and appropriately leaves the nonessential transcript score on screen.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Absorbed the errors faithfully conveys the qualitative transcript result while all consequential magnitudes remain spoken.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_3",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Removing the horizon limit does not lose the qualitative no-failure finding, and the cascade size and wrong-patch ratio remain.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Keeping the transcript alongside explicit state absorbed the wrong-write errors"
+  ],
+  "excess": 2,
+  "errors": true,
+  "reason": "The revision attributes the 0.999 score to the transcript rather than the combined state-and-transcript arm; transcript-only ReAct scored 0.974.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_2",
+  "model": "astra",
+  "script": "explicit-state-misremembers"
+ }
+]

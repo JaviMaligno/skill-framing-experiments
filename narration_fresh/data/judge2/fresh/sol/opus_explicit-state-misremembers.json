@@ -1,0 +1,160 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All findings survive, and the score is a single magnitude integrated into a sentence.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_2",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "About 25 cascading failures"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "A cascade preserves the mechanism but drops the size of its consequences.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_3",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": true,
+  "reason": "All findings survive, but the adjacent precise decimals are difficult by ear and the before-and-after wording overstates an unisolated transcript effect.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_3",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Wrong patches in 17 of 24 runs"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Most runs drops the measured prevalence of wrong patches.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_1",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Wrong patches in 17 of 24 runs"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Most runs loses the prevalence, although near perfect faithfully summarizes the transcript arm's performance.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_2",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice retains flawless Gemini performance, the cascade's size, wrong-patch prevalence, and transcript protection.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_1",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Wrong patches in 17 of 24 runs"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Most runs loses prevalence, and calling all 75 episodes long mischaracterizes the mixed horizons.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_1",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "About 25 cascading failures"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "A cascade drops the size of the failures, which an on-screen label cannot restore.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_2",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Every finding remains audible, with the score naturally attached to Haiku's performance.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_1",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Wrong patches in 17 of 24 runs"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Most runs drops prevalence, and 75 long episodes inaccurately describes the mixed horizons.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_3",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "About 25 cascading failures"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative cascade omits how many failures the wrong copy triggered.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_2",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All headline findings survive without a table-like sequence of figures.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_3",
+  "model": "opus",
+  "script": "explicit-state-misremembers"
+ }
+]

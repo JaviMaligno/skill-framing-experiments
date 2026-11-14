@@ -1,0 +1,159 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "size of the iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only 86% is spoken, and 'did clearly worse' drops how far clean restarts fell behind.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "size of the iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Much worse' is a vague comparative that does not convey the 17-point gap.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All three figures and the non-significant edge are kept accurately, but three unround percentages still come in consecutive lines.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "size of the iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost nine in ten' keeps the iterate rate, but 'clearly fewer' drops the clean-restart magnitude.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "size of the iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Fell behind' gives no sense of how large the clean-restart deficit is.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps 86% vs 69%, puts the non-significant button edge in faithful words, and keeps 3 of 4.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps the 86% vs 69% gap, the non-significant button edge in words, and the 3 of 4 rescue, with only two percentages spoken.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "iterate success rate (86%)",
+   "size of the iterate vs clean-restart gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Most tasks' and 'clearly fewer' replace both headline rates with vague wording, so the size of the gap is lost.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All figures are accurate and the caveat is kept, but three unround percentages are recited in a row.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "It is accurate and complete, but still recites 86%, 69% and 91% back to back.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps the 86% vs 69% gap, the non-significant edge in words, and 3 of 4, with only two percentages spoken.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "size of the iterate vs clean-restart gap (86% vs 69%)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Clean restarts did worse' drops the magnitude of the main comparison.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ }
+]

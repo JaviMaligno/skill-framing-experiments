@@ -1,0 +1,193 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The task gain and replay recovery retain their scale, but the general-accuracy loss and both hidden-cost comparisons lose their magnitudes.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Qualitative descriptions replace the sizes of the task gain, general loss, instruction-following changes, and LoRA's unseen-command result.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes of −0.071 and +0.033"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Replay recovery and unseen-command scores survive, but the task gain, general loss, and instruction-following changes lose their sizes.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The smoother narration drops several finding magnitudes, and saying those numbers remain in the visuals does not preserve them in the voice.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "10% replay recovering about 73% without task cost",
+   "LoRA barely forgetting without replay",
+   "Instruction-following changes of −0.071 and +0.033",
+   "Unseen-command scores of 0.00 versus 0.15"
+  ],
+  "excess": 3,
+  "errors": false,
+  "reason": "The disconnected number list conveys none of the findings and reads like a spreadsheet.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "All finding magnitudes remain accurate, but the dense decimal sequences still sound like a table despite added connective wording.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "10% replay level producing the recovery",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "It retains the recovery percentage but replaces its replay dose and most other quantitative findings with vague descriptions.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "Every original finding survives accurately, but the replay list and successive exact decimal comparisons remain spreadsheet-like.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "Task accuracy rising from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "10% replay level producing the recovery",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative replacements preserve directions but not the required magnitudes or the replay dose.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Task-accuracy endpoints of about 0.36 and 0.90",
+   "Average general-accuracy drop of 0.078",
+   "About 73% recovery of forgetting",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "More than doubled gives only a broad bound, while most and the hidden-cost descriptions omit the original finding sizes.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Natural fractions preserve the task gain and replay recovery, but the other nonzero finding magnitudes disappear.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "All original finding magnitudes remain accurate, but the replay enumeration and repeated decimal comparisons retain the numerical overload.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ }
+]

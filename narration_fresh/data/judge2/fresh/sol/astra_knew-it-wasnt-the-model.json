@@ -1,0 +1,152 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All headline magnitudes remain, but the certification and repeated counts create several figure-heavy passages.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All headline magnitudes remain, but the certification and repeated counts create several figure-heavy passages.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All headline magnitudes remain, with clearer replication wording but still several closely spaced numerical counts.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The patching rate, its replication, and the accusation gap survive, with only the accusation comparison remaining figure-heavy.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The unfinished Spanish note changes no spoken findings and leaves the original numerical density intact.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The headline rates remain explicit and replication is retained, while supporting numerical detail is reduced.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Random-by-nature accusation gap: 14/20 versus 4/20."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“More” and “far fewer” preserve the direction but not the size of the accusation gap.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Random-by-nature accusation gap: 14/20 versus 4/20."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“Most” and “a minority” are accurate but too broad to preserve the measured accusation gap.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The added production notes supply no spoken replacements, so all findings and the original numerical density remain.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Random-by-nature accusation gap: 14/20 versus 4/20."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“More” and “fewer” omit the magnitude of the accusation comparison.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The headline rates and replication survive, with numerical density concentrated in the accusation comparison.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The production notes do not change the voice, which retains every headline magnitude and several figure-heavy passages.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "astra",
+  "script": "knew-it-wasnt-the-model"
+ }
+]

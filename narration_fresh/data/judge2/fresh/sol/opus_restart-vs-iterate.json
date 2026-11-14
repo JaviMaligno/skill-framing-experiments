@@ -1,0 +1,171 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative comparisons omit the sizes of both differences.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Neither 'much worse' nor 'edged ahead' preserves the numerical comparison.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All headline quantities survive, but the three consecutive uneven percentages remain dense by ear.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost nine in ten' preserves the iteration rate approximately, but both comparison sizes disappear.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice drops both comparison sizes, regardless of the visible bar labels.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The two consecutive uneven percentages remain a dense spot, while 'a bit better' loses the button's numerical advantage.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The iteration-versus-restart comparison survives, but the button's advantage loses its size and two uneven percentages remain consecutive.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Iterating solved 86% of tasks.",
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Most tasks' and qualitative comparisons preserve direction but not the headline magnitudes.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every headline finding survives accurately, but three consecutive uneven percentages still sound table-like.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All headline magnitudes and the significance caveat survive, with one dense run of three percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "Moving 91% to the screen loses its spoken magnitude, and the remaining two consecutive percentages still form a dense spot.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Clean restarts solved 69%, versus 86% iterating.",
+   "The restart button reached 91%, versus 86% iterating."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The clearer restart-tool explanation does not restore the numerical sizes omitted from both comparisons.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "opus",
+  "script": "restart-vs-iterate"
+ }
+]

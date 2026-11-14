@@ -1,0 +1,179 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "Several measured changes and LoRA's unseen-command score become vague qualitative statements.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Recovery achieved with just 10% replay",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The recovery percentage and zero unseen-command successes survive, but other finding magnitudes and the replay level disappear.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "Every finding magnitude survives, but the setup override leaves the dense, table-like numerical findings unchanged.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "The empty spoken-forms table supplies no overrides, so all findings and the spreadsheet-like numerical delivery remain.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "All findings remain numerically intact, but the empty table does nothing to simplify the dense spoken figures.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The qualitative replacements preserve directions but lose the sizes of several headline results.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "No actual overrides are provided, so every finding survives alongside the original dense numerical recitation.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "The narration retains every finding magnitude and its dense numerical delivery because the spoken-forms table is empty.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The replay result remains quantified, but vague changes and partial success replace several other measured magnitudes.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Recovery achieved with just 10% replay",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Natural qualitative phrasing removes numerical clutter but also drops most finding magnitudes and the replay level.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Task accuracy rose from about 0.36 to 0.90",
+   "Average general-accuracy drop of 0.078",
+   "Recovery achieved with just 10% replay",
+   "Instruction-following changes: −0.071 for full fine-tuning, +0.033 for LoRA",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps the recovery percentage and zero unseen-command successes, but omits the other quantitative finding sizes and replay level.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 3,
+  "errors": false,
+  "reason": "Every original finding remains, but no spoken overrides reduce the table-like sequence of exact figures.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ }
+]
