@@ -1,0 +1,166 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Near-total repetition in the table example.",
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Looping and vague comparisons omit the magnitudes, and Sonnet's quoted response occurred at turn three hundred, not a thousand.",
+  "version": "1c81e93",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "'Almost all' preserves the table finding, but the model comparison loses its size and the thousand-turn attribution is incorrect.",
+  "version": "1c81e93",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "The base model's 0.51 single-turn and 0.78 multi-turn repetition levels."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The table percentage and aligned rate survive, but the base magnitudes disappear and the thousand-turn attribution is incorrect.",
+  "version": "4ccc13f",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": true,
+  "reason": "All finding magnitudes survive, but scene eleven recites three decimals and Sonnet's quote is incorrectly attributed to a thousand turns.",
+  "version": "2d8f6fa",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "'Almost nothing else' preserves the near-total table repetition, but the comparison lacks magnitude and the thousand-turn attribution is incorrect.",
+  "version": "1c81e93",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The table-only output conveys near-total repetition and the turn-count error is removed, but the model comparison loses its magnitude.",
+  "version": "0993f3d",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Coverage across nine stimuli does not preserve the size of the repetition gap, and the thousand-turn attribution remains incorrect.",
+  "version": "4ccc13f",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": true,
+  "reason": "All finding magnitudes remain, including a three-decimal run, but Sonnet's quote occurred at turn three hundred rather than a thousand.",
+  "version": "2d8f6fa",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "The base model's multi-turn repetition level of 0.78 and its increase over single-turn."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The spoken pair preserves the single-turn comparison but drops the multi-turn magnitude, while retaining the incorrect thousand-turn attribution.",
+  "version": "4ccc13f",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": true,
+  "reason": "All finding magnitudes survive, but the three-decimal run remains and the thousand-turn attribution is incorrect.",
+  "version": "2d8f6fa",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Near-total repetition in the table example.",
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The turn-count error is removed, but a loop example and 'on another planet' do not preserve the numerical magnitudes.",
+  "version": "0993f3d",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "The aligned-versus-base repetition magnitudes and single-to-multi-turn increase."
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The table-only output preserves near-total repetition, but 'far more' drops the comparison's size and the thousand-turn attribution remains incorrect.",
+  "version": "0993f3d",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ }
+]

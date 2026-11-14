@@ -1,0 +1,166 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The cost comparison loses its starting magnitude, and not every subsequent decision depends on the correction.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "The episode comparison survives with an implied denominator, but the token advantage disappears and the setup misstates the timing and dependent decisions.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "Both numerical comparisons survive, with two dense numerical passages, but the setup misstates the timing and says every subsequent decision depends on the correction.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "The episode comparison survives, but the cost line drops the token magnitude and the setup misstates the timing and dependent decisions.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Almost every time against about one in seven conveys the episode contrast, but the cost magnitude disappears and the setup misstates the timing and dependent decisions.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The episode contrast remains audible, but the token advantage loses its magnitude and the setup misstates the timing and dependent decisions.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "The episode comparison survives, but an unspecified saving cannot carry the original cost comparison and the setup misstates the timing and dependent decisions.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "Making the transcript line grammatical preserves both findings without removing either numerical cluster, while the setup still misstates the timing and dependent decisions.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "Magnitude of the 70-of-72 versus 10-of-72 episode comparison",
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Rarely and small cost saving omit the measured magnitudes, while the setup misstates the timing and dependent decisions.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "Both numerical comparisons remain intact with two dense numerical passages, but the setup misstates the timing and dependent decisions.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The episode contrast survives without a numerical cluster, but the original token magnitude disappears and the setup misstates the timing and dependent decisions.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Magnitude of the 70-of-72 versus 10-of-72 episode comparison",
+   "Cost advantage shrinking from 7.5x in tokens to 1.4x in money"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "Rarely and most of that saving retain direction rather than measured size, while the setup misstates the timing and dependent decisions.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

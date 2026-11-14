@@ -1,0 +1,162 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap (~0.10 vs 0.51/0.78)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Saying 'fell into a loop' keeps the table finding, but 'barely repeat' and 'on another planet' drop how big the gap is.",
+  "version": "1c81e93",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost all repetition' keeps the table finding, but 'another planet, worse still over many turns' is a vague comparative with no size.",
+  "version": "1c81e93",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "base model's repetition level (0.51/0.78), so the gap size is lost"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps the aligned figure (~0.10) but replaces the base figures with 'on another planet', so the size of the gap is gone.",
+  "version": "4ccc13f",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is still spoken, but scene 11 still recites three decimals in a row.",
+  "version": "2d8f6fa",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Gives back almost nothing else' keeps the table finding, but 'repeats far more' drops the size of the gap.",
+  "version": "1c81e93",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The table loop is still conveyed (and the thousand-times error is fixed), but 'another planet' gives no size for the central gap.",
+  "version": "0993f3d",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "99.6% is kept, but 'far more repetitive' is a vague comparative that drops the size of the gap.",
+  "version": "4ccc13f",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is still spoken, with three decimals still close together in scene 11.",
+  "version": "2d8f6fa",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The gap is carried as a single spoken pair (~0.10 vs 0.51); only the multi-turn 0.78 detail moves off the voice, and the pair is easy to follow.",
+  "version": "4ccc13f",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding is still spoken, but scene 11 still recites three decimals in quick succession.",
+  "version": "2d8f6fa",
+  "file": "repetition_2",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The table loop and the Sonnet and Opus quotes are accurate, but 'don't loop / on another planet' drops the size of the gap.",
+  "version": "0993f3d",
+  "file": "repetition_3",
+  "model": "opus",
+  "script": "repetition"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "size of the base-vs-aligned repetition gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The table loop is kept, but 'loops far more, not a fluke' conveys significance without the size of the gap.",
+  "version": "0993f3d",
+  "file": "repetition_1",
+  "model": "opus",
+  "script": "repetition"
+ }
+]

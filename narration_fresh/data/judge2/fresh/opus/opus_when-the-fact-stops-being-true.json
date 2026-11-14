@@ -1,0 +1,154 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps 'almost every time' against '10 of 72' for the correction gap and keeps the 1.4x bill figure, with no figure runs.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Both findings survive ('70 of 72' against 'just 10'; a big token saving shrank to 1.4x), but the scene 4 pair is still somewhat dense.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "This is essentially unchanged and keeps both back-to-back fractions and the 7.5x/1.4x pair, so it does not address the number guidance.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The correction gap is kept as '70 of 72' against 'just 10', and the bill saving as 'just 1.4x', with one mildly dense spot in scene 4.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "cost shrink magnitude (7.5x to 1.4x)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost every time' against 'about one in seven' carries the correction gap, but 'shrank on the bill' drops how big the cost saving is.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost every time' against 'only 10 of 72' and 'a big token saving became 1.4x on the bill' keep both findings cleanly.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "'70 of 72' against 'just 10' and 'shrank to 1.4x in money' keep both findings, with the scene 4 figures still somewhat close together.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Only a word changed, so both fraction pairs and the 7.5x/1.4x pair remain spoken close together.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "transcript correction rate (10 of 72)",
+   "cost shrink magnitude (7.5x to 1.4x)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Rarely did' and 'a small cost saving' are vague and drop the sizes of the correction gap and the cost shrink.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "This rephrases the lines but still speaks '70 of 72', '10 of 72', 7.5x and 1.4x in quick succession.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost every time' against 'only 10 of 72' and the 1.4x bill figure keep both findings without figure runs.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "transcript correction rate (10 of 72)",
+   "cost shrink magnitude (7.5x to 1.4x)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Rarely did' and 'most of that saving never reached the bill' are vague and drop the sizes both findings rest on.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "opus",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

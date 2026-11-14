@@ -1,0 +1,170 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The 73% recovery and the zero-versus-some contrast on unseen commands survive, but 'jumped', 'dropped' and 'did worse/improved' drop the sizes the findings depend on.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps 73% and the complete-failure-versus-some-success contrast, but the task gain, the general drop and the IFEval change become vague comparatives.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All figures stay in the voice and 'half-billion-parameter' is correct, but several dense decimal runs (0.36→0.90, 0.071/0.033, 0.00/0.15) remain hard to follow by ear.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged with an empty spoken-forms table, so every finding is carried, but the voice still recites several runs of unround decimals.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged and the spoken-forms table is empty, so the findings are intact but the decimal-heavy passages remain.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Jumped', 'across the board' and 'lost ground/improved' drop the magnitudes; only 73% and the zero-versus-some contrast survive.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The overrides table is empty despite its note, so the voice still says every exact figure, including several dense decimal runs.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged with an empty table, so all findings are carried but the spreadsheet-like decimal passages remain.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The task gain, the general drop and the IFEval change are reduced to sizeless comparatives, while 73% and zero versus some right are kept.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only 73% and the nothing-versus-some contrast survive; the other magnitudes become vague words.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90 size",
+   "general accuracy drop of 0.078",
+   "IFEval −0.071 vs +0.033 size"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The sizes of the task gain, the general drop and the IFEval change are dropped, while 73% and none-versus-some are kept.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The narration is unchanged with an empty spoken-forms table, so every finding is carried but several dense decimal runs remain in the voice.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "astra",
+  "script": "forgetting-you-dont-measure"
+ }
+]

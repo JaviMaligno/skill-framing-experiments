@@ -1,0 +1,201 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "general accuracy drop size (0.078)",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps the task jump as a third to nine in ten and the 73% as three quarters, but it turns the general drop, both IFEval changes and LoRA's 0.15 into vague words.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop size (0.078)",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only the 10%→73% recovery and the zero score survive; the task jump, general drop, IFEval changes and LoRA's 0.15 become qualitative.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop size (0.078)",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps 73% and the 0 vs 0.15 contrast, but 'shot up', 'across the board' and 'got worse/improved' drop the sizes.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop size (0.078)",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Most sizes become vague comparatives, and the reviser's meta-commentary has leaked into the narration block.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop 0.078",
+   "10% recovers ~73%",
+   "LoRA barely forgot",
+   "IFEval -0.071 vs +0.033",
+   "unseen commands 0.00 vs 0.15",
+   "one benchmark undersold three costs"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The output is a broken list of line numbers with no narration, so nothing is carried.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Every figure is kept and correct, but scenes 4 and 6 still pack several unround decimals close together.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop size (0.078)",
+   "10% mixing amount behind the 73% recovery",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only 73% and the zero score remain; the other sizes, including the 10% condition, are replaced by vague words.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings are kept accurately with an added correct LoRA verdict, but it adds a mixing-level list and keeps the dense decimal runs in scenes 4 and 6.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "task accuracy ~0.36→~0.90",
+   "general accuracy drop size (0.078)",
+   "10% mixing amount behind the 73% recovery",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Nearly every size becomes vague ('learned well', 'slightly better', 'some right'), and ✎ edit markers are left in the voice lines.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "general accuracy drop size (0.078)",
+   "~73% recovery (now 'most')",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'More than doubled' fairly carries the task jump, but the 73% becomes 'most' and the general and IFEval sizes and LoRA's 0.15 are lost.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "general accuracy drop size (0.078)",
+   "IFEval full-FT drop size (0.071)",
+   "IFEval LoRA gain size (0.033)",
+   "LoRA 0.15 on unseen commands"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "It keeps the task jump and the three-quarters recovery in words, but the general drop, both IFEval changes and LoRA's 0.15 become vague.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Every finding is kept with correct figures, but scenes 4 and 6 still recite several unround decimals in quick succession.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "opus",
+  "script": "forgetting-you-dont-measure"
+ }
+]

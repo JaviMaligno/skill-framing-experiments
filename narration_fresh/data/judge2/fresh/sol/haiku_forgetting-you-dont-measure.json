@@ -1,0 +1,169 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings remain, but the claimed spoken rewrites are absent and both dense numerical passages remain.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The unchanged narration preserves every finding and retains two hard-to-follow runs of figures.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Task accuracy starting near 0.36",
+   "Average general-accuracy loss of 0.078",
+   "Ten-percent replay dose",
+   "Instruction-following changes of −0.071 and +0.033",
+   "LoRA unseen-command accuracy of 0.15"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The narration reduces numerical clutter but replaces several quantitative findings with unspecified changes.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Task accuracy starting near 0.36",
+   "Average general-accuracy loss of 0.078",
+   "Instruction-following changes of −0.071 and +0.033"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The starting accuracy and three loss-or-gain magnitudes disappear, while scene four still clusters several figures.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Adding connective words preserves the findings but does not resolve either dense numerical passage.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Task accuracy starting near 0.36",
+   "Average general-accuracy loss of 0.078",
+   "Replay recovering about 73% of forgetting",
+   "Instruction-following changes of −0.071 and +0.033"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice is less crowded, but 'most' and unspecified gains or losses do not preserve the missing magnitudes.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "The unchanged voice retains every finding along with the original numerical congestion.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Average general-accuracy loss of 0.078",
+   "Instruction-following changes of −0.071 and +0.033"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Natural fractions preserve the task and unseen-command scores, but qualitative wording drops the general-accuracy and instruction-following magnitudes.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Despite claiming to remove figures, the supplied spoken forms leave the original findings and numerical runs unchanged.",
+  "version": "0993f3d",
+  "file": "forgetting-you-dont-measure_2",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Task accuracy starting near 0.36",
+   "Average general-accuracy loss of 0.078",
+   "Ten-percent replay dose",
+   "Instruction-following changes of −0.071 and +0.033"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Several quantitative findings become unspecified changes, although the recovery percentage and unseen-command scores survive.",
+  "version": "4ccc13f",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Near-exact fractions and point changes preserve every finding, but scenes four and six still recite several numerical results in succession.",
+  "version": "1c81e93",
+  "file": "forgetting-you-dont-measure_3",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Spelling out approximation and range language preserves accuracy without reducing the two dense runs of figures.",
+  "version": "2d8f6fa",
+  "file": "forgetting-you-dont-measure_1",
+  "model": "haiku",
+  "script": "forgetting-you-dont-measure"
+ }
+]

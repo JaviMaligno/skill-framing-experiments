@@ -30,9 +30,10 @@ Experiment 2 asks the same question on simpler material, written from scratch.
 
 ## Result in one paragraph
 
-On the real narration skill, revising fresh scripts, the rule and the patched `if` drop the
-finding's number and "colleague" never does: Opus keeps it in 1/18 revisions under the rule,
-4/18 under the `if`, 18/18 under "colleague" (judge Opus; Sol 0, 0, 18). The more obedient the
+On the real narration skill, revising fresh scripts, the rule and the patched `if` lose the
+finding and "colleague" never does. With the second judge (see experiment 3), which reads the
+source article and accepts words when the finding is qualitative, Opus keeps it in 0-7/18
+revisions under the rule, 2-6/18 under the `if`, 18/18 under "colleague". The more obedient the
 model, the worse the rule: Astra and Haiku survive the `if`, Opus doesn't. The same holds for a
 rule that **caps a quantity** in a spoken briefing written from scratch (Opus 6/18, gpt-6-astra
 4/18 keep the essential figure, against 18/18 written as a way of speaking). A rule **without**
@@ -214,6 +215,33 @@ in the video the author made with the colleague version no pile-up is heard, so 
 here without a conclusion.
 
 `python narration_fresh/score.py` prints the full table (excess, quality, errors) and the tests.
+
+**Second judge** (`narration_fresh/judge2.py`, `data/judge2/`). The first judge failed every
+number said in words, including "almost never" for 4 in 791, which is exactly what the source
+article claims. The second judge also reads the article: words pass when the finding is
+qualitative and fail when the finding is a size or a gap and the words drop the size ("more
+often", "on another planet"). It also scores figure runs (excess, 0-3). Calibrated on the
+reproduction: it fails the rule's "more often" for 47 % and the lost repetition gap, and passes
+"almost never".
+
+Finding carried, of 18 (judge Opus · judge Sol):
+
+| model | rule | pile-ups | if, by ear | colleague |
+|---|---|---|---|---|
+| Opus | 7 · 0 | 15 · 5 | 6 · 2 | 18 · 18 |
+| Astra | 5 · 3 | 9 · 9 | 18 · 18 | 18 · 17 |
+| Haiku | 7 · 2 | 13 · 4 | 15 · 13 | 18 · 18 |
+| Luna | 18 · 18 | 18 · 18 | 18 · 17 | 18 · 18 |
+
+Judges agree on 86 % of the 288 verdicts. "Colleague" leaves more figure runs than the rule
+(excess about 1.0-1.4 against 0-0.2). All four versions also carry an older step of the same
+skill, "the finding, with its exact number… same rounding, same units"; under the rule the rule
+wins, under "colleague" that step is in charge again. `python narration_fresh/score2.py` prints
+the table.
+
+The real revision of the episode is `agilabs-video-studio` `74eb78b`: in the subagent script
+Opus kept the sizes in words ("a quarter", "almost half"); in the repetition script it dropped
+the gap ("The base does, and more over many turns").
 
 ## Pilot: release notes (`release_notes/`)
 

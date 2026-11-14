@@ -1,0 +1,156 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Each finding keeps its size in words: 'a quarter', 'almost half', 'nearly nine times in ten' against 'almost never', and 95% spoken.",
+  "version": "1c81e93",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All figures are kept and the added three-families line is accurate, but '4 times in 791' and the 88%/3%/0% run are hard to follow by ear.",
+  "version": "2d8f6fa",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Opus long-context rise to 47%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'More often with long context' drops the size of the rise from 25% to 47%; the other findings survive.",
+  "version": "0993f3d",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Sizes survive in words, though 'almost every time' slightly overstates Gemini's 88% unchecked rate and is loosely attached to its referent.",
+  "version": "1c81e93",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "'Nearly half' and 'nearly all the time' keep the magnitudes, and 88% against 'almost never' keeps the gap; only '4 times in 791' remains a dense figure.",
+  "version": "4ccc13f",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Opus long-context rise to 47%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Even more often' drops the size of the long-context rise.",
+  "version": "0993f3d",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Opus long-context rise to 47%"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "'More often with long context' loses the 47% magnitude, and '4 times in 791' stays dense.",
+  "version": "4ccc13f",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Every number is kept, but line 12 recites 88%, 3% and 0% in one breath and '4 out of 791' adds another dense spot.",
+  "version": "2d8f6fa",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All magnitudes are kept, and the Gemini comparison is simplified to 88% against 'almost never'; only '4 times in 791' is dense.",
+  "version": "2d8f6fa",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'A quarter', 'almost half' and 'nearly nine times in ten' against 'almost never' carry every size naturally.",
+  "version": "1c81e93",
+  "file": "subagent_3",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Opus long-context rise to 47%"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'More often still' drops the 47% magnitude, and 'only 4 times' without a denominator weakly conveys how rare it was.",
+  "version": "0993f3d",
+  "file": "subagent_2",
+  "model": "opus",
+  "script": "subagent"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Opus long-context rise to 47%"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "'Even more often with long context' loses the size of the rise to 47%.",
+  "version": "4ccc13f",
+  "file": "subagent_1",
+  "model": "opus",
+  "script": "subagent"
+ }
+]

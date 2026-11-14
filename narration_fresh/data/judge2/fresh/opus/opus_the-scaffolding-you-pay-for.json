@@ -1,0 +1,154 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Every finding is still voiced with its size: no rule broken, more than twice the tokens, and a third with no code while all free runs delivered; 147 is rounded to 'well over a hundred'.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only the redundant 8/12 against 12/12 chain is dropped; 'a third' still gives the gap, and the remaining figures are single and spaced apart.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All findings are kept, and the delivery gap becomes a natural sentence: 'eight of its twelve… all twelve'.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Four of its twelve runs delivered no code; without the skill, all twelve did' is accurate and easy to hear, and the other figures are kept.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "domain rules 48/48",
+   "133% more tokens",
+   "a third delivered no code vs 12/12"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The narration is broken: only scene labels remain, so no finding is voiced.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All findings are kept, and the delivery comparison is spoken naturally as 'eight of its twelve… all twelve'.",
+  "version": "2d8f6fa",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The findings are kept in words with their size: 'more than doubled', 'a third' against 'every run', and 'almost a hundred and fifty' runs.",
+  "version": "1c81e93",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Same as X2: 'a third' carries the delivery gap, and the other single figures stay spoken.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "size of the token cost (133% / more than double)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Far more output tokens' is a vague comparative that drops the size of the cost.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_1",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "size of the token cost (133% / more than double)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Far more output tokens' loses the size; the other findings survive.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_2",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'More than twice the output tokens' keeps the size, 'not one run' keeps the qualitative rule finding, and 'a third' keeps the delivery gap; only the 147 setup count is dropped.",
+  "version": "0993f3d",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Same as X2: only the redundant 8/12 against 12/12 chain is removed, and the note on Opus versus Sonnet is accurate.",
+  "version": "4ccc13f",
+  "file": "the-scaffolding-you-pay-for_3",
+  "model": "opus",
+  "script": "the-scaffolding-you-pay-for"
+ }
+]

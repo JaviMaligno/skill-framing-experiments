@@ -1,0 +1,152 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "Near-perfect Stateful score on Haiku (0.999)."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Scoring highest preserves the ranking but not how close the score was to perfect.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Near-perfect Stateful score on Haiku (0.999)."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Absorbing the error preserves the mechanism but omits the near-perfect performance magnitude.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Every headline finding remains accurate, with the numbers integrated into natural sentences.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Nearly one faithfully conveys the near-perfect score, and the other headline findings survive.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Shortening model names and omitting the horizon detail leaves the headline findings and their magnitudes intact.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The revision retains the zero-failure result, cascade size, wrong-patch frequency, and near-perfect score.",
+  "version": "4ccc13f",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All original headline findings remain, without a hard-to-follow run of figures.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "Keeping numerals in the script does not remove their spoken meaning or create numerical overload.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The separate Stateful sentence explicitly preserves the score and accurately identifies its runtime.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_1",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Near-perfect Stateful score on Haiku (0.999)."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Scored best states a ranking without conveying the near-perfect score.",
+  "version": "0993f3d",
+  "file": "explicit-state-misremembers_2",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The narration preserves all headline findings, regardless of the incomplete spoken-form notes.",
+  "version": "1c81e93",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The explicit spoken lines accurately retain every headline finding and its numerical meaning.",
+  "version": "2d8f6fa",
+  "file": "explicit-state-misremembers_3",
+  "model": "haiku",
+  "script": "explicit-state-misremembers"
+ }
+]

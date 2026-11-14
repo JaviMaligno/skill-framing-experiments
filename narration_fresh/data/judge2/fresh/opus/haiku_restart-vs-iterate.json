@@ -1,0 +1,157 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All three scene-4 percentages and the three-of-four rescue are still spoken, and the qualitative claims are intact, but 86/69/91 still come in three back-to-back lines.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "This is essentially the original with one line split, so every finding is kept and the three-percentage run in scene 4 remains.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "size of iterate (86%) vs clean-restart (69%) gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Clean restarts trailed' is a vague comparative that drops the 17-point gap, which is the decisive finding.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps 86% against 69%, 'edged ahead, but not significantly' faithfully carries the small non-significant edge, and 3 of 4 is kept.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings are kept and the added 7 and 34 restart counts are accurate, but scenes 4 and 5 now pile up many exact figures.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice keeps the 86% vs 69% gap and conveys the button's edge qualitatively as small and non-significant, which is the article's claim.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Clean restarts trailed' drops how far behind they were.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap",
+   "3-of-4 rescue (denominator and referent unclear)"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Lagged well behind' is vague, and 'three of those losses' has no clear referent or denominator.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "size of iterate vs clean-restart gap"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Clean restarts did worse' is exactly the kind of sizeless comparative the rule rejects.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "'About six in seven', 'almost seven in ten' and 'just over nine in ten' are accurate near-exact fractions that keep every size, though three come in a row.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "iterate's 86% and thus the size of its gap over clean restarts"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Solved most of the tasks' drops iterate's magnitude, so the gap to 'about seven in ten' is no longer conveyed.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All three percentages and 'three of the four' are spoken within sentences, keeping every finding, but they are still three consecutive figures.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ }
+]

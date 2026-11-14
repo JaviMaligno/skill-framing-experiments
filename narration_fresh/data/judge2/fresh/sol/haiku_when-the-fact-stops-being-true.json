@@ -1,0 +1,168 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "7.5× token saving",
+   "1.4× monetary saving"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "The spoken override drops both cost magnitudes, and the retained ten-step correction timing conflicts with steps three and ten in the article.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "Transcript success rate of 10/72",
+   "7.5× token saving"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "“Fell far behind” loses the measured gap and the token-saving magnitude disappears; the inherited correction timing is also inaccurate.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Transcript success rate of 10/72",
+   "7.5× token saving"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "“Far less often” drops the transcript rate and the cost comparison loses its starting magnitude; the inherited correction timing is inaccurate.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "7.5× token saving"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "The spoken override retains the monetary ratio but replaces the token ratio with “big”; the inherited correction timing is inaccurate.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "All headline magnitudes survive, but the episode counts and paired cost ratios remain dense numerical runs, and the inherited correction timing is inaccurate.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "7.5× token saving",
+   "1.4× monetary saving"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "The approximate episode proportions preserve their contrast, but “small money saving” loses the quantified cost change; the inherited correction timing is inaccurate.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "Adding a verb preserves every magnitude without reducing either numerical pile-up, and the inherited correction timing is inaccurate.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "All headline quantities remain, along with both dense numerical comparisons and the inaccurate inherited correction timing.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "7.5× token saving"
+  ],
+  "excess": 1,
+  "errors": true,
+  "reason": "“Just ten” inherits the preceding denominator, but the token-saving magnitude disappears; the inherited correction timing is inaccurate.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Transcript success rate of 10/72",
+   "7.5× token saving"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "“Only rarely” loses the transcript rate and the cost comparison loses its starting magnitude; the inherited correction timing is inaccurate.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Transcript success rate of 10/72",
+   "7.5× token saving"
+  ],
+  "excess": 0,
+  "errors": true,
+  "reason": "“Far less often” loses the measured transcript rate and only the final cost ratio remains; the inherited correction timing is inaccurate.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": true,
+  "reason": "Every headline magnitude survives, but both numerical pile-ups and the inaccurate inherited correction timing remain.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "haiku",
+  "script": "when-the-fact-stops-being-true"
+ }
+]

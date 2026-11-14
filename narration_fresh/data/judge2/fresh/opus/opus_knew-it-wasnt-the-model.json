@@ -1,0 +1,156 @@
+[
+ {
+  "id": "X1",
+  "finding": false,
+  "lost": [
+   "14/20 vs 4/20 accusation gap (reduced to 'most' vs 'a few')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Patching and replication survive, but the main comparison is cut to vague quantifiers and its size is lost.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings are kept with their numbers, but 260 of 260, 19/20, 19 and 19, 14/20 and 4/20 cluster closely by ear.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "14/20 vs 4/20 accusation gap (reduced to 'most' vs 'few')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The accusation gap is reduced to vague quantifiers, so its size is not conveyed.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "4/20 forest side of the accusation gap (reduced to 'only a few')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "14/20 is kept but the forest side becomes 'only a few', so the gap's size is only loosely conveyed.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "All findings are carried faithfully, and the figures are spread out naturally.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X6",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Every time' and 'did the same' faithfully carry the qualitative claims, and the 14/20 vs 4/20 gap is kept.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X7",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings are kept with exact numbers, though the 260 of 260 and 19-and-19 run is somewhat dense.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_1",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "14/20 model side of the accusation gap (reduced to 'most')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The model side becomes 'most' against an exact 4/20, so the gap's size is only loosely conveyed.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings are carried with exact numbers, with a moderately dense run of figures.",
+  "version": "2d8f6fa",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative claims are kept in faithful words, and the accusation gap keeps its numbers.",
+  "version": "4ccc13f",
+  "file": "knew-it-wasnt-the-model_2",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Almost all' faithfully carries 19/20 in both arms, and the 14/20 vs 4/20 gap is kept.",
+  "version": "1c81e93",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "4/20 forest side of the accusation gap (reduced to 'far fewer')"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "'Far fewer' is a vague comparative that drops the size of the 14/20 vs 4/20 gap.",
+  "version": "0993f3d",
+  "file": "knew-it-wasnt-the-model_3",
+  "model": "opus",
+  "script": "knew-it-wasnt-the-model"
+ }
+]

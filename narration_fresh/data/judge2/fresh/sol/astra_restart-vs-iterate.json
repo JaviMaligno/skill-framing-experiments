@@ -1,0 +1,167 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All finding magnitudes survive, though three consecutive exact percentages create one dense numerical passage.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The unchanged narration retains every finding magnitude but still recites three exact percentages consecutively.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "Every finding magnitude remains spoken, with one dense run of three exact percentages.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The revised phrasing preserves all findings but retains the consecutive three-percentage comparison.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All finding magnitudes remain accurate and spoken, though the percentage sequence is numerically dense.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%.",
+   "Rescue of three of four features iteration lost."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The voice retains only the iteration percentage and replaces the other finding magnitudes with vague summaries.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The rescue count survives, but qualitative comparisons omit the clean-restart and restart-button magnitudes.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Saying fewer and a small edge does not preserve the omitted success-rate magnitudes.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All finding magnitudes remain spoken and accurate, with one dense sequence of three exact percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Moving the two comparison percentages to the screen removes their magnitudes from the voice.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%.",
+   "Rescue of three of four features iteration lost."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Only the iteration magnitude remains spoken; the other numerical findings become unspecified comparisons and rescues.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate of 69% versus iteration's 86%.",
+   "Restart-button success rate of 91%.",
+   "Rescue of three of four features iteration lost."
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The simplified voice avoids numerical density but drops three finding magnitudes that on-screen figures cannot replace.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "astra",
+  "script": "restart-vs-iterate"
+ }
+]

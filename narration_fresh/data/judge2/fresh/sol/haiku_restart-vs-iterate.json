@@ -1,0 +1,166 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All finding magnitudes survive, but the three consecutive percentages remain a dense numerical run.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X2",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, but splitting the lines does not remove the table-like sequence of three percentages.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X3",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate relative to iteration",
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“Trailed” and “edged ahead” preserve direction and significance but drop the comparison magnitudes.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The iteration-versus-restart comparison and rescue fraction survive, but the button's success magnitude disappears.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X5",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "All findings survive, but the percentage sequence and the additional cluster of restart counts and rescue figures create two dense spots.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The button's qualitative edge does not retain its numerical success magnitude.",
+  "version": "4ccc13f",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate relative to iteration",
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Both alternative policies lose their success magnitudes, leaving only qualitative comparisons.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate relative to iteration",
+   "Restart-button success rate",
+   "Three-of-four rescue rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The policy comparisons lose their magnitudes, and three rescued losses without the four-feature denominator does not preserve the rescue rate.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X9",
+  "finding": false,
+  "lost": [
+   "Clean-restart success rate relative to iteration",
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Keeping the omitted percentages on screen does not preserve their comparison magnitudes in the voice.",
+  "version": "0993f3d",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "The near-exact fractions preserve all findings, but three successive ratios still form a table-like numerical run.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_3",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X11",
+  "finding": false,
+  "lost": [
+   "Iteration success rate",
+   "Restart-button success rate"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "“Most” does not retain the iteration magnitude, and the button's qualitative edge omits its success rate.",
+  "version": "1c81e93",
+  "file": "restart-vs-iterate_2",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 1,
+  "errors": false,
+  "reason": "All findings survive, but adding verbs leaves the same dense sequence of three percentages.",
+  "version": "2d8f6fa",
+  "file": "restart-vs-iterate_1",
+  "model": "haiku",
+  "script": "restart-vs-iterate"
+ }
+]

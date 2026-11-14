@@ -1,0 +1,161 @@
+[
+ {
+  "id": "X1",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both the episode comparison and the token-to-money reduction retain their sizes, with two dense numerical spots.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X2",
+  "finding": false,
+  "lost": [
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The episode comparison survives, but the money figure alone does not preserve the size of the token-to-money reduction.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X3",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both quantitative comparisons remain spoken, with two dense numerical spots.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X4",
+  "finding": false,
+  "lost": [
+   "70/72 versus 10/72 episode comparison",
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative replacements omit the transcript success rate and the size of the token-to-money reduction.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X5",
+  "finding": false,
+  "lost": [
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The episode comparison remains exact, but 'much smaller' drops the size of the cost finding.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X6",
+  "finding": false,
+  "lost": [
+   "70/72 versus 10/72 episode comparison",
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "The qualitative summaries preserve direction but not the sizes of either comparison.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X7",
+  "finding": false,
+  "lost": [
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 1,
+  "errors": false,
+  "reason": "The episode comparison survives, but the cost comparison loses its magnitude.",
+  "version": "4ccc13f",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X8",
+  "finding": false,
+  "lost": [
+   "70/72 versus 10/72 episode comparison",
+   "7.5x token saving versus 1.4x money saving"
+  ],
+  "excess": 0,
+  "errors": false,
+  "reason": "Keeping the state success count does not preserve the comparison when the transcript rate becomes vague, and the cost magnitude is also lost.",
+  "version": "0993f3d",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X9",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both quantitative comparisons remain spoken, with two dense numerical spots.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_1",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X10",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both comparisons retain their numerical sizes, with two dense numerical spots.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_2",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X11",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both comparisons retain their numerical sizes, with two dense numerical spots.",
+  "version": "2d8f6fa",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ },
+ {
+  "id": "X12",
+  "finding": true,
+  "lost": [],
+  "excess": 2,
+  "errors": false,
+  "reason": "Both original quantitative comparisons remain spoken, with two dense numerical spots.",
+  "version": "1c81e93",
+  "file": "when-the-fact-stops-being-true_3",
+  "model": "astra",
+  "script": "when-the-fact-stops-being-true"
+ }
+]
